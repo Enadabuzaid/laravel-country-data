@@ -1,0 +1,29 @@
+{
+    "name": "enad/country-data",
+    "description": "Laravel package for country information (JSON or DB)",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Enad\\CountryData\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Enad Abuzaid"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0 || ^12.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Enad\\CountryData\\CountryDataServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

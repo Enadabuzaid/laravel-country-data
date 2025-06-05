@@ -1,0 +1,69 @@
+[
+  {
+    "names": {
+      "common": {
+        "en": "Jordan",
+        "ar": "الأردن"
+      },
+      "official": {
+        "en": "Hashemite Kingdom of Jordan",
+        "ar": "المملكة الأردنية الهاشمية"
+      }
+    },
+    "code": "JO",
+    "iso2": "JO",
+    "iso3": "JOR",
+    "numericCode": "400",
+    "cioc": "JOR",
+    "cca2": "JO",
+    "ccn3": "400",
+    "flag": "🇯🇴",
+    "emoji": "🇯🇴",
+    "flags": {
+      "png": "https://flagcdn.com/w320/jo.png",
+      "svg": "https://flagcdn.com/jo.svg"
+    },
+    "coatOfArms": {
+      "png": "https://mainfacts.com/media/images/coats_of_arms/jo.png",
+      "svg": "https://mainfacts.com/media/images/coats_of_arms/jo.svg"
+    },
+    "maps": {
+      "googleMaps": "https://goo.gl/maps/KoDRN5r6rRRaNn3c6",
+      "openStreetMaps": "https://www.openstreetmap.org/relation/184818"
+    },
+    "currency": {
+      "code": "JOD",
+      "name": {
+        "en": "Jordanian Dinar",
+        "ar": "دينار أردني"
+      },
+      "symbol": {
+        "en": "JD",
+        "ar": "د.ا"
+      }
+    },
+    "dial": "+962",
+    "capital": "Amman",
+    "region": "Middle East",
+    "continent": "Asia",
+    "subregion": "Western Asia",
+    "languages": ["ar"],
+    "timezones": ["Asia/Amman"],
+    "tld": [".jo"],
+    "borders": ["IRQ", "ISR", "SAU", "SYR"],
+    "geo": {
+      "latitude": 31.963158,
+      "longitude": 35.930359
+    },
+    "population": 11150300,
+    "area": 89342,
+    "filters": [
+      "arab",
+      "middle-east",
+      "muslim-majority",
+      "asia"
+    ]
+  }
+
+
+]
