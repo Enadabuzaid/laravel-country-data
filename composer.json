@@ -1,6 +1,7 @@
 {
     "name": "enad/country-data",
-    "description": "Laravel package for country information (JSON or DB)",
+    "description": "Laravel package for country information (config-based, reusable, and localized)",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
