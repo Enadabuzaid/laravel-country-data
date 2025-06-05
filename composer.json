@@ -22,7 +22,10 @@
         "laravel": {
             "providers": [
                 "Enad\\CountryData\\CountryDataServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "CountryData": "Enad\\CountryData\\Facades\\CountryData"
+            }
         }
     },
     "minimum-stability": "dev",

@@ -8,6 +8,6 @@ class CountryData extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'country-data';
+        return \Enad\CountryData\CountryData::class;
     }
 }

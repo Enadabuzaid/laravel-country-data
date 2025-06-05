@@ -11,7 +11,13 @@ class CountryDataServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__ . '/../config/countries.php' => config_path('countries.php'),
+                __DIR__ . '/../config/country-data.php' => config_path('country-data.php'),
             ], 'country-data');
+
+
+            $this->commands([
+                \Enad\CountryData\Commands\ConfigureCountryData::class,
+            ]);
         }
     }
 
@@ -26,5 +32,4 @@ class CountryDataServiceProvider extends ServiceProvider
             return new \Enad\CountryData\CountryData();
         });
     }
-
 }
