@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // **************** ARAB COUNTRIES START ****************
     // 1- Jordan
     [
         "names" => [
@@ -1034,7 +1033,6 @@ return [
         "area" => 2235,
         "filters" => ["arab", "muslim-majority", "africa"]
     ],
-    // **************** ARAB COUNTRIES END ****************
 
 
 
