@@ -1,5 +1,5 @@
 {
-    "name": "enad/country-data",
+    "name": "enadabuzaid/country-data",
     "description": "Laravel package for country information (config-based, reusable, and localized)",
     "version": "1.0.0",
     "type": "library",
