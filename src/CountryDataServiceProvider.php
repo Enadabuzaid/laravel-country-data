@@ -3,6 +3,9 @@
 namespace Enad\CountryData;
 
 use Illuminate\Support\ServiceProvider;
+use Enad\CountryData\Commands\ConfigureCountryData;
+use Enad\CountryData\Commands\PublishFrontendComponent;
+
 
 class CountryDataServiceProvider extends ServiceProvider
 {
@@ -16,7 +19,8 @@ class CountryDataServiceProvider extends ServiceProvider
 
 
             $this->commands([
-                \Enad\CountryData\Commands\ConfigureCountryData::class,
+                ConfigureCountryData::class,
+                PublishFrontendComponent::class
             ]);
         }
     }
