@@ -32,7 +32,7 @@ Built with multilingual support, region filters, and helper methods — ideal fo
 Install the package via Composer:
 
 ```bash
-composer require enadabuzaid/country-data
+composer require enadstack/laravel-country-data
 ```
 
 Publish the config files:
@@ -110,7 +110,7 @@ Published locations:
 ### Via Facade
 
 ```php
-use CountryData;
+use Enadstack\CountryData\Facades\CountryData;
 
 CountryData::getArabCountries();
 CountryData::getByCode('SA');
