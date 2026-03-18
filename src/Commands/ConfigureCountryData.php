@@ -1,6 +1,6 @@
 <?php
 
-namespace Enad\CountryData\Commands;
+namespace Enadstack\CountryData\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;

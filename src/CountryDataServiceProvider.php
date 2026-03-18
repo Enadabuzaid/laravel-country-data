@@ -1,10 +1,10 @@
 <?php
 
-namespace Enad\CountryData;
+namespace Enadstack\CountryData;
 
 use Illuminate\Support\ServiceProvider;
-use Enad\CountryData\Commands\ConfigureCountryData;
-use Enad\CountryData\Commands\PublishFrontendComponent;
+use Enadstack\CountryData\Commands\ConfigureCountryData;
+use Enadstack\CountryData\Commands\PublishFrontendComponent;
 
 
 class CountryDataServiceProvider extends ServiceProvider
@@ -33,7 +33,7 @@ class CountryDataServiceProvider extends ServiceProvider
         );
 
         $this->app->singleton('country-data', function () {
-            return new \Enad\CountryData\CountryData();
+            return new \Enadstack\CountryData\CountryData();
         });
     }
 }

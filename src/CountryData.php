@@ -1,6 +1,6 @@
 <?php
 
-namespace Enad\CountryData;
+namespace Enadstack\CountryData;
 
 class CountryData
 {

@@ -1,30 +1,33 @@
 {
-    "name": "enadabuzaid/country-data",
+    "name": "enadstack/laravel-country-data",
     "description": "Laravel package for country information (config-based, reusable, and localized)",
     "version": "1.0.0",
     "type": "library",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Enad\\CountryData\\": "src/"
-        }
-    },
     "authors": [
         {
-            "name": "Enad Abuzaid"
+            "name": "Enad Abu Zaid",
+            "email": "enad@enadstack.com",
+            "homepage": "https://enadstack.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
         "illuminate/support": "^11.0 || ^12.0"
     },
+    "autoload": {
+        "psr-4": {
+            "Enadstack\\CountryData\\": "src/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "Enad\\CountryData\\CountryDataServiceProvider"
+                "Enadstack\\CountryData\\CountryDataServiceProvider"
             ],
             "aliases": {
-                "CountryData": "Enad\\CountryData\\Facades\\CountryData"
+                "CountryData": "Enadstack\\CountryData\\Facades\\CountryData"
             }
         }
     },
