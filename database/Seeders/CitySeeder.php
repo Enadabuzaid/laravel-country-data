@@ -7,6 +7,14 @@ use Illuminate\Support\Facades\DB;
 
 class CitySeeder extends Seeder
 {
+    /**
+     * Optional country code filter (ISO-2 uppercase).
+     * Empty array = seed all cities.
+     *
+     * @var string[]
+     */
+    public array $countryCodes = [];
+
     public function run(): void
     {
         $path = __DIR__ . '/../../data/cities.json';
@@ -23,7 +31,14 @@ class CitySeeder extends Seeder
             return;
         }
 
-        // Pre-load country id map  (code => id)
+        // Filter to selected countries when a subset was requested
+        if (! empty($this->countryCodes)) {
+            $codes  = array_map('strtoupper', $this->countryCodes);
+            $cities = array_filter($cities, fn ($c) => in_array(strtoupper($c['country_code']), $codes, true));
+            $cities = array_values($cities);
+        }
+
+        // Pre-load country id map (code => id)
         $countryMap = DB::table('countries')
             ->pluck('id', 'code')
             ->toArray();
@@ -49,18 +64,18 @@ class CitySeeder extends Seeder
                     'name_en'      => $c['name_en'],
                 ],
                 [
-                    'country_id'  => $countryMap[$countryCode],
-                    'country_code'=> $countryCode,
-                    'name_en'     => $c['name_en'],
-                    'name_ar'     => $c['name_ar'] ?? null,
-                    'is_capital'  => (bool) ($c['is_capital'] ?? false),
-                    'latitude'    => $c['latitude'] ?? null,
-                    'longitude'   => $c['longitude'] ?? null,
-                    'population'  => $c['population'] ?? null,
-                    'timezone'    => $c['timezone'] ?? null,
-                    'is_active'   => true,
-                    'updated_at'  => now(),
-                    'created_at'  => now(),
+                    'country_id'   => $countryMap[$countryCode],
+                    'country_code' => $countryCode,
+                    'name_en'      => $c['name_en'],
+                    'name_ar'      => $c['name_ar'] ?? null,
+                    'is_capital'   => (bool) ($c['is_capital'] ?? false),
+                    'latitude'     => $c['latitude'] ?? null,
+                    'longitude'    => $c['longitude'] ?? null,
+                    'population'   => $c['population'] ?? null,
+                    'timezone'     => $c['timezone'] ?? null,
+                    'is_active'    => true,
+                    'updated_at'   => now(),
+                    'created_at'   => now(),
                 ]
             );
 
@@ -69,6 +84,9 @@ class CitySeeder extends Seeder
 
         $bar->finish();
         $this->command->newLine();
-        $this->command->info('Cities seeded: ' . (count($cities) - $skipped) . ($skipped ? " (skipped {$skipped} — country not found)" : ''));
+        $this->command->info(
+            'Cities seeded: ' . (count($cities) - $skipped) .
+            ($skipped ? " (skipped {$skipped} — country not found)" : '')
+        );
     }
 }

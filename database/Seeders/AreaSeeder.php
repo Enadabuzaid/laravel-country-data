@@ -7,6 +7,14 @@ use Illuminate\Support\Facades\DB;
 
 class AreaSeeder extends Seeder
 {
+    /**
+     * Optional country code filter (ISO-2 uppercase).
+     * Empty array = seed all areas.
+     *
+     * @var string[]
+     */
+    public array $countryCodes = [];
+
     public function run(): void
     {
         $path = __DIR__ . '/../../data/areas.json';
@@ -21,6 +29,13 @@ class AreaSeeder extends Seeder
         if (json_last_error() !== JSON_ERROR_NONE) {
             $this->command->error('Failed to parse areas.json: ' . json_last_error_msg());
             return;
+        }
+
+        // Filter to selected countries when a subset was requested
+        if (! empty($this->countryCodes)) {
+            $codes = array_map('strtoupper', $this->countryCodes);
+            $areas = array_filter($areas, fn ($a) => in_array(strtoupper($a['country_code']), $codes, true));
+            $areas = array_values($areas);
         }
 
         // Pre-load city id map: "COUNTRY_CODE|city_name_en" => id
@@ -69,6 +84,9 @@ class AreaSeeder extends Seeder
 
         $bar->finish();
         $this->command->newLine();
-        $this->command->info('Areas seeded: ' . (count($areas) - $skipped) . ($skipped ? " (skipped {$skipped} — city not found)" : ''));
+        $this->command->info(
+            'Areas seeded: ' . (count($areas) - $skipped) .
+            ($skipped ? " (skipped {$skipped} — city not found)" : '')
+        );
     }
 }

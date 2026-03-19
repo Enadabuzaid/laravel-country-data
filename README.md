@@ -1,22 +1,24 @@
 # Laravel Country Data
 
-A clean and reusable **Laravel package** for accessing comprehensive country information — including localized names, flags, dial codes, currencies, timezones, and more — all stored in a `config/countries.php` file for maximum performance and cacheability.
+A full-featured **Laravel geography package** with countries, cities, and areas — backed by a database with caching, geospatial helpers, validation rules, a Livewire cascading dropdown, and an optional REST API.
 
-Built with multilingual support, region filters, and helper methods — ideal for dropdowns, admin panels, and international applications.
+Built with multilingual support (English & Arabic), region filters, and a clean `Geography` facade — ideal for any application that needs structured location data.
 
 ---
 
 ## Features
 
-- Publishable country list as `config/countries.php`
-- Multilingual support (English and Arabic)
-- Region filters: **Arab**, **Gulf**, **Muslim-majority**, **Continents**, and more
-- Dial codes with emoji flags and SVG flag URLs
-- Search countries by name, code, or filter
-- Helper formatters for frontend select menus
-- Laravel-native config access — works with `config:cache`
-- Artisan commands for setup and frontend component publishing
-- Frontend components for **Blade**, **Vue 3**, and **React**
+- **DB-backed geography** — countries, cities, and areas as Eloquent models
+- **Selective seeding** — choose which countries to seed interactively or via CLI flags
+- **Transparent caching** — all reads cached, one-command flush
+- **Geography facade** — clean API for countries, cities, areas, search, and select helpers
+- **Currency & timezone helpers** — typed `CurrencyData` value object, dial-code lookup, continent grouping
+- **Geospatial helpers** — Haversine distance, cities/areas near a coordinate
+- **Validation rules** — `ValidCountryCode`, `ValidCityForCountry`, `ValidAreaForCity`
+- **Livewire component** — cascading Country → City → Area dropdowns, RTL-aware
+- **Optional REST API** — 12 JSON endpoints, opt-in via `.env`
+- **Artisan commands** — setup, cache-clear, stats
+- Multilingual (EN + AR), region filters, and frontend select helpers
 
 ---
 
@@ -29,8 +31,6 @@ Built with multilingual support, region filters, and helper methods — ideal fo
 
 ## Installation
 
-Install the package via Composer:
-
 ```bash
 composer require enadstack/laravel-country-data
 ```
@@ -41,403 +41,496 @@ Publish the config files:
 php artisan vendor:publish --tag=country-data
 ```
 
-This copies two files into your app's `config/` directory:
-
-| File | Purpose |
-|------|---------|
-| `config/countries.php` | The full country dataset |
-| `config/country-data.php` | Package settings (source, frontend) |
-
 ---
 
-## Quick Setup
+## Geography System Setup
 
-### Step 1 — Choose your country dataset
-
-Run the interactive setup command to choose which country list to use:
+### 1. Run the interactive setup command
 
 ```bash
-php artisan country-data:configure
+php artisan country-data:setup
 ```
 
-You will be prompted to choose:
+The command will ask three things:
 
 ```
-Which country list do you want to use?
-  [0] All Countries
-  [1] Arab Countries Only
-  [2] Gulf Countries Only
-  [3] European Countries Only
+ Geography Setup
+
+ ┌ Run migrations? ──────────────────────┐
+ │ Yes                                   │
+ └───────────────────────────────────────┘
+
+ ┌ Seed geography data? ─────────────────┐
+ │ Yes                                   │
+ └───────────────────────────────────────┘
+
+ ┌ Countries to seed ────────────────────┐
+ │ > ◼ All countries (22)               │
+ │   ◻ Bahrain (BH)                     │
+ │   ◼ Jordan (JO)                      │
+ │   ◼ Saudi Arabia (SA)                │
+ │   ...                                │
+ └───────────────────────────────────────┘
 ```
 
-This updates `config/country-data.php` and copies the correct dataset into `config/countries.php`.
-
-You can also set this manually in `config/country-data.php`:
-
-```php
-return [
-    'source' => 'all', // Options: 'all', 'arab', 'gulf', 'europe'
-];
-```
-
-### Step 2 — (Optional) Publish a frontend component
+### 2. Non-interactive / CI options
 
 ```bash
-php artisan country-data:publish-component
+# Migrate only, seed later
+php artisan country-data:setup --migrate
+
+# Seed all countries without prompts
+php artisan country-data:setup --seed --all
+
+# Seed specific countries by ISO-2 code
+php artisan country-data:setup --seed --countries=JO,SA,AE
+
+# Drop tables + migrate + seed (destructive — confirms before drop)
+php artisan country-data:setup --fresh --all
 ```
 
-You will be prompted to choose:
+### What gets created
 
-```
-Which frontend type to publish?
-  [0] blade
-  [1] vue
-  [2] react
-```
+| Table | Content |
+|---|---|
+| `countries` | 22 Arab League countries with currency, dial code, timezone, geo coordinates |
+| `cities` | 136 cities across all 22 countries (Jordan: all 12 governorates) |
+| `areas` | 101 areas (Jordan fully covered — 32 Amman neighborhoods + all governorates) |
 
-Published locations:
-
-| Type | Destination |
-|------|-------------|
-| Blade | `resources/views/components/country-select.blade.php` |
-| Vue | `resources/js/components/custom/CountrySelect.vue` |
-| React | `resources/js/components/custom/CountrySelect.jsx` |
+Seeders are **idempotent** — safe to re-run, they use `updateOrInsert`.
 
 ---
 
-## Usage
-
-### Via Facade
+## Geography Facade
 
 ```php
-use Enadstack\CountryData\Facades\CountryData;
-
-CountryData::getArabCountries();
-CountryData::getByCode('SA');
+use Enadstack\CountryData\Facades\Geography;
 ```
 
-### Via Helper (config)
+### Countries
 
 ```php
-$countries = config('countries');
+// All active countries (ordered by name_en)
+Geography::countries();
+
+// Filter by tag: arab | gulf | middle-east | africa | asia …
+Geography::countries('gulf');
+
+// Single country by ISO-2 code (case-insensitive)
+$jordan = Geography::country('JO');
+$jordan->code;        // 'JO'
+$jordan->name_en;     // 'Jordan'
+$jordan->name_ar;     // 'الأردن'
+$jordan->flag;        // '🇯🇴'
+$jordan->dial;        // '+962'
+$jordan->timezones;   // ['Asia/Amman']
+$jordan->currency_code; // 'JOD'
+
+// All capital cities
+Geography::capitals();
+
+// For select dropdowns
+Geography::countriesForSelect(locale: 'en', filter: 'arab');
+// [['value' => 'JO', 'label' => 'Jordan', 'flag' => '🇯🇴', 'dial' => '+962'], ...]
 ```
 
----
-
-## Available Methods
-
-### `getArabCountries(): array`
-
-Returns all countries tagged with the `arab` filter.
+### Cities
 
 ```php
-CountryData::getArabCountries();
+// All cities for a country
+Geography::cities('JO');
+
+// Single city by country + English name
+Geography::city('JO', 'Amman');
+
+// Capital city of a country
+Geography::capital('JO');
+
+// Search cities by partial name (EN or AR), optionally scoped to a country
+Geography::searchCities('am');
+Geography::searchCities('am', 'JO');
+
+// For select dropdowns
+Geography::citiesForSelect('JO', locale: 'ar');
+// [['value' => 3, 'label' => 'عمان'], ...]
 ```
 
----
-
-### `getGulfCountries(): array`
-
-Returns the 7 Gulf Cooperation Council countries (SA, AE, KW, QA, OM, BH, IQ).
+### Areas
 
 ```php
-CountryData::getGulfCountries();
+// All areas for a city (accepts City model or int ID)
+Geography::areas($amman);
+Geography::areas(3);
+
+// Filter by type: governorate | district | neighborhood | zone
+Geography::areas($amman, 'neighborhood');
+
+// Grouped by type
+Geography::areasByType($amman);
+// Collection keyed by type: ['neighborhood' => [...], 'district' => [...]]
+
+// Search areas within a city
+Geography::searchAreas('down', $amman);
+
+// For select dropdowns
+Geography::areasForSelect($amman, locale: 'en', type: 'neighborhood');
+// [['value' => 12, 'label' => 'Downtown', 'type' => 'neighborhood'], ...]
 ```
 
----
-
-### `getByFilter(string $filter): array`
-
-Returns countries matching a given filter tag.
+### Country → Areas (HasManyThrough)
 
 ```php
-CountryData::getByFilter('muslim-majority');
-CountryData::getByFilter('middle-east');
-CountryData::getByFilter('asia');
-```
+$jordan = Country::where('code', 'JO')->first();
 
-Available filter values:
+// All areas across all of Jordan's cities
+$jordan->areas;
 
-| Filter | Description |
-|--------|-------------|
-| `arab` | Arab League countries |
-| `gulf` | Gulf Cooperation Council countries |
-| `muslim-majority` | Countries with a Muslim-majority population |
-| `middle-east` | Middle Eastern countries |
-| `asia` | Asian countries |
-| `africa` | African countries |
-| `europe` | European countries |
-| `north-america` | North American countries |
-
----
-
-### `getByCode(string $code): ?array`
-
-Returns full country data by ISO 2-letter code. Returns `null` if not found.
-
-```php
-CountryData::getByCode('JO');
-// Returns full array for Jordan
-```
-
----
-
-### `searchByName(string $name, string $locale = 'en'): ?array`
-
-Finds a country by its common or official name. Case-insensitive. Returns `null` if not found.
-
-```php
-CountryData::searchByName('Jordan');
-CountryData::searchByName('الأردن', 'ar');
-CountryData::searchByName('المملكة العربية السعودية', 'ar');
-```
-
----
-
-### `getName(string $code, string $locale = 'en'): ?string`
-
-Returns the common name of a country in the specified locale.
-
-```php
-CountryData::getName('SA');       // 'Saudi Arabia'
-CountryData::getName('SA', 'ar'); // 'السعودية'
+// Filtered
+$jordan->areas()->where('type', 'neighborhood')->get();
 ```
 
 ---
 
-### `getFlag(string $code): ?string`
+## Currency & Timezone Helpers
 
-Returns the flag emoji for a country.
+### Currency
 
 ```php
-CountryData::getFlag('JO'); // '🇯🇴'
-CountryData::getFlag('AE'); // '🇦🇪'
+$currency = Geography::currencyOf('JO');
+// Returns a CurrencyData value object
+
+$currency->code;        // 'JOD'
+$currency->nameEn;      // 'Jordanian Dinar'
+$currency->nameAr;      // 'دينار أردني'
+$currency->symbolEn;    // 'JD'
+$currency->symbolAr;    // 'د.أ'
+
+// Locale-aware display values
+$currency->name();      // 'Jordanian Dinar' (en)
+$currency->symbol();    // 'JD' (en)
+
+// Switch locale — returns a new immutable copy
+$currency->in('ar')->name();    // 'دينار أردني'
+$currency->in('ar')->symbol();  // 'د.أ'
+
+// Serialize
+$currency->toArray();
+
+// Countries sharing a currency
+Geography::countriesByCurrency('USD');
+```
+
+### Timezones
+
+```php
+// All IANA timezone identifiers for a country
+Geography::timezonesOf('JO');       // ['Asia/Amman']
+Geography::timezonesOf('AE');       // ['Asia/Dubai']
+
+// Timezone of a specific city (accepts City model or int ID)
+Geography::timezoneForCity($amman); // 'Asia/Amman'
+Geography::timezoneForCity(3);      // 'Asia/Amman'
+```
+
+### Dial Codes
+
+```php
+Geography::dialCodeOf('JO');           // '+962'
+Geography::countryByDialCode('+962');  // Country model for Jordan
+Geography::countryByDialCode('962');   // also works (without +)
+```
+
+### Continents
+
+```php
+// All distinct continent names
+Geography::continents();
+// Collection: ['Africa', 'Asia', ...]
+
+// Countries on a continent (flat collection)
+Geography::countriesByContinent('Asia');
+
+// All countries grouped by continent
+Geography::groupedByContinent();
+// Collection keyed by continent name, each value a Collection of Countries
 ```
 
 ---
 
-### `getDialCodes(bool $withFlag = false): array`
+## Geospatial Helpers
 
-Returns an array of dial codes. Pass `true` to include the flag emoji and SVG URL.
+All distance calculations use the **Haversine formula** (PHP-level, works with SQLite and all DB drivers).
 
 ```php
-CountryData::getDialCodes();
-// [['code' => 'JO', 'dial' => '+962'], ...]
+// Straight-line distance in km between two country centres
+Geography::distanceBetween('JO', 'SA'); // ~1,400.0
 
-CountryData::getDialCodes(true);
-// [['code' => 'JO', 'dial' => '+962', 'flag' => '🇯🇴', 'flag_url' => 'https://flagcdn.com/jo.svg'], ...]
+// Cities within a radius — each result has a `distance` (float, km) attribute
+$cities = Geography::citiesNear(lat: 31.9566, lng: 35.9457, radiusKm: 100, countryCode: 'JO');
+$cities->first()->distance; // e.g. 0.42
+
+// All cities of a country sorted by distance from a point
+$cities = Geography::sortCitiesByDistance(31.9566, 35.9457, 'JO');
+$cities->first()->name_en; // 'Amman'
+
+// Areas near a coordinate within a city
+$areas = Geography::areasNear(lat: 31.9566, lng: 35.9457, city: $amman, radiusKm: 10);
+$areas->first()->distance; // km from the given point
 ```
 
 ---
 
-### `getSelectOptions(string $locale = 'en'): array`
-
-Returns a formatted array suitable for `<select>` dropdowns or frontend components.
+## Validation Rules
 
 ```php
-CountryData::getSelectOptions();
-// [['label' => 'Jordan', 'value' => 'JO'], ...]
+use Enadstack\CountryData\Rules\ValidCountryCode;
+use Enadstack\CountryData\Rules\ValidCityForCountry;
+use Enadstack\CountryData\Rules\ValidAreaForCity;
 
-CountryData::getSelectOptions('ar');
-// [['label' => 'الأردن', 'value' => 'JO'], ...]
+$request->validate([
+    // Must be an active ISO-2 country code
+    'country_code' => ['required', new ValidCountryCode()],
+
+    // Scoped to a filter (arab, gulf, etc.)
+    'country_code' => ['required', new ValidCountryCode(filter: 'arab')],
+
+    // City must exist and belong to the given country
+    'city_id' => ['required', new ValidCityForCountry($request->country_code)],
+
+    // Area must exist and belong to the given city
+    'area_id' => ['required', new ValidAreaForCity($request->city_id)],
+
+    // Area must also be of a specific type
+    'area_id' => ['required', new ValidAreaForCity($request->city_id, type: 'neighborhood')],
+]);
 ```
 
 ---
 
-## Country Data Structure
+## Livewire Cascading Dropdown
 
-Each country in `config/countries.php` has the following shape:
+Requires **Livewire 3**. The component is auto-registered when Livewire is installed.
 
-```php
-[
-    'code'        => 'JO',
-    'iso2'        => 'JO',
-    'iso3'        => 'JOR',
-    'numericCode' => '400',
-    'cca2'        => 'JO',
-    'ccn3'        => '400',
-    'cioc'        => 'JOR',
-    'flag'        => '🇯🇴',
-    'emoji'       => '🇯🇴',
-
-    'names' => [
-        'common'   => ['en' => 'Jordan',  'ar' => 'الأردن'],
-        'official' => ['en' => 'Hashemite Kingdom of Jordan', 'ar' => 'المملكة الأردنية الهاشمية'],
-    ],
-
-    'flags' => [
-        'png' => 'https://flagcdn.com/w320/jo.png',
-        'svg' => 'https://flagcdn.com/jo.svg',
-    ],
-
-    'coatOfArms' => [
-        'png' => '...',
-        'svg' => '...',
-    ],
-
-    'maps' => [
-        'googleMaps'     => 'https://goo.gl/maps/...',
-        'openStreetMaps' => 'https://www.openstreetmap.org/...',
-    ],
-
-    'currency' => [
-        'code'   => 'JOD',
-        'name'   => ['en' => 'Jordanian dinar',  'ar' => 'دينار أردني'],
-        'symbol' => ['en' => 'JD', 'ar' => 'د.أ'],
-    ],
-
-    'dial'      => '+962',
-    'capital'   => 'Amman',
-    'region'    => 'Asia',
-    'continent' => 'Asia',
-    'subregion' => 'Western Asia',
-
-    'languages' => ['ara'],
-    'timezones' => ['Asia/Amman'],
-    'tld'       => ['.jo'],
-    'borders'   => ['IRQ', 'ISR', 'PSE', 'SAU', 'SYR'],
-
-    'geo' => [
-        'latitude'  => 31.0,
-        'longitude' => 36.0,
-    ],
-
-    'population' => 10203140,
-    'area'       => 89342.0,
-
-    'filters' => ['arab', 'muslim-majority', 'middle-east', 'asia'],
-]
-```
-
----
-
-## Frontend Components
-
-### Blade
-
-After publishing with `php artisan country-data:publish-component`, use the component in your views:
+### Basic usage
 
 ```blade
-<x-country-select
-    id="country"
-    name="country"
-    label="Select Country"
-    :countries="CountryData::getSelectOptions('en')"
-    :preferred="['JO', 'SA', 'AE']"
-    :rtl="false"
-    :withFlag="true"
-/>
+<livewire:geography-select />
 ```
 
-For a dial code + phone number input:
+### With options
 
 ```blade
-<x-phone-code-select
-    id="phone"
-    label="Phone Number"
-    :countries="CountryData::getDialCodes(true)"
-    codeName="dial_code"
-    inputName="phone"
-    :withFlag="true"
+<livewire:geography-select
+    locale="ar"
+    filter="gulf"
+    :show-areas="true"
+    :required="true"
+    country-field="country_code"
+    city-field="city_id"
+    area-field="area_id"
 />
 ```
 
----
+### Props
 
-### Vue 3
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `locale` | `string` | `'en'` | Display language (`en` or `ar`) |
+| `filter` | `?string` | `null` | Country filter tag (e.g. `arab`, `gulf`) |
+| `showAreas` | `bool` | `false` | Show the third area dropdown |
+| `required` | `bool` | `false` | Mark all selects as required |
+| `countryField` | `string` | `'country_code'` | Hidden input name for country |
+| `cityField` | `string` | `'city_id'` | Hidden input name for city |
+| `areaField` | `string` | `'area_id'` | Hidden input name for area |
 
-```vue
-<script setup>
-import CountrySelect from '@/components/custom/CountrySelect.vue'
+### Events emitted
 
-const countries = // fetch from your Laravel API or pass via props
-</script>
+| Event | Payload |
+|---|---|
+| `country-selected` | `['code' => 'JO']` |
+| `city-selected` | `['id' => 3]` |
+| `area-selected` | `['id' => 12]` |
 
-<template>
-  <CountrySelect
-    :countries="countries"
-    v-model="selectedCountry"
-    label="Select Country"
-    placeholder="Search..."
-    :preferred="['JO', 'SA', 'AE']"
-    :withFlag="true"
-    :rtl="false"
-  />
-</template>
+### Publish the view to customise
+
+```bash
+php artisan vendor:publish --tag=country-data-livewire
 ```
 
-For the phone input:
-
-```vue
-<PhoneCodeSelect
-  :countries="countries"
-  label="Phone Number"
-  :withFlag="true"
-  @input="val => form.phone = val"
-/>
-```
-
-The `@input` event emits `{ dial: '+962', number: '791234567' }`.
+Published to: `resources/views/vendor/country-data/livewire/geography-select.blade.php`
 
 ---
 
-### React
+## REST API
 
-```jsx
-import CountrySelect from '@/components/custom/CountrySelect'
+The API is **disabled by default**. Enable it in `.env`:
 
-function MyForm() {
-  return (
-    <CountrySelect
-      countries={countries}
-      value={selectedCountry}
-      onChange={(country) => setSelectedCountry(country)}
-      label="Select Country"
-      placeholder="Search..."
-      preferred={['JO', 'SA', 'AE']}
-      withFlag={true}
-      rtl={false}
-    />
-  )
+```env
+COUNTRY_DATA_API=true
+COUNTRY_DATA_API_PREFIX=api/geography   # default
+```
+
+Or in `config/country-data.php`:
+
+```php
+'api' => [
+    'enabled'    => true,
+    'prefix'     => 'api/geography',
+    'middleware' => ['api'],
+],
+```
+
+### Endpoints
+
+#### Countries
+
+| Method | URL | Description |
+|---|---|---|
+| GET | `/api/geography/countries` | All countries (`?filter=gulf&locale=ar`) |
+| GET | `/api/geography/countries/{code}` | Single country by ISO-2 code |
+| GET | `/api/geography/countries/{code}/cities` | Cities for a country |
+
+#### Cities & Areas
+
+| Method | URL | Description |
+|---|---|---|
+| GET | `/api/geography/cities/{id}` | Single city by ID |
+| GET | `/api/geography/cities/{id}/areas` | Areas for a city (`?type=neighborhood`) |
+
+#### Currency & Continents
+
+| Method | URL | Description |
+|---|---|---|
+| GET | `/api/geography/currencies` | All unique currencies (`?locale=ar`) |
+| GET | `/api/geography/currencies/{code}/countries` | Countries using a currency |
+| GET | `/api/geography/continents` | All distinct continents |
+| GET | `/api/geography/continents/{name}/countries` | Countries on a continent |
+
+#### Geospatial
+
+| Method | URL | Description |
+|---|---|---|
+| GET | `/api/geography/near/cities` | Cities near a coordinate (`?lat=&lng=&radius=&country=`) |
+
+#### Search
+
+| Method | URL | Description |
+|---|---|---|
+| GET | `/api/geography/search/cities` | Search cities (`?q=amman&country=JO`) |
+| GET | `/api/geography/search/areas` | Search areas (`?q=down&city_id=3`) |
+
+### Response shape
+
+```json
+{
+    "data": [ { "code": "JO", "name": "Jordan", "name_en": "Jordan", "name_ar": "الأردن", ... } ],
+    "meta": { "total": 1 }
 }
 ```
 
-For the phone input:
+---
 
-```jsx
-<PhoneCodeSelect
-  countries={countries}
-  label="Phone Number"
-  withFlag={true}
-  onChange={({ dial, number }) => setPhone({ dial, number })}
-/>
+## Artisan Commands
+
+| Command | Description |
+|---|---|
+| `php artisan country-data:setup` | Interactive migrate + selective seed |
+| `php artisan country-data:setup --migrate` | Run migrations only |
+| `php artisan country-data:setup --seed --all` | Seed all countries without prompting |
+| `php artisan country-data:setup --seed --countries=JO,SA` | Seed specific countries |
+| `php artisan country-data:setup --fresh --all` | Drop tables, migrate, seed all |
+| `php artisan country-data:cache-clear` | Flush all geography cache entries |
+| `php artisan country-data:stats` | Display seeded counts, cache status |
+| `php artisan country-data:configure` | Choose config-based country dataset |
+| `php artisan country-data:publish-component` | Publish Blade/Vue/React frontend component |
+
+### `country-data:stats` output
+
+```
+ Geography Data Statistics
+
+  Countries (active / total) ............. 22 / 22
+  Cities    (active / total) ............. 136 / 136
+  Capital cities ........................... 22
+  Areas   (active / total) ............... 101 / 101
+
+  Countries by continent:
+    Africa .................................. 5
+    Asia ................................... 17
+
+  Areas by type:
+    neighborhood ........................... 82
+    zone ................................... 16
+    district ................................ 3
+
+  Top cities by area count:
+    Amman (JO) ...................... 32 areas
+    Riyadh (SA) ..................... 12 areas
+
+  Cache:
+    Enabled ............................. yes
+    Driver .............................. file
+    TTL ........................ 86400s (24:00:00)
+    Tracked keys ......................... 14
 ```
 
 ---
 
-## Artisan Commands Reference
+## Cache Configuration
 
-| Command | Description |
-|---------|-------------|
-| `php artisan country-data:configure` | Interactively select a country data source |
-| `php artisan country-data:publish-component` | Publish a frontend component (Blade, Vue, React) |
+```php
+// config/country-data.php
+'cache' => [
+    'enabled' => true,
+    'ttl'     => 86400,      // seconds (24 h)
+    'prefix'  => 'geography',
+],
+```
+
+Flush manually:
+
+```php
+Geography::flush();
+```
+
+Or via artisan:
+
+```bash
+php artisan country-data:cache-clear
+```
+
+The cache is also flushed automatically after seeding.
 
 ---
 
 ## Config Reference
 
-### `config/country-data.php`
-
 ```php
+// config/country-data.php
 return [
-    // Which dataset to load: 'all', 'arab', 'gulf', 'europe'
-    'source' => 'all',
+    // Config-based country dataset (used by CountryData facade)
+    'source' => 'all', // 'all' | 'arab' | 'gulf' | 'europe'
+
+    'cache' => [
+        'enabled' => env('COUNTRY_DATA_CACHE', true),
+        'ttl'     => env('COUNTRY_DATA_CACHE_TTL', 86400),
+        'prefix'  => 'geography',
+    ],
+
+    'api' => [
+        'enabled'    => env('COUNTRY_DATA_API', false),
+        'prefix'     => env('COUNTRY_DATA_API_PREFIX', 'api/geography'),
+        'middleware' => ['api'],
+    ],
+
+    'livewire' => [
+        'register'    => true,
+        'locale'      => 'en',
+        'show_areas'  => false,
+    ],
 
     'frontend' => [
-        // Which frontend type is in use: 'none', 'blade', 'vue', 'react'
-        'component' => 'none',
-
-        // Whether to publish frontend component files
+        'component'          => 'none', // 'none' | 'blade' | 'vue' | 'react'
         'publish_components' => true,
     ],
 ];
@@ -445,48 +538,95 @@ return [
 
 ---
 
-## Performance
+## Config-Based Facade (v1 — still available)
 
-This package uses Laravel's config system, which means:
+For lightweight use without a database, the original `CountryData` facade works from config:
 
-- All country data is loaded once per request
-- You can cache it with `php artisan config:cache` for zero-overhead lookups
-- No database queries are made
+```php
+use Enadstack\CountryData\Facades\CountryData;
+
+CountryData::getArabCountries();
+CountryData::getGulfCountries();
+CountryData::getByCode('JO');
+CountryData::getByFilter('muslim-majority');
+CountryData::searchByName('Jordan');
+CountryData::searchByName('الأردن', 'ar');
+CountryData::getName('SA', 'ar');       // 'المملكة العربية السعودية'
+CountryData::getFlag('JO');             // '🇯🇴'
+CountryData::getDialCodes(withFlag: true);
+CountryData::getSelectOptions('ar');
+```
 
 ---
 
 ## File Structure
 
 ```
-config/
-├── countries.php               # Published country dataset (active)
-├── country-data.php            # Package settings
-└── source/
-    ├── countries-all.php       # All countries (44+)
-    ├── countries-arab.php      # Arab countries only
-    ├── countries-gulf.php      # Gulf countries only (7)
-    └── countries-europe.php    # European countries (coming soon)
-
-src/
-├── CountryData.php             # Core class with all static methods
-├── CountryDataServiceProvider.php
-├── Facades/
-│   └── CountryData.php         # Laravel Facade
-├── Commands/
-│   ├── ConfigureCountryData.php
-│   └── PublishFrontendComponent.php
-└── resources/
-    ├── views/components/
-    │   ├── country-select.blade.php
-    │   └── phone-code-select.blade.php
-    └── js/
-        ├── vue/
-        │   ├── CountrySelect.vue
-        │   └── PhoneCodeSelect.vue
-        └── react/
-            ├── CountrySelect.jsx
-            └── PhoneCodeSelect.jsx
+laravel-country-data/
+├── config/
+│   ├── countries.php           # Config-based country dataset
+│   └── country-data.php        # Package settings
+│
+├── data/
+│   ├── countries.json          # 22 Arab countries (source for DB seeder)
+│   ├── cities.json             # 136 cities
+│   └── areas.json              # 101 areas
+│
+├── database/
+│   ├── migrations/
+│   │   ├── ..._create_countries_table.php
+│   │   ├── ..._create_cities_table.php
+│   │   └── ..._create_areas_table.php
+│   └── Seeders/
+│       ├── GeographySeeder.php
+│       ├── CountrySeeder.php
+│       ├── CitySeeder.php
+│       └── AreaSeeder.php
+│
+├── routes/
+│   └── api.php
+│
+└── src/
+    ├── Commands/
+    │   ├── GeographySetup.php
+    │   ├── CacheClear.php
+    │   ├── Stats.php
+    │   ├── ConfigureCountryData.php
+    │   └── PublishFrontendComponent.php
+    ├── Data/
+    │   └── CurrencyData.php
+    ├── Facades/
+    │   ├── Geography.php
+    │   └── CountryData.php
+    ├── Http/Controllers/
+    │   └── GeographyController.php
+    ├── Livewire/
+    │   └── GeographySelect.php
+    ├── Models/
+    │   ├── Country.php
+    │   ├── City.php
+    │   └── Area.php
+    ├── Rules/
+    │   ├── ValidCountryCode.php
+    │   ├── ValidCityForCountry.php
+    │   └── ValidAreaForCity.php
+    ├── Services/
+    │   └── GeographyService.php
+    └── resources/views/livewire/
+        └── geography-select.blade.php
 ```
+
+---
+
+## Testing
+
+```bash
+composer test              # all tests
+composer test:unit         # unit tests only
+composer test:feature      # feature tests only
+```
+
+The test suite runs on an **SQLite in-memory** database — no external DB needed.
 
 ---
 

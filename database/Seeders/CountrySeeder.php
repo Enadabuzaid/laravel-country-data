@@ -7,6 +7,14 @@ use Illuminate\Support\Facades\DB;
 
 class CountrySeeder extends Seeder
 {
+    /**
+     * Optional country code filter (ISO-2 uppercase).
+     * Empty array = seed all countries.
+     *
+     * @var string[]
+     */
+    public array $countryCodes = [];
+
     public function run(): void
     {
         $path = __DIR__ . '/../../data/countries.json';
@@ -21,6 +29,13 @@ class CountrySeeder extends Seeder
         if (json_last_error() !== JSON_ERROR_NONE) {
             $this->command->error('Failed to parse countries.json: ' . json_last_error_msg());
             return;
+        }
+
+        // Filter to selected countries when a subset was requested
+        if (! empty($this->countryCodes)) {
+            $codes      = array_map('strtoupper', $this->countryCodes);
+            $countries  = array_filter($countries, fn ($c) => in_array(strtoupper($c['code']), $codes, true));
+            $countries  = array_values($countries);
         }
 
         $this->command->info('Seeding countries…');
