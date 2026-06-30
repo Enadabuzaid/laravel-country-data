@@ -2,10 +2,13 @@
 
 namespace Enadstack\CountryData\Commands;
 
-use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Schema;
 use Enadstack\CountryData\Database\Seeders\GeographySeeder;
 use Enadstack\CountryData\Services\GeographyService;
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Schema;
+
+use function Laravel\Prompts\multiselect;
 
 class GeographySetup extends Command
 {
@@ -13,6 +16,7 @@ class GeographySetup extends Command
                             {--migrate       : Run migrations only (skip seed prompt)}
                             {--seed          : Run seeders only (skip migrate)}
                             {--all           : Seed all countries without prompting}
+                            {--source=       : Seed countries from a configured source file (all, arab, gulf, europe)}
                             {--countries=    : Comma-separated ISO-2 codes to seed (e.g. JO,SA,AE)}
                             {--fresh         : Drop and re-create geography tables before migrating}';
 
@@ -24,14 +28,15 @@ class GeographySetup extends Command
         $this->components->info('Geography Setup');
         $this->newLine();
 
-        $migrateOnly  = $this->option('migrate');
-        $seedOnly     = $this->option('seed');
-        $seedAll      = $this->option('all');
-        $codesOption  = $this->option('countries');
-        $fresh        = $this->option('fresh');
+        $migrateOnly = $this->option('migrate');
+        $seedOnly = $this->option('seed');
+        $seedAll = $this->option('all');
+        $sourceOption = $this->option('source');
+        $codesOption = $this->option('countries');
+        $fresh = $this->option('fresh');
 
         $runMigrate = ! $seedOnly;
-        $runSeed    = ! $migrateOnly;
+        $runSeed = ! $migrateOnly;
 
         // ── Step 1: Migrations ────────────────────────────────────────────────
 
@@ -45,6 +50,7 @@ class GeographySetup extends Command
                         false
                     )) {
                         $this->components->warn('Aborted.');
+
                         return self::FAILURE;
                     }
 
@@ -57,7 +63,7 @@ class GeographySetup extends Command
 
                 $this->components->task('Running migrations', function () {
                     $this->call('migrate', [
-                        '--path'  => 'vendor/enadstack/laravel-country-data/database/migrations',
+                        '--path' => 'vendor/enadstack/laravel-country-data/database/migrations',
                         '--force' => true,
                     ]);
                 });
@@ -70,6 +76,7 @@ class GeographySetup extends Command
 
         if (! $runSeed) {
             $this->components->info('Migrations complete. Skipping seeder (--migrate flag used).');
+
             return self::SUCCESS;
         }
 
@@ -77,16 +84,18 @@ class GeographySetup extends Command
 
         if (! $shouldSeed) {
             $this->components->info('Skipped seeding. Run <fg=yellow>country-data:setup --seed</> any time to seed later.');
+
             return self::SUCCESS;
         }
 
         // ── Step 3: Country selection ─────────────────────────────────────────
 
-        $selectedCodes = $this->resolveCountryCodes($codesOption, $seedAll);
+        $selectedCodes = $this->resolveCountryCodes($codesOption, $seedAll, $sourceOption);
 
         if ($selectedCodes === null) {
             // User cancelled the selection
             $this->components->warn('No countries selected. Seeding skipped.');
+
             return self::SUCCESS;
         }
 
@@ -94,13 +103,13 @@ class GeographySetup extends Command
 
         $label = empty($selectedCodes)
             ? 'all countries'
-            : implode(', ', $selectedCodes) . ' (' . count($selectedCodes) . ')';
+            : implode(', ', $selectedCodes).' ('.count($selectedCodes).')';
 
         $this->newLine();
         $this->components->info("Seeding: {$label}");
         $this->newLine();
 
-        $seeder = new GeographySeeder();
+        $seeder = new GeographySeeder;
         $seeder->countryCodes = $selectedCodes;
         $seeder->setCommand($this);
         app()->call([$seeder, 'run']);
@@ -121,7 +130,7 @@ class GeographySetup extends Command
      *   ['JO',…]  — seed the listed subset
      *   null      — user cancelled / nothing chosen
      */
-    private function resolveCountryCodes(?string $codesOption, bool $seedAll): ?array
+    private function resolveCountryCodes(?string $codesOption, bool $seedAll, ?string $sourceOption): ?array
     {
         // --all flag or no filtering needed
         if ($seedAll) {
@@ -131,7 +140,12 @@ class GeographySetup extends Command
         // --countries=JO,SA,AE passed on the CLI (non-interactive)
         if ($codesOption !== null) {
             $codes = array_filter(array_map('trim', explode(',', $codesOption)));
+
             return array_values(array_map('strtoupper', $codes));
+        }
+
+        if ($sourceOption !== null) {
+            return $this->loadCountryCodesFromSource($sourceOption);
         }
 
         // Interactive multiselect
@@ -139,6 +153,7 @@ class GeographySetup extends Command
 
         if (empty($available)) {
             $this->components->warn('Could not load countries.json — seeding all countries.');
+
             return [];
         }
 
@@ -148,10 +163,10 @@ class GeographySetup extends Command
         $this->newLine();
 
         // Build choice list: "All countries" first, then each country
-        $allLabel = 'All countries (' . count($available) . ')';
-        $choices  = array_merge([$allLabel], array_values($available));
+        $allLabel = 'All countries ('.count($available).')';
+        $choices = array_merge([$allLabel], array_values($available));
 
-        $selected = $this->multiselect(
+        $selected = multiselect(
             label  : 'Countries to seed',
             options: $choices,
             hint   : 'Space to toggle, Enter to confirm',
@@ -175,13 +190,43 @@ class GeographySetup extends Command
     }
 
     /**
+     * @return string[]|null
+     */
+    private function loadCountryCodesFromSource(string $source): ?array
+    {
+        $source = strtolower(trim($source));
+        $path = __DIR__.'/../../config/source/countries-'.$source.'.php';
+
+        if (! File::exists($path)) {
+            $this->components->error("Country source [{$source}] does not exist.");
+
+            return null;
+        }
+
+        $countries = require $path;
+
+        if (! is_array($countries)) {
+            $this->components->error("Country source [{$source}] is invalid.");
+
+            return null;
+        }
+
+        return array_values(array_unique(array_filter(array_map(
+            fn (array $country): ?string => isset($country['code'])
+                ? strtoupper((string) $country['code'])
+                : null,
+            $countries,
+        ))));
+    }
+
+    /**
      * Load country choices from the JSON data file.
      *
      * Returns array keyed by ISO-2 code: ['JO' => 'Jordan (JO)', 'SA' => 'Saudi Arabia (SA)', …]
      */
     private function loadCountryChoices(): array
     {
-        $path = __DIR__ . '/../../data/countries.json';
+        $path = __DIR__.'/../../data/countries.json';
 
         if (! file_exists($path)) {
             return [];
@@ -196,8 +241,8 @@ class GeographySetup extends Command
         $choices = [];
 
         foreach ($countries as $c) {
-            $code          = strtoupper($c['code']);
-            $name          = $c['names']['common']['en'] ?? $code;
+            $code = strtoupper($c['code']);
+            $name = $c['names']['common']['en'] ?? $code;
             $choices[$code] = "{$name} ({$code})";
         }
 

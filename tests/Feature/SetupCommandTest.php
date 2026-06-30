@@ -2,10 +2,10 @@
 
 namespace Enadstack\CountryData\Tests\Feature;
 
-use Enadstack\CountryData\Tests\TestCase;
+use Enadstack\CountryData\Models\Area;
 use Enadstack\CountryData\Models\City;
 use Enadstack\CountryData\Models\Country;
-use Enadstack\CountryData\Models\Area;
+use Enadstack\CountryData\Tests\TestCase;
 
 class SetupCommandTest extends TestCase
 {
@@ -31,12 +31,29 @@ class SetupCommandTest extends TestCase
         $this->assertGreaterThan(0, City::count());
     }
 
+    public function test_source_option_seeds_arab_countries_non_interactively(): void
+    {
+        $this->artisan('country-data:setup', ['--seed' => true, '--source' => 'arab'])
+            ->assertExitCode(0);
+
+        $this->assertSame(22, Country::count());
+        $this->assertSame(
+            ['AE', 'BH', 'DJ', 'DZ', 'EG', 'IQ', 'JO', 'KM', 'KW', 'LB', 'LY', 'MA', 'MR', 'OM', 'PS', 'QA', 'SA', 'SD', 'SO', 'SY', 'TN', 'YE'],
+            Country::pluck('code')->sort()->values()->all(),
+        );
+
+        City::all()->each(fn (City $city) => $this->assertContains(
+            $city->country_code,
+            Country::pluck('code')->all(),
+        ));
+    }
+
     // ── --countries= option ───────────────────────────────────────────────────
 
     public function test_countries_option_seeds_only_specified_codes(): void
     {
         $this->artisan('country-data:setup', [
-            '--seed'      => true,
+            '--seed' => true,
             '--countries' => 'JO,SA',
         ])->assertExitCode(0);
 
@@ -49,7 +66,7 @@ class SetupCommandTest extends TestCase
     public function test_countries_option_seeds_cities_only_for_selected(): void
     {
         $this->artisan('country-data:setup', [
-            '--seed'      => true,
+            '--seed' => true,
             '--countries' => 'JO',
         ])->assertExitCode(0);
 
@@ -61,7 +78,7 @@ class SetupCommandTest extends TestCase
     public function test_countries_option_is_case_insensitive(): void
     {
         $this->artisan('country-data:setup', [
-            '--seed'      => true,
+            '--seed' => true,
             '--countries' => 'jo,ae',
         ])->assertExitCode(0);
 
@@ -73,7 +90,7 @@ class SetupCommandTest extends TestCase
     public function test_countries_option_accepts_single_country(): void
     {
         $this->artisan('country-data:setup', [
-            '--seed'      => true,
+            '--seed' => true,
             '--countries' => 'AE',
         ])->assertExitCode(0);
 
@@ -84,7 +101,7 @@ class SetupCommandTest extends TestCase
     public function test_areas_are_scoped_to_selected_countries(): void
     {
         $this->artisan('country-data:setup', [
-            '--seed'      => true,
+            '--seed' => true,
             '--countries' => 'JO',
         ])->assertExitCode(0);
 
