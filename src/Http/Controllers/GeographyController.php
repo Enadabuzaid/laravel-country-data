@@ -357,11 +357,54 @@ class GeographyController extends Controller
         ];
     }
 
+    public function cityAreaTree(Request $request, int $id): JsonResponse
+    {
+        $city = City::active()->find($id);
+
+        if (! $city) {
+            return $this->notFound('City');
+        }
+
+        $locale = $request->query('locale', 'en');
+        $roots  = $this->geo->areaTree($city, $request->query('type'));
+
+        return response()->json([
+            'data' => $roots->map(fn (Area $a) => $this->areaArray($a, $locale) + [
+                'children' => $a->children->map(fn (Area $c) => $this->areaArray($c, $locale))->values(),
+            ]),
+            'meta' => [
+                'total'   => $roots->count(),
+                'city_id' => $id,
+            ],
+        ]);
+    }
+
+    public function areaChildren(Request $request, int $id): JsonResponse
+    {
+        $area = Area::active()->find($id);
+
+        if (! $area) {
+            return $this->notFound('Area');
+        }
+
+        $locale   = $request->query('locale', 'en');
+        $children = $this->geo->areaChildren($area);
+
+        return response()->json([
+            'data' => $children->map(fn (Area $a) => $this->areaArray($a, $locale)),
+            'meta' => [
+                'total'   => $children->count(),
+                'area_id' => $id,
+            ],
+        ]);
+    }
+
     private function areaArray(Area $a, string $locale): array
     {
         return [
             'id'          => $a->id,
             'city_id'     => $a->city_id,
+            'parent_id'   => $a->parent_id,
             'name'        => $locale === 'ar' ? ($a->name_ar ?? $a->name_en) : $a->name_en,
             'name_en'     => $a->name_en,
             'name_ar'     => $a->name_ar,

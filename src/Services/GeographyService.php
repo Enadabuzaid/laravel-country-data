@@ -113,6 +113,53 @@ class GeographyService
         return $this->areas($city)->groupBy('type');
     }
 
+    /**
+     * The two-level tree for a city: root areas with their active children
+     * eager-loaded. Cities with flat data return every area as a root.
+     */
+    public function areaTree(City|int $city, ?string $type = null): Collection
+    {
+        $cityId = $city instanceof City ? $city->id : $city;
+
+        return $this->remember("areas.tree.{$cityId}.{$type}", fn () =>
+            Area::active()
+                ->where('city_id', $cityId)
+                ->roots()
+                ->when($type, fn ($q) => $q->ofType($type))
+                ->with(['children' => fn ($q) => $q->where('is_active', true)->orderBy('name_en')])
+                ->orderBy('name_en')
+                ->get()
+        );
+    }
+
+    /** Direct children of one area */
+    public function areaChildren(Area|int $area): Collection
+    {
+        $areaId = $area instanceof Area ? $area->id : $area;
+
+        return $this->remember("areas.children.{$areaId}", fn () =>
+            Area::active()
+                ->where('parent_id', $areaId)
+                ->orderBy('name_en')
+                ->get()
+        );
+    }
+
+    /** Root areas of a city (districts, zones, anything unparented) */
+    public function areaRoots(City|int $city, ?string $type = null): Collection
+    {
+        $cityId = $city instanceof City ? $city->id : $city;
+
+        return $this->remember("areas.roots.{$cityId}.{$type}", fn () =>
+            Area::active()
+                ->where('city_id', $cityId)
+                ->roots()
+                ->when($type, fn ($q) => $q->ofType($type))
+                ->orderBy('name_en')
+                ->get()
+        );
+    }
+
     // ── Search (not cached — dynamic input) ──────────────────────────────────
 
     /** Search cities by partial name (en or ar) within optional country */
@@ -183,6 +230,54 @@ class GeographyService
                 'type'  => $a->type,
             ])
         );
+    }
+
+    /**
+     * Areas as optgroups, one group per root area:
+     *   [['label' => 'Zahran', 'value' => 12, 'options' => [['value'=>…,'label'=>…,'type'=>…], …]], …]
+     *
+     * Areas with no parent and no children are returned in a final ungrouped
+     * bucket with a null label, so flat cities still render correctly.
+     */
+    public function areasForSelectGrouped(City|int $city, string $locale = 'en'): Collection
+    {
+        $cityId = $city instanceof City ? $city->id : $city;
+
+        return $this->remember("select.areas.grouped.{$cityId}.{$locale}", function () use ($cityId, $locale) {
+            $label = fn (Area $a) => $locale === 'ar' ? ($a->name_ar ?? $a->name_en) : $a->name_en;
+
+            $groups   = collect();
+            $ungrouped = collect();
+
+            foreach ($this->areaTree($cityId) as $root) {
+                if ($root->children->isEmpty()) {
+                    $ungrouped->push([
+                        'value' => $root->id,
+                        'label' => $label($root),
+                        'type'  => $root->type,
+                    ]);
+
+                    continue;
+                }
+
+                $groups->push([
+                    'label'   => $label($root),
+                    'value'   => $root->id,
+                    'type'    => $root->type,
+                    'options' => $root->children->map(fn (Area $c) => [
+                        'value' => $c->id,
+                        'label' => $label($c),
+                        'type'  => $c->type,
+                    ])->values(),
+                ]);
+            }
+
+            if ($ungrouped->isNotEmpty()) {
+                $groups->push(['label' => null, 'value' => null, 'type' => null, 'options' => $ungrouped]);
+            }
+
+            return $groups;
+        });
     }
 
     // ── Currency ─────────────────────────────────────────────────────────────

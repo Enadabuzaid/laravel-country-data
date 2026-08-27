@@ -1,7 +1,7 @@
 {
     "name": "enadstack/laravel-country-data",
     "description": "Laravel package for country information (config-based, reusable, and localized)",
-    "version": "2.0.2",
+    "version": "2.1.0",
     "type": "library",
     "license": "MIT",
     "authors": [

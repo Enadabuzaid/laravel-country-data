@@ -95,7 +95,7 @@ php artisan country-data:setup --fresh --all
 |---|---|
 | `countries` | 22 Arab League countries with currency, dial code, timezone, geo coordinates |
 | `cities` | 136 cities across all 22 countries (Jordan: all 12 governorates) |
-| `areas` | 101 areas (Jordan fully covered — 32 Amman neighborhoods + all governorates) |
+| `areas` | 276 areas. Amman is fully covered and **two-level**: 27 Greater Amman Municipality districts, each with its neighborhoods and major streets (207 Amman rows). Other cities remain flat. |
 
 Seeders are **idempotent** — safe to re-run, they use `updateOrInsert`.
 
@@ -176,6 +176,58 @@ Geography::searchAreas('down', $amman);
 Geography::areasForSelect($amman, locale: 'en', type: 'neighborhood');
 // [['value' => 12, 'label' => 'Downtown', 'type' => 'neighborhood'], ...]
 ```
+
+### Area hierarchy
+
+Areas are a **two-level tree**. A root has `parent_id = null` (a district, a zone,
+or any area in a city that has not been broken down yet); a child points at its
+district. Amman is the first city modelled this way — every other city's areas are
+roots, exactly as before.
+
+```php
+// Roots with their children eager-loaded
+$tree = Geography::areaTree($amman);
+
+foreach ($tree as $district) {
+    echo $district->name_en;              // 'Zahran'
+    foreach ($district->children as $a) {
+        echo '  '.$a->name_en;            // 'Abdoun', 'Sweifieh', …
+    }
+}
+
+// Roots only (e.g. to populate a district dropdown)
+Geography::areaRoots($amman, 'district');
+
+// Children of one district
+Geography::areaChildren($districtId);
+
+// Grouped for an <optgroup> select
+Geography::areasForSelectGrouped($amman, locale: 'ar');
+```
+
+On the model:
+
+```php
+$area->parent;                 // the district, or null for a root
+$area->children;               // neighborhoods + streets under a district
+
+Area::roots()->get();          // parent_id IS NULL
+Area::nested()->get();         // parent_id IS NOT NULL
+Area::districts()->get();      // type = district
+```
+
+**Area types:** `governorate`, `district`, `neighborhood`, `zone`, and `street`.
+`street` is used for major named streets (شارع المدينة المنورة, شارع مكة) — in
+Jordanian addresses people locate themselves by street as readily as by
+neighborhood, so these are selectable areas. A street is a line rather than a
+polygon, so its `parent_id` is the district holding most of its length.
+
+> Amman's districts and localities are derived from OpenStreetMap (Amman
+> Governorate, retrieved 2026-08-27). Neighborhoods are assigned to the district
+> whose centre they are nearest, with well-known assignments pinned explicitly;
+> a handful near district boundaries may warrant correction.
+
+---
 
 ### Country → Areas (HasManyThrough)
 
@@ -396,6 +448,8 @@ Or in `config/country-data.php`:
 |---|---|---|
 | GET | `/api/geography/cities/{id}` | Single city by ID |
 | GET | `/api/geography/cities/{id}/areas` | Areas for a city (`?type=neighborhood`) |
+| GET | `/api/geography/cities/{id}/areas/tree` | Districts for a city with their children nested |
+| GET | `/api/geography/areas/{id}/children` | Areas belonging to one district |
 
 #### Currency & Continents
 
@@ -452,7 +506,7 @@ Or in `config/country-data.php`:
   Countries (active / total) ............. 22 / 22
   Cities    (active / total) ............. 136 / 136
   Capital cities ........................... 22
-  Areas   (active / total) ............... 101 / 101
+  Areas   (active / total) ............... 276 / 276
 
   Countries by continent:
     Africa .................................. 5
@@ -464,7 +518,7 @@ Or in `config/country-data.php`:
     district ................................ 3
 
   Top cities by area count:
-    Amman (JO) ...................... 32 areas
+    Amman (JO) ...................... 207 areas
     Riyadh (SA) ..................... 12 areas
 
   Cache:
@@ -570,13 +624,14 @@ laravel-country-data/
 ├── data/
 │   ├── countries.json          # 22 Arab countries (source for DB seeder)
 │   ├── cities.json             # 136 cities
-│   └── areas.json              # 101 areas
+│   └── areas.json              # 276 areas
 │
 ├── database/
 │   ├── migrations/
 │   │   ├── ..._create_countries_table.php
 │   │   ├── ..._create_cities_table.php
-│   │   └── ..._create_areas_table.php
+│   │   ├── ..._create_areas_table.php
+│   │   └── ..._add_parent_id_to_areas_table.php
 │   └── Seeders/
 │       ├── GeographySeeder.php
 │       ├── CountrySeeder.php

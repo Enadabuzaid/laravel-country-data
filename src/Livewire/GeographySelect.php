@@ -143,6 +143,21 @@ class GeographySelect extends Component
         return app(GeographyService::class)->areasForSelect($this->selectedCity, $this->locale);
     }
 
+    /**
+     * The same areas grouped under their district, for <optgroup> rendering.
+     * Cities with flat data yield a single null-labelled group, which the view
+     * renders exactly like the old flat list.
+     */
+    #[Computed]
+    public function groupedAreas(): Collection
+    {
+        if (! $this->selectedCity || ! $this->showAreas) {
+            return collect();
+        }
+
+        return app(GeographyService::class)->areasForSelectGrouped($this->selectedCity, $this->locale);
+    }
+
     // ── Render ────────────────────────────────────────────────────────────────
 
     public function render()

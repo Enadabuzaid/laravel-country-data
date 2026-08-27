@@ -5,6 +5,7 @@ namespace Enadstack\CountryData\Commands;
 use Enadstack\CountryData\Database\Seeders\GeographySeeder;
 use Enadstack\CountryData\Services\GeographyService;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 
@@ -57,6 +58,14 @@ class GeographySetup extends Command
                     foreach (['areas', 'cities', 'countries'] as $table) {
                         Schema::dropIfExists($table);
                     }
+
+                    /**
+                     * Dropping the tables is not enough — the rows in `migrations`
+                     * survive, so the migrator would see nothing pending and the
+                     * tables would never be recreated. Forget this package's
+                     * migrations so the run below actually re-applies them.
+                     */
+                    $this->forgetPackageMigrations();
 
                     $this->components->warn('Dropped: areas, cities, countries');
                 }
@@ -121,6 +130,25 @@ class GeographySetup extends Command
     }
 
     // ── Private helpers ───────────────────────────────────────────────────────
+
+    /**
+     * Remove this package's rows from the `migrations` table so that a --fresh
+     * run re-applies them against the freshly dropped tables.
+     */
+    private function forgetPackageMigrations(): void
+    {
+        if (! Schema::hasTable('migrations')) {
+            return;
+        }
+
+        $names = collect(File::files(__DIR__.'/../../database/migrations'))
+            ->map(fn ($file) => str_replace('.php', '', $file->getFilename()))
+            ->all();
+
+        if ($names) {
+            DB::table('migrations')->whereIn('migration', $names)->delete();
+        }
+    }
 
     /**
      * Resolve the final list of country codes to seed.

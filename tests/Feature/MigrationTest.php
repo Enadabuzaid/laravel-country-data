@@ -72,7 +72,7 @@ class MigrationTest extends TestCase
     public function test_areas_table_has_required_columns(): void
     {
         $required = [
-            'id', 'city_id',
+            'id', 'city_id', 'parent_id',
             'name_en', 'name_ar',
             'type', 'latitude', 'longitude',
             'is_active', 'created_at', 'updated_at',

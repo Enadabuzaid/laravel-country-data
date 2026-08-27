@@ -23,6 +23,10 @@ Route::get('countries/{code}/cities',     [GeographyController::class, 'countryC
 // Cities
 Route::get('cities/{id}',                 [GeographyController::class, 'city']);
 Route::get('cities/{id}/areas',           [GeographyController::class, 'cityAreas']);
+Route::get('cities/{id}/areas/tree',      [GeographyController::class, 'cityAreaTree']);
+
+// Areas
+Route::get('areas/{id}/children',         [GeographyController::class, 'areaChildren']);
 
 // Currency
 Route::get('currencies',                              [GeographyController::class, 'currencies']);

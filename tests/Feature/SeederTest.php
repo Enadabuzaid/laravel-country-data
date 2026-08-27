@@ -124,7 +124,7 @@ class SeederTest extends TestCase
     {
         $this->seed(GeographySeeder::class);
 
-        $this->assertDatabaseCount('areas', 101);
+        $this->assertDatabaseCount('areas', $this->expectedAreaCount());
     }
 
     public function test_area_seeder_amman_has_many_areas(): void
@@ -145,7 +145,7 @@ class SeederTest extends TestCase
     {
         $this->seed(GeographySeeder::class);
 
-        $validTypes = ['governorate', 'district', 'neighborhood', 'zone'];
+        $validTypes = ['governorate', 'district', 'neighborhood', 'zone', 'street'];
 
         $invalidCount = DB::table('areas')
             ->whereNotIn('type', $validTypes)
@@ -177,6 +177,18 @@ class SeederTest extends TestCase
         $this->seed(GeographySeeder::class);
         $this->seed(AreaSeeder::class); // run again
 
-        $this->assertDatabaseCount('areas', 101);
+        $this->assertDatabaseCount('areas', $this->expectedAreaCount());
+    }
+
+    /**
+     * Derived from the data file so the count never needs hand-updating when
+     * areas are added. Valid because GeographySeeder seeds every country, so
+     * no row is skipped for a missing city.
+     */
+    private function expectedAreaCount(): int
+    {
+        return count(json_decode(
+            file_get_contents(__DIR__.'/../../data/areas.json'), true
+        ));
     }
 }

@@ -122,13 +122,28 @@
         >
             <option value="">— {{ __('Select Area') }} —</option>
 
-            @foreach($this->areas as $option)
-                <option value="{{ $option['value'] }}">
-                    {{ $option['label'] }}
-                    @if($option['type'] !== 'neighborhood')
-                        ({{ __($option['type']) }})
-                    @endif
-                </option>
+            @foreach($this->groupedAreas as $group)
+                @if($group['label'])
+                    <optgroup label="{{ $group['label'] }}">
+                        @foreach($group['options'] as $option)
+                            <option value="{{ $option['value'] }}">
+                                {{ $option['label'] }}
+                                @if(! in_array($option['type'], ['neighborhood', 'street'], true))
+                                    ({{ __($option['type']) }})
+                                @endif
+                            </option>
+                        @endforeach
+                    </optgroup>
+                @else
+                    @foreach($group['options'] as $option)
+                        <option value="{{ $option['value'] }}">
+                            {{ $option['label'] }}
+                            @if(! in_array($option['type'], ['neighborhood', 'street'], true))
+                                ({{ __($option['type']) }})
+                            @endif
+                        </option>
+                    @endforeach
+                @endif
             @endforeach
         </select>
     </div>
