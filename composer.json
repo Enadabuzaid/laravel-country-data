@@ -1,13 +1,12 @@
 {
     "name": "enadstack/laravel-country-data",
-    "description": "Laravel package for country information (config-based, reusable, and localized)",
-    "version": "2.2.0",
+    "description": "Every country, capital and city area for Laravel: Eloquent models, cached shortcuts, enums, validation rules and UI components, in English and Arabic",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Enad Abu Zaid",
-            "email": "enad@enadstack.com",
+            "email": "enad.abuzaid15@gmail.com",
             "homepage": "https://enadstack.com",
             "role": "Developer"
         }
@@ -17,7 +16,7 @@
         "illuminate/support": "^11.0 || ^12.0 || ^13.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^9.0 || ^10.0",
+        "orchestra/testbench": "^9.0 || ^10.0 || ^11.0",
         "phpunit/phpunit": "^11.0",
         "livewire/livewire": "^3.0"
     },
@@ -35,7 +34,9 @@
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test:unit": "vendor/bin/phpunit --testsuite=Unit",
-        "test:feature": "vendor/bin/phpunit --testsuite=Feature"
+        "test:feature": "vendor/bin/phpunit --testsuite=Feature",
+        "data:fetch": "php scripts/fetch-sources.php",
+        "data:build": "php scripts/build-data.php"
     },
     "extra": {
         "laravel": {
@@ -47,7 +48,5 @@
                 "Geography": "Enadstack\\CountryData\\Facades\\Geography"
             }
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

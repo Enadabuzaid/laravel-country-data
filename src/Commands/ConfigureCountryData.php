@@ -19,6 +19,12 @@ class ConfigureCountryData extends Command
             'europe' => 'European Countries Only',
         ];
 
+        // Every other generated source (gcc, levant, eu, g20, …)
+        foreach (glob(__DIR__ . '/../../config/source/countries-*.php') as $file) {
+            $key = substr(basename($file, '.php'), strlen('countries-'));
+            $choices[$key] ??= 'Region: ' . $key;
+        }
+
         $selected = $this->choice(
             'Which country list do you want to use?',
             array_values($choices),

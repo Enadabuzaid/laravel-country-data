@@ -1,0 +1,2347 @@
+{
+    "AC": [
+        {
+            "qid": "Q31890709",
+            "osmRelation": "156166",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Ascension%20Island.svg",
+            "population": null,
+            "populationDate": null
+        }
+    ],
+    "AD": [
+        {
+            "qid": "Q228",
+            "osmRelation": "9407",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Andorra.svg",
+            "population": 89752,
+            "populationDate": "2026-06-30"
+        }
+    ],
+    "AE": [
+        {
+            "qid": "Q878",
+            "osmRelation": "307763",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20the%20United%20Arab%20Emirates.svg",
+            "population": 9890400,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "AF": [
+        {
+            "qid": "Q889",
+            "osmRelation": "303427",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Arms%20of%20the%20Islamic%20Emirate%20of%20Afghanistan.svg",
+            "population": 41454761,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "AG": [
+        {
+            "qid": "Q781",
+            "osmRelation": "536900",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Antigua%20and%20Barbuda.svg",
+            "population": 101489,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "AI": [
+        {
+            "qid": "Q25228",
+            "osmRelation": "2177161",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Anguilla.svg",
+            "population": 19079,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "AL": [
+        {
+            "qid": "Q222",
+            "osmRelation": "53292",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Albania.svg",
+            "population": 2811655,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "AM": [
+        {
+            "qid": "Q399",
+            "osmRelation": "364066",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Armenia.svg",
+            "population": 2930450,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "AN": [
+        {
+            "qid": "Q25227",
+            "osmRelation": null,
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Netherlands%20Antilles%20%281986-2010%29.svg",
+            "population": 197041,
+            "populationDate": "2009-01-01"
+        }
+    ],
+    "AO": [
+        {
+            "qid": "Q916",
+            "osmRelation": "195267",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Angola.svg",
+            "population": 36749906,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "AQ": [
+        {
+            "qid": "Q10372207",
+            "osmRelation": null,
+            "coatOfArms": null,
+            "population": 4400,
+            "populationDate": "2009-01-01"
+        },
+        {
+            "qid": "Q51",
+            "osmRelation": "2186646",
+            "coatOfArms": null,
+            "population": 5000,
+            "populationDate": "0000"
+        }
+    ],
+    "AR": [
+        {
+            "qid": "Q414",
+            "osmRelation": "286393",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Argentina.svg",
+            "population": 47327407,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "AS": [
+        {
+            "qid": "Q16641",
+            "osmRelation": "2177187",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20American%20Samoa.svg",
+            "population": 49710,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "AT": [
+        {
+            "qid": "Q40",
+            "osmRelation": "16239",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Austria.svg",
+            "population": 8979894,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "AU": [
+        {
+            "qid": "Q408",
+            "osmRelation": "80500",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Commonwealth%20of%20Australia.svg",
+            "population": 27614411,
+            "populationDate": "2025-06-30"
+        }
+    ],
+    "AW": [
+        {
+            "qid": "Q21203",
+            "osmRelation": "1231749",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Aruba%20wapen.svg",
+            "population": 106739,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "AX": [
+        {
+            "qid": "Q5689",
+            "osmRelation": "2375170",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20%C3%85land.svg",
+            "population": 30836,
+            "populationDate": "2025-12-31"
+        }
+    ],
+    "AZ": [
+        {
+            "qid": "Q227",
+            "osmRelation": "364110",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Azerbaijan.svg",
+            "population": 10180770,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BA": [
+        {
+            "qid": "Q225",
+            "osmRelation": "2528142",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Bosnia%20and%20Herzegovina.svg",
+            "population": 3816459,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "BB": [
+        {
+            "qid": "Q244",
+            "osmRelation": "547511",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Barbados%20%282%29.svg",
+            "population": 303431,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BD": [
+        {
+            "qid": "Q902",
+            "osmRelation": "184640",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Bangladesh.svg",
+            "population": 171466990,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BE": [
+        {
+            "qid": "Q31",
+            "osmRelation": "52411",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Great%20coat%20of%20arms%20of%20Belgium.svg",
+            "population": 11825551,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "BF": [
+        {
+            "qid": "Q965",
+            "osmRelation": "192783",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Burkina%20Faso%20%281984-2025%29.svg",
+            "population": 23025776,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BG": [
+        {
+            "qid": "Q219",
+            "osmRelation": "186382",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Bulgaria.svg",
+            "population": 6423207,
+            "populationDate": "2025-12-31"
+        }
+    ],
+    "BH": [
+        {
+            "qid": "Q398",
+            "osmRelation": "378734",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20The%20Kingdom%20of%20Bahrain.svg",
+            "population": 1569666,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BI": [
+        {
+            "qid": "Q967",
+            "osmRelation": "195269",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Burundi.svg",
+            "population": 13689450,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BJ": [
+        {
+            "qid": "Q962",
+            "osmRelation": "192784",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Benin.svg",
+            "population": 14111034,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BL": [
+        {
+            "qid": "Q25362",
+            "osmRelation": "7552779",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Blason%20St%20Barth%C3%A9l%C3%A9my%20TOM%20entire.svg",
+            "population": 10124,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "BM": [
+        {
+            "qid": "Q23635",
+            "osmRelation": "1993208",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Bermuda.svg",
+            "population": 65024,
+            "populationDate": "2013-01-01"
+        }
+    ],
+    "BN": [
+        {
+            "qid": "Q921",
+            "osmRelation": "2103120",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Brunei.svg",
+            "population": 458949,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BO": [
+        {
+            "qid": "Q750",
+            "osmRelation": "252645",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20de%20Bolivia.svg",
+            "population": 12244159,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BQ": [
+        {
+            "qid": "Q27561",
+            "osmRelation": "1216720",
+            "coatOfArms": null,
+            "population": 29418,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BR": [
+        {
+            "qid": "Q155",
+            "osmRelation": "59470",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Brazil.svg",
+            "population": 214211951,
+            "populationDate": "2026-07-01"
+        }
+    ],
+    "BS": [
+        {
+            "qid": "Q778",
+            "osmRelation": "547469",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Bahamas.svg",
+            "population": 399440,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BT": [
+        {
+            "qid": "Q917",
+            "osmRelation": "184629",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Bhutan.svg",
+            "population": 787424,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BV": [
+        {
+            "qid": "Q23408",
+            "osmRelation": "13360562",
+            "coatOfArms": null,
+            "population": 0,
+            "populationDate": "0000"
+        }
+    ],
+    "BW": [
+        {
+            "qid": "Q963",
+            "osmRelation": "1889339",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Botswana.svg",
+            "population": 2480244,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "BY": [
+        {
+            "qid": "Q184",
+            "osmRelation": "59065",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Belarus%20%282020%E2%80%93present%29.svg",
+            "population": 9056080,
+            "populationDate": "2026-01-01"
+        }
+    ],
+    "BZ": [
+        {
+            "qid": "Q242",
+            "osmRelation": "287827",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Belize.svg",
+            "population": 411106,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CA": [
+        {
+            "qid": "Q16",
+            "osmRelation": "1428125",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal%20Coat%20of%20arms%20of%20Canada.svg",
+            "population": 36991981,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "CC": [
+        {
+            "qid": "Q36004",
+            "osmRelation": "82636",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Clunies-Ross%20family%20arms.svg",
+            "population": 602,
+            "populationDate": "2021-06-30"
+        }
+    ],
+    "CD": [
+        {
+            "qid": "Q974",
+            "osmRelation": "192795",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Democratic%20Republic%20of%20the%20Congo%20%28black%20spear%29.svg",
+            "population": 105789731,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CF": [
+        {
+            "qid": "Q929",
+            "osmRelation": "192790",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Central%20African%20Republic.svg",
+            "population": 5152421,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CG": [
+        {
+            "qid": "Q971",
+            "osmRelation": "192794",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Republic%20of%20the%20Congo.svg",
+            "population": 6142180,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CH": [
+        {
+            "qid": "Q39",
+            "osmRelation": "51701",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Switzerland.svg",
+            "population": 9104063,
+            "populationDate": "2025-09-30"
+        }
+    ],
+    "CI": [
+        {
+            "qid": "Q1008",
+            "osmRelation": "192779",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Ivory%20Coast%20%282%29.svg",
+            "population": 31165654,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CK": [
+        {
+            "qid": "Q26988",
+            "osmRelation": "2184233",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Cook%20Islands.svg",
+            "population": 14222,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CL": [
+        {
+            "qid": "Q298",
+            "osmRelation": "167454",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Chile%20%28c%29.svg",
+            "population": 19458000,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "CM": [
+        {
+            "qid": "Q1009",
+            "osmRelation": "192830",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cameroon.svg",
+            "population": 28372687,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CN": [
+        {
+            "qid": "Q148",
+            "osmRelation": "270056",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9C%8B%E5%BE%BD.svg",
+            "population": 1404890000,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "CO": [
+        {
+            "qid": "Q739",
+            "osmRelation": "120027",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Colombia.svg",
+            "population": 52321152,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CP": [
+        {
+            "qid": "Q161258",
+            "osmRelation": "2573010",
+            "coatOfArms": null,
+            "population": 0,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "CQ": [
+        {
+            "qid": "Q3405693",
+            "osmRelation": "1973199",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Sark.svg",
+            "population": 562,
+            "populationDate": "2022-04-27"
+        }
+    ],
+    "CR": [
+        {
+            "qid": "Q800",
+            "osmRelation": "287667",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Costa%20Rica.svg",
+            "population": 5265575,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "CU": [
+        {
+            "qid": "Q241",
+            "osmRelation": "307833",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cuba.svg",
+            "population": 10985974,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CV": [
+        {
+            "qid": "Q1011",
+            "osmRelation": "535774",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cape%20Verde.svg",
+            "population": 555988,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "CW": [
+        {
+            "qid": "Q25279",
+            "osmRelation": "2867318",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cura%C3%A7ao.svg",
+            "population": 152849,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "CX": [
+        {
+            "qid": "Q31063",
+            "osmRelation": "2177207",
+            "coatOfArms": null,
+            "population": 1692,
+            "populationDate": "2021-08-10"
+        }
+    ],
+    "CY": [
+        {
+            "qid": "Q229",
+            "osmRelation": "3263726",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Cyprus%20%282006%29.svg",
+            "population": 1344976,
+            "populationDate": "2023-01-01"
+        },
+        {
+            "qid": "Q644636",
+            "osmRelation": "3263732",
+            "coatOfArms": null,
+            "population": 1120489,
+            "populationDate": "0000"
+        }
+    ],
+    "CZ": [
+        {
+            "qid": "Q213",
+            "osmRelation": "51684",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Czech%20Republic.svg",
+            "population": 10909500,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "DD": [
+        {
+            "qid": "Q16957",
+            "osmRelation": null,
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/State%20arms%20of%20the%20German%20Democratic%20Republic.svg",
+            "population": 16111000,
+            "populationDate": "1990-01-01"
+        }
+    ],
+    "DE": [
+        {
+            "qid": "Q183",
+            "osmRelation": "51477",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Germany.svg",
+            "population": 83467117,
+            "populationDate": "2025-12-31"
+        }
+    ],
+    "DG": [
+        {
+            "qid": "Q184851",
+            "osmRelation": "2732108",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20British%20Indian%20Ocean%20Territory.svg",
+            "population": 4202,
+            "populationDate": "0000"
+        }
+    ],
+    "DJ": [
+        {
+            "qid": "Q977",
+            "osmRelation": "192801",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Djibouti.svg",
+            "population": 1152944,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "DK": [
+        {
+            "qid": "Q35",
+            "osmRelation": "50046",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20coat%20of%20arms%20of%20Denmark.svg",
+            "population": 5822863,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "DM": [
+        {
+            "qid": "Q784",
+            "osmRelation": "307823",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Dominica.svg",
+            "population": 74656,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "DO": [
+        {
+            "qid": "Q786",
+            "osmRelation": "307828",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Dominican%20Republic.svg",
+            "population": 10760028,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "DZ": [
+        {
+            "qid": "Q262",
+            "osmRelation": "192756",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20Emblem%20of%20Algeria%20%28bronze%20effect%29.svg",
+            "population": 46164219,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "EC": [
+        {
+            "qid": "Q736",
+            "osmRelation": "108089",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Ecuador.svg",
+            "population": 16938986,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "EE": [
+        {
+            "qid": "Q191",
+            "osmRelation": "79510",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Estonia.svg",
+            "population": 1369995,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "EG": [
+        {
+            "qid": "Q79",
+            "osmRelation": "1473947",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Egypt%20%28Official%29.svg",
+            "population": 114535772,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "EH": [
+        {
+            "qid": "Q6250",
+            "osmRelation": "2559126",
+            "coatOfArms": null,
+            "population": 612000,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "ER": [
+        {
+            "qid": "Q986",
+            "osmRelation": "296961",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Eritrea%20%28or%20argent%20azur%29.svg",
+            "population": 3497000,
+            "populationDate": "2019-01-01"
+        }
+    ],
+    "ES": [
+        {
+            "qid": "Q29",
+            "osmRelation": "1311341",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20de%20Espa%C3%B1a%20%28variant%29.svg",
+            "population": 48592909,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "ET": [
+        {
+            "qid": "Q115",
+            "osmRelation": "192800",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Ethiopia.svg",
+            "population": 128691692,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "FI": [
+        {
+            "qid": "Q33",
+            "osmRelation": "54224",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Finland.svg",
+            "population": 5652881,
+            "populationDate": "2025-12-31"
+        }
+    ],
+    "FJ": [
+        {
+            "qid": "Q712",
+            "osmRelation": "571747",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Fiji.svg",
+            "population": 926276,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "FK": [
+        {
+            "qid": "Q9648",
+            "osmRelation": "2185374",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20the%20Falkland%20Islands%20%28relief%29.svg",
+            "population": 4550,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "FM": [
+        {
+            "qid": "Q702",
+            "osmRelation": "571802",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Federated%20States%20of%20Micronesia.svg",
+            "population": 75817,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "FO": [
+        {
+            "qid": "Q4628",
+            "osmRelation": "52939",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Faroe%20Islands.svg",
+            "population": 54149,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "FR": [
+        {
+            "qid": "Q142",
+            "osmRelation": "2202162",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Arms%20of%20the%20French%20Republic.svg",
+            "population": 68605616,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "GA": [
+        {
+            "qid": "Q1000",
+            "osmRelation": "192793",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Gabon.svg",
+            "population": 2025137,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "GB": [
+        {
+            "qid": "Q145",
+            "osmRelation": "62149",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20United%20Kingdom%20%282022%2C%20variant%202%29.svg",
+            "population": 67326569,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "GD": [
+        {
+            "qid": "Q769",
+            "osmRelation": "550727",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Grenada.svg",
+            "population": 114299,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "GE": [
+        {
+            "qid": "Q230",
+            "osmRelation": "28699",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Greater%20coat%20of%20arms%20of%20Georgia.svg",
+            "population": 3929581,
+            "populationDate": "2024-11-14"
+        }
+    ],
+    "GF": [
+        {
+            "qid": "Q3769",
+            "osmRelation": "2502058",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20French%20Guiana%2C%20according%20to%20the%20original%20displayed%20at%20the%20Museum%20Franconie%2C%20at%20Cayenne.svg",
+            "population": 293996,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "GG": [
+        {
+            "qid": "Q25230",
+            "osmRelation": "270009",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guernsey.svg",
+            "population": 67787,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "GH": [
+        {
+            "qid": "Q117",
+            "osmRelation": "192781",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Ghana.svg",
+            "population": 32833031,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "GI": [
+        {
+            "qid": "Q1410",
+            "osmRelation": "1278736",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Gibraltar1.svg",
+            "population": 34003,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "GL": [
+        {
+            "qid": "Q223",
+            "osmRelation": "2184073",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Greenland.svg",
+            "population": 56609,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "GM": [
+        {
+            "qid": "Q1005",
+            "osmRelation": "192774",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20The%20Gambia.svg",
+            "population": 2639916,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "GN": [
+        {
+            "qid": "Q1006",
+            "osmRelation": "192778",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guinea.svg",
+            "population": 17521167,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "GP": [
+        {
+            "qid": "Q17012",
+            "osmRelation": "2562137",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guadeloupe.svg",
+            "population": 384160,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "GQ": [
+        {
+            "qid": "Q983",
+            "osmRelation": "192791",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Equatorial%20Guinea.svg",
+            "population": 1847549,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "GR": [
+        {
+            "qid": "Q41",
+            "osmRelation": "192307",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Greece.svg",
+            "population": 10482487,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "GS": [
+        {
+            "qid": "Q35086",
+            "osmRelation": "1983628",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20South%20Georgia%20and%20the%20South%20Sandwich%20Islands.svg",
+            "population": 35,
+            "populationDate": "2019-01-01"
+        }
+    ],
+    "GT": [
+        {
+            "qid": "Q774",
+            "osmRelation": "1521463",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guatemala.svg",
+            "population": 17263239,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "GU": [
+        {
+            "qid": "Q16635",
+            "osmRelation": "1152532",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20Guam.svg",
+            "population": 153836,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "GW": [
+        {
+            "qid": "Q1007",
+            "osmRelation": "192776",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Guinea-Bissau.svg",
+            "population": 1861283,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "GY": [
+        {
+            "qid": "Q734",
+            "osmRelation": "287083",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guyana.svg",
+            "population": 878674,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "HK": [
+        {
+            "qid": "Q8646",
+            "osmRelation": "913110",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Regional%20Emblem%20of%20Hong%20Kong.svg",
+            "population": 7413070,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "HM": [
+        {
+            "qid": "Q131198",
+            "osmRelation": "8449400",
+            "coatOfArms": null,
+            "population": 0,
+            "populationDate": "0000"
+        }
+    ],
+    "HN": [
+        {
+            "qid": "Q783",
+            "osmRelation": "287670",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Honduras.svg",
+            "population": 8303771,
+            "populationDate": "2013-01-01"
+        }
+    ],
+    "HR": [
+        {
+            "qid": "Q224",
+            "osmRelation": "214885",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Croatia.svg",
+            "population": 3871833,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "HT": [
+        {
+            "qid": "Q790",
+            "osmRelation": "307829",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Haiti.svg",
+            "population": 10981229,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "HU": [
+        {
+            "qid": "Q28",
+            "osmRelation": "21335",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Hungary.svg",
+            "population": 9603634,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "ID": [
+        {
+            "qid": "Q252",
+            "osmRelation": "304751",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Indonesia%20Garuda%20Pancasila.svg",
+            "population": 275439000,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "IE": [
+        {
+            "qid": "Q27",
+            "osmRelation": "62273",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Ireland.svg",
+            "population": 5149139,
+            "populationDate": "2022-04-01"
+        }
+    ],
+    "IL": [
+        {
+            "qid": "Q801",
+            "osmRelation": "1473946",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Israel.svg",
+            "population": 9840000,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "IM": [
+        {
+            "qid": "Q9676",
+            "osmRelation": "62269",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Isle%20of%20Man.svg",
+            "population": 84523,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "IN": [
+        {
+            "qid": "Q668",
+            "osmRelation": "304716",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20India.svg",
+            "population": 1326093247,
+            "populationDate": "2020-07-01"
+        }
+    ],
+    "IO": [
+        {
+            "qid": "Q43448",
+            "osmRelation": "1993867",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20British%20Indian%20Ocean%20Territory.svg",
+            "population": 3000,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "IQ": [
+        {
+            "qid": "Q796",
+            "osmRelation": "304934",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Iraq.svg",
+            "population": 38274618,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "IR": [
+        {
+            "qid": "Q794",
+            "osmRelation": "304938",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Iran.svg",
+            "population": 92417700,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "IS": [
+        {
+            "qid": "Q189",
+            "osmRelation": "299133",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Iceland.svg",
+            "population": 364260,
+            "populationDate": "2019-12-31"
+        }
+    ],
+    "IT": [
+        {
+            "qid": "Q38",
+            "osmRelation": "365331",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Italy.svg",
+            "population": 58850717,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "JE": [
+        {
+            "qid": "Q785",
+            "osmRelation": "367988",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Jersey.svg",
+            "population": 103267,
+            "populationDate": "2021-03-21"
+        }
+    ],
+    "JM": [
+        {
+            "qid": "Q766",
+            "osmRelation": "555017",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Jamaica.svg",
+            "population": 2697983,
+            "populationDate": "2011-01-01"
+        }
+    ],
+    "JO": [
+        {
+            "qid": "Q810",
+            "osmRelation": "184818",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Jordan.svg",
+            "population": 10428241,
+            "populationDate": "2019-06-19"
+        }
+    ],
+    "JP": [
+        {
+            "qid": "Q17",
+            "osmRelation": "382313",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Kamon%20of%20the%20Imperial%20House%20of%20Japan.svg",
+            "population": 123802000,
+            "populationDate": "2024-10-01"
+        }
+    ],
+    "KE": [
+        {
+            "qid": "Q114",
+            "osmRelation": "192798",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Kenya%20%28Official%29.svg",
+            "population": 48468138,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "KG": [
+        {
+            "qid": "Q813",
+            "osmRelation": "178009",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Kyrgyzstan.svg",
+            "population": 7281800,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "KH": [
+        {
+            "qid": "Q424",
+            "osmRelation": "49898",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal%20arms%20of%20Cambodia.svg",
+            "population": 17423880,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "KI": [
+        {
+            "qid": "Q710",
+            "osmRelation": "571178",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Kiribati.svg",
+            "population": 134518,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "KM": [
+        {
+            "qid": "Q970",
+            "osmRelation": "535790",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Comoros.svg",
+            "population": 902348,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "KN": [
+        {
+            "qid": "Q763",
+            "osmRelation": "536899",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Saint%20Kitts%20and%20Nevis.svg",
+            "population": 46922,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "KP": [
+        {
+            "qid": "Q423",
+            "osmRelation": "192734",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20North%20Korea.svg",
+            "population": 26418204,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "KR": [
+        {
+            "qid": "Q884",
+            "osmRelation": "307756",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20South%20Korea.svg",
+            "population": 51466201,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "KW": [
+        {
+            "qid": "Q817",
+            "osmRelation": "305099",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20the%20State%20of%20Kuwait.svg",
+            "population": 4464000,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "KY": [
+        {
+            "qid": "Q5785",
+            "osmRelation": "2185366",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Cayman%20Islands%20Coat%20of%20Arms.svg",
+            "population": 88833,
+            "populationDate": "2024-12-01"
+        }
+    ],
+    "KZ": [
+        {
+            "qid": "Q232",
+            "osmRelation": "214665",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Kazakhstan%20latin.svg",
+            "population": 20139914,
+            "populationDate": "2024-06-01"
+        }
+    ],
+    "LA": [
+        {
+            "qid": "Q819",
+            "osmRelation": "49903",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Laos%20%281991-2025%29.svg",
+            "population": 6858160,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "LB": [
+        {
+            "qid": "Q822",
+            "osmRelation": "184843",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Lebanon.svg",
+            "population": 6100075,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "LC": [
+        {
+            "qid": "Q760",
+            "osmRelation": "550728",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Saint%20Lucia.svg",
+            "population": 167591,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "LI": [
+        {
+            "qid": "Q347",
+            "osmRelation": "1155955",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Staatswappen-Liechtensteins.svg",
+            "population": 37922,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "LK": [
+        {
+            "qid": "Q854",
+            "osmRelation": "536807",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Sri%20Lanka.svg",
+            "population": 21444000,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "LR": [
+        {
+            "qid": "Q1014",
+            "osmRelation": "192780",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Liberia.svg",
+            "population": 5214030,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "LS": [
+        {
+            "qid": "Q1013",
+            "osmRelation": "2093234",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Lesotho.svg",
+            "population": 2007201,
+            "populationDate": "2016-01-01"
+        }
+    ],
+    "LT": [
+        {
+            "qid": "Q37",
+            "osmRelation": "72596",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Lithuania.svg",
+            "population": 2860002,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "LU": [
+        {
+            "qid": "Q32",
+            "osmRelation": "2171347",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Greater%20coat%20of%20arms%20of%20the%20grand-duchy%20of%20Luxembourg.svg",
+            "population": 690959,
+            "populationDate": "2026-01-01"
+        }
+    ],
+    "LV": [
+        {
+            "qid": "Q211",
+            "osmRelation": "72594",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Latvia.svg",
+            "population": 1845096,
+            "populationDate": "2026-01-01"
+        }
+    ],
+    "LY": [
+        {
+            "qid": "Q1016",
+            "osmRelation": "192758",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Government%20of%20National%20Unity%20%28Libya%29.svg",
+            "population": 7381023,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "MA": [
+        {
+            "qid": "Q1028",
+            "osmRelation": "3630439",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Morocco.svg",
+            "population": 36828330,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "MC": [
+        {
+            "qid": "Q235",
+            "osmRelation": "36990",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Monaco.svg",
+            "population": 38857,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "MD": [
+        {
+            "qid": "Q217",
+            "osmRelation": "58974",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Moldova.svg",
+            "population": 2409207,
+            "populationDate": "2024-04-08"
+        }
+    ],
+    "ME": [
+        {
+            "qid": "Q236",
+            "osmRelation": "53296",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Montenegro.svg",
+            "population": 617213,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "MF": [
+        {
+            "qid": "Q126125",
+            "osmRelation": "1891583",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/St%20Martin%20Coat.png",
+            "population": 32358,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "MG": [
+        {
+            "qid": "Q1019",
+            "osmRelation": "447325",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20Madagascar.svg",
+            "population": 31964956,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "MH": [
+        {
+            "qid": "Q709",
+            "osmRelation": "571771",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Marshall%20Islands.svg",
+            "population": 53127,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "MK": [
+        {
+            "qid": "Q221",
+            "osmRelation": "53293",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20North%20Macedonia.svg",
+            "population": 1836713,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "ML": [
+        {
+            "qid": "Q912",
+            "osmRelation": "192785",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Mali.svg",
+            "population": 22395489,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "MM": [
+        {
+            "qid": "Q836",
+            "osmRelation": "50371",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/State%20Seal%20of%20the%20Republic%20of%20the%20Union%20of%20Myanmar.svg",
+            "population": 53370609,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "MN": [
+        {
+            "qid": "Q711",
+            "osmRelation": "161033",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/State%20emblem%20of%20Mongolia.svg",
+            "population": 3409939,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "MO": [
+        {
+            "qid": "Q14773",
+            "osmRelation": "1867188",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Regional%20Emblem%20of%20Macau.svg",
+            "population": 682100,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "MP": [
+        {
+            "qid": "Q16644",
+            "osmRelation": "306004",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20Northern%20Mariana%20Islands.svg",
+            "population": 47329,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "MQ": [
+        {
+            "qid": "Q17054",
+            "osmRelation": "7112170",
+            "coatOfArms": null,
+            "population": 360630,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "MR": [
+        {
+            "qid": "Q1025",
+            "osmRelation": "192763",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20Seal%20of%20Mauritania.svg",
+            "population": 4736139,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "MS": [
+        {
+            "qid": "Q13353",
+            "osmRelation": "537257",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Montserrat.svg",
+            "population": 5440,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "MT": [
+        {
+            "qid": "Q233",
+            "osmRelation": "365307",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Malta.svg",
+            "population": 553214,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "MU": [
+        {
+            "qid": "Q1027",
+            "osmRelation": "535828",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Mauritius.svg",
+            "population": 1264613,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "MV": [
+        {
+            "qid": "Q826",
+            "osmRelation": "536773",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Maldives.svg",
+            "population": 436330,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "MW": [
+        {
+            "qid": "Q1020",
+            "osmRelation": "195290",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Malawi.svg",
+            "population": 17563749,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "MX": [
+        {
+            "qid": "Q96",
+            "osmRelation": "114686",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Mexico.svg",
+            "population": 132274416,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "MY": [
+        {
+            "qid": "Q833",
+            "osmRelation": "2108121",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Malaysia.svg",
+            "population": 34231700,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "MZ": [
+        {
+            "qid": "Q1029",
+            "osmRelation": "195273",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Mozambique.svg",
+            "population": 29668834,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "NA": [
+        {
+            "qid": "Q1030",
+            "osmRelation": "195266",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Namibia.svg",
+            "population": 2533794,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "NC": [
+        {
+            "qid": "Q33788",
+            "osmRelation": "3407643",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20New%20Caledonia.svg",
+            "population": 278500,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "NE": [
+        {
+            "qid": "Q1032",
+            "osmRelation": "192786",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Niger.svg",
+            "population": 21477348,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "NF": [
+        {
+            "qid": "Q31057",
+            "osmRelation": "2574988",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Norfolk%20Island.svg",
+            "population": 2188,
+            "populationDate": "2021-08-10"
+        }
+    ],
+    "NG": [
+        {
+            "qid": "Q1033",
+            "osmRelation": "192787",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Nigeria.svg",
+            "population": 211400708,
+            "populationDate": "2021-06-01"
+        }
+    ],
+    "NI": [
+        {
+            "qid": "Q811",
+            "osmRelation": "287666",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Nicaragua.svg",
+            "population": 5142098,
+            "populationDate": "2005-01-01"
+        }
+    ],
+    "NL": [
+        {
+            "qid": "Q29999",
+            "osmRelation": "2323309",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/State%20coat%20of%20arms%20of%20the%20Netherlands.svg",
+            "population": 17100715,
+            "populationDate": "2013-01-01"
+        }
+    ],
+    "NO": [
+        {
+            "qid": "Q20",
+            "osmRelation": "2978650",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Norway.svg",
+            "population": 5627400,
+            "populationDate": "2026-01-01"
+        }
+    ],
+    "NP": [
+        {
+            "qid": "Q837",
+            "osmRelation": "184633",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Nepal.svg",
+            "population": 29164578,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "NR": [
+        {
+            "qid": "Q697",
+            "osmRelation": "571804",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Nauru%20%282020%29.svg",
+            "population": 13650,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "NU": [
+        {
+            "qid": "Q34020",
+            "osmRelation": "3548481",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Niue.jpg",
+            "population": 1821,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "NZ": [
+        {
+            "qid": "Q664",
+            "osmRelation": "556706",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20New%20Zealand.svg",
+            "population": 5307800,
+            "populationDate": "2024-12-31"
+        }
+    ],
+    "OM": [
+        {
+            "qid": "Q842",
+            "osmRelation": "305138",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Oman.svg",
+            "population": 4829480,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "PA": [
+        {
+            "qid": "Q804",
+            "osmRelation": "287668",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Panama.svg",
+            "population": 4570133,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "PC": [
+        {
+            "qid": "Q129237",
+            "osmRelation": null,
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Trust%20Territory%20of%20the%20Pacific%20Islands%20seal.svg",
+            "population": 132929,
+            "populationDate": "0000"
+        }
+    ],
+    "PE": [
+        {
+            "qid": "Q419",
+            "osmRelation": "288247",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Escudo%20nacional%20del%20Per%C3%BA.svg",
+            "population": 34157732,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "PF": [
+        {
+            "qid": "Q30971",
+            "osmRelation": "3412620",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20French%20Polynesia.svg",
+            "population": 278786,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "PG": [
+        {
+            "qid": "Q691",
+            "osmRelation": "307866",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Papua%20New%20Guinea.svg",
+            "population": 8935000,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "PH": [
+        {
+            "qid": "Q928",
+            "osmRelation": "443174",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Philippines.svg",
+            "population": 112729484,
+            "populationDate": "2024-07-01"
+        }
+    ],
+    "PK": [
+        {
+            "qid": "Q843",
+            "osmRelation": "307573",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/State%20emblem%20of%20Pakistan.svg",
+            "population": 223773700,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "PL": [
+        {
+            "qid": "Q36",
+            "osmRelation": "49715",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Herb%20Polski.svg",
+            "population": 37563071,
+            "populationDate": "2024-06-30"
+        }
+    ],
+    "PM": [
+        {
+            "qid": "Q34617",
+            "osmRelation": "3406826",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20SaintPierreetMiquelon.svg",
+            "population": 5974,
+            "populationDate": "2019-01-01"
+        }
+    ],
+    "PN": [
+        {
+            "qid": "Q35672",
+            "osmRelation": "2185375",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Pitcairn%20Islands.svg",
+            "population": 50,
+            "populationDate": "2019-01-01"
+        }
+    ],
+    "PR": [
+        {
+            "qid": "Q1183",
+            "osmRelation": "4422604",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Commonwealth%20of%20Puerto%20Rico.svg",
+            "population": 3285874,
+            "populationDate": "2020-04-01"
+        }
+    ],
+    "PS": [
+        {
+            "qid": "Q219060",
+            "osmRelation": "1703814",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Palestine.svg",
+            "population": 5227193,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "PT": [
+        {
+            "qid": "Q45",
+            "osmRelation": "295480",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Portugal.svg",
+            "population": 10347892,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "PW": [
+        {
+            "qid": "Q695",
+            "osmRelation": "571805",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20Palau.svg",
+            "population": 21729,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "PY": [
+        {
+            "qid": "Q733",
+            "osmRelation": "287077",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Paraguay.svg",
+            "population": 6811297,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "QA": [
+        {
+            "qid": "Q846",
+            "osmRelation": "305095",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Qatar-2022.svg",
+            "population": 2639211,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "RE": [
+        {
+            "qid": "Q17070",
+            "osmRelation": "1785276",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20R%C3%A9union.svg",
+            "population": 889679,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "RO": [
+        {
+            "qid": "Q218",
+            "osmRelation": "90689",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Romania.svg",
+            "population": 19053815,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "RS": [
+        {
+            "qid": "Q403",
+            "osmRelation": "1741311",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Serbia.svg",
+            "population": 6605168,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "RU": [
+        {
+            "qid": "Q159",
+            "osmRelation": "60189",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20the%20Russian%20Federation.svg",
+            "population": 146119928,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "RW": [
+        {
+            "qid": "Q1037",
+            "osmRelation": "171496",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Rwanda.svg",
+            "population": 14569341,
+            "populationDate": "2025-01-01"
+        }
+    ],
+    "SA": [
+        {
+            "qid": "Q851",
+            "osmRelation": "307584",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Saudi%20Arabia.svg",
+            "population": 33000000,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "SB": [
+        {
+            "qid": "Q685",
+            "osmRelation": "1857436",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Solomon%20Islands.svg",
+            "population": 611343,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "SC": [
+        {
+            "qid": "Q1042",
+            "osmRelation": "536765",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Seychelles.svg",
+            "population": 119773,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "SD": [
+        {
+            "qid": "Q1049",
+            "osmRelation": "192789",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Sudan.svg",
+            "population": 40533330,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "SE": [
+        {
+            "qid": "Q34",
+            "osmRelation": "52822",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Great%20coat%20of%20arms%20of%20Sweden.svg",
+            "population": 10609460,
+            "populationDate": "2025-09-01"
+        }
+    ],
+    "SG": [
+        {
+            "qid": "Q334",
+            "osmRelation": "536780",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Singapore.svg",
+            "population": 5866139,
+            "populationDate": "2021-07-01"
+        }
+    ],
+    "SH": [
+        {
+            "qid": "Q192184",
+            "osmRelation": "1964272",
+            "coatOfArms": null,
+            "population": 5633,
+            "populationDate": "2016-01-01"
+        }
+    ],
+    "SI": [
+        {
+            "qid": "Q215",
+            "osmRelation": "218657",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Slovenia.svg",
+            "population": 2066880,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "SJ": [
+        {
+            "qid": "Q842829",
+            "osmRelation": "3245620",
+            "coatOfArms": null,
+            "population": 2905,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "SK": [
+        {
+            "qid": "Q214",
+            "osmRelation": "14296",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Slovakia.svg",
+            "population": 5409407,
+            "populationDate": "2025-12-31"
+        }
+    ],
+    "SL": [
+        {
+            "qid": "Q1044",
+            "osmRelation": "192777",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Sierra%20Leone.svg",
+            "population": 7557212,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "SM": [
+        {
+            "qid": "Q238",
+            "osmRelation": "54624",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20San%20Marino.svg",
+            "population": 34167,
+            "populationDate": "2026-07-01"
+        }
+    ],
+    "SN": [
+        {
+            "qid": "Q1041",
+            "osmRelation": "192775",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Senegal.svg",
+            "population": 16876720,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "SO": [
+        {
+            "qid": "Q1045",
+            "osmRelation": "192799",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Somalia.svg",
+            "population": 11031386,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "SR": [
+        {
+            "qid": "Q730",
+            "osmRelation": "287082",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Suriname.svg",
+            "population": 563402,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "SS": [
+        {
+            "qid": "Q958",
+            "osmRelation": "1656678",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20South%20Sudan.svg",
+            "population": 12575714,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "ST": [
+        {
+            "qid": "Q1039",
+            "osmRelation": "535880",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20S%C3%A3o%20Tom%C3%A9%20and%20Pr%C3%ADncipe.svg",
+            "population": 204327,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "SV": [
+        {
+            "qid": "Q792",
+            "osmRelation": "1520612",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20El%20Salvador.svg",
+            "population": 6029976,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "SX": [
+        {
+            "qid": "Q26273",
+            "osmRelation": "1231790",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Wapen%20van%20Sint%20Maarten.svg",
+            "population": 43847,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "SY": [
+        {
+            "qid": "Q858",
+            "osmRelation": "184840",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Syria%20%282025%E2%80%93present%29.svg",
+            "population": 23865423,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "SZ": [
+        {
+            "qid": "Q1050",
+            "osmRelation": "88210",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Eswatini.svg",
+            "population": 1230506,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "TA": [
+        {
+            "qid": "Q34625512",
+            "osmRelation": "3672278",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tristan%20da%20Cunha.svg",
+            "population": null,
+            "populationDate": null
+        }
+    ],
+    "TC": [
+        {
+            "qid": "Q18221",
+            "osmRelation": "547479",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20Turks%20and%20Caicos%20Islands.svg",
+            "population": 44542,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "TD": [
+        {
+            "qid": "Q657",
+            "osmRelation": "2361304",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Chad.svg",
+            "population": 19319064,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "TF": [
+        {
+            "qid": "Q129003",
+            "osmRelation": "2186658",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20Terres%20australes%20et%20antarctiques%20fran%C3%A7aises.svg",
+            "population": 196,
+            "populationDate": "2012-01-01"
+        }
+    ],
+    "TG": [
+        {
+            "qid": "Q945",
+            "osmRelation": "192782",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20du%20Togo.svg",
+            "population": 7797694,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "TH": [
+        {
+            "qid": "Q869",
+            "osmRelation": "2067731",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Thailand.svg",
+            "population": 66188503,
+            "populationDate": "2017-12-31"
+        }
+    ],
+    "TJ": [
+        {
+            "qid": "Q863",
+            "osmRelation": "214626",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Tajikistan.svg",
+            "population": 9504000,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "TK": [
+        {
+            "qid": "Q36823",
+            "osmRelation": "2186600",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Badge%20of%20Tokelau.svg",
+            "population": 1499,
+            "populationDate": "2016-01-01"
+        }
+    ],
+    "TL": [
+        {
+            "qid": "Q574",
+            "osmRelation": "305142",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20East%20Timor.svg",
+            "population": 1400638,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "TM": [
+        {
+            "qid": "Q874",
+            "osmRelation": "223026",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Turkmenistan.svg",
+            "population": 6117933,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "TN": [
+        {
+            "qid": "Q948",
+            "osmRelation": "192757",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tunisia.svg",
+            "population": 11565204,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "TO": [
+        {
+            "qid": "Q678",
+            "osmRelation": "2186665",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tonga.svg",
+            "population": 108020,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "TR": [
+        {
+            "qid": "Q43",
+            "osmRelation": "174737",
+            "coatOfArms": null,
+            "population": 85372377,
+            "populationDate": "2023-12-31"
+        }
+    ],
+    "TT": [
+        {
+            "qid": "Q754",
+            "osmRelation": "555717",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Trinidad%20and%20Tobago%20%282025%29.svg",
+            "population": 1369125,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "TV": [
+        {
+            "qid": "Q672",
+            "osmRelation": "2177266",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tuvalu.svg",
+            "population": 10643,
+            "populationDate": "2022-12-12"
+        }
+    ],
+    "TW": [
+        {
+            "qid": "Q865",
+            "osmRelation": "449220",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20Emblem%20of%20the%20Republic%20of%20China.svg",
+            "population": 23262544,
+            "populationDate": "2026-04-01"
+        }
+    ],
+    "TZ": [
+        {
+            "qid": "Q924",
+            "osmRelation": "195270",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Tanzania.svg",
+            "population": 57310019,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "UA": [
+        {
+            "qid": "Q212",
+            "osmRelation": "60199",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20the%20Ukrainian%20Soviet%20Socialist%20Republic%20%281949%E2%80%931991%29%2C%20Emblem%20of%20Ukraine%20%281991%E2%80%931992%29.svg",
+            "population": 41167335,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "UG": [
+        {
+            "qid": "Q1036",
+            "osmRelation": "192796",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Uganda.svg",
+            "population": 47123531,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "UM": [
+        {
+            "qid": "Q16645",
+            "osmRelation": "2185386",
+            "coatOfArms": null,
+            "population": 190,
+            "populationDate": "2010-01-01"
+        }
+    ],
+    "US": [
+        {
+            "qid": "Q30",
+            "osmRelation": "148838",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Greater%20coat%20of%20arms%20of%20the%20United%20States.svg",
+            "population": 340110988,
+            "populationDate": "2024-07-01"
+        }
+    ],
+    "UY": [
+        {
+            "qid": "Q77",
+            "osmRelation": "287072",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Uruguay.svg",
+            "population": 3444263,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "UZ": [
+        {
+            "qid": "Q265",
+            "osmRelation": "196240",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Uzbekistan.svg",
+            "population": 34915100,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "VA": [
+        {
+            "qid": "Q237",
+            "osmRelation": "36989",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Vatican%20City%20%282023%E2%80%93present%29.svg",
+            "population": 882,
+            "populationDate": "2024-12-31"
+        }
+    ],
+    "VC": [
+        {
+            "qid": "Q757",
+            "osmRelation": "550725",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Saint%20Vincent%20and%20the%20Grenadines.svg",
+            "population": 109897,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "VE": [
+        {
+            "qid": "Q717",
+            "osmRelation": "272644",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Venezuela.svg",
+            "population": 31250306,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "VG": [
+        {
+            "qid": "Q25305",
+            "osmRelation": "285454",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20the%20British%20Virgin%20Islands.svg",
+            "population": 39369,
+            "populationDate": "2023-01-01"
+        }
+    ],
+    "VI": [
+        {
+            "qid": "Q11703",
+            "osmRelation": "286898",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Seal%20of%20the%20United%20States%20Virgin%20Islands.svg",
+            "population": 87146,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "VN": [
+        {
+            "qid": "Q881",
+            "osmRelation": "49915",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Vietnam.svg",
+            "population": 96208984,
+            "populationDate": "2019-04-01"
+        }
+    ],
+    "VU": [
+        {
+            "qid": "Q686",
+            "osmRelation": "2177246",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Vanuatu.svg",
+            "population": 300019,
+            "populationDate": "2020-01-01"
+        }
+    ],
+    "WF": [
+        {
+            "qid": "Q35555",
+            "osmRelation": "3412448",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/BlasonWallisetFutuna.svg",
+            "population": 11558,
+            "populationDate": "2018-01-01"
+        }
+    ],
+    "WS": [
+        {
+            "qid": "Q683",
+            "osmRelation": "1872673",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Public%20Seal%20of%20Samoa.svg",
+            "population": 200010,
+            "populationDate": "2021-01-01"
+        }
+    ],
+    "XK": [
+        {
+            "qid": "Q1246",
+            "osmRelation": "2088990",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20the%20Republic%20of%20Kosovo.svg",
+            "population": 1586659,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "YE": [
+        {
+            "qid": "Q805",
+            "osmRelation": "305092",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Yemen%20%282%29.svg",
+            "population": 28250420,
+            "populationDate": "2017-01-01"
+        }
+    ],
+    "YT": [
+        {
+            "qid": "Q17063",
+            "osmRelation": "1363069",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Mayotte.svg",
+            "population": 320901,
+            "populationDate": "2024-01-01"
+        }
+    ],
+    "YU": [
+        {
+            "qid": "Q36704",
+            "osmRelation": null,
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20Yugoslavia%20%281963%E2%80%931992%29.svg",
+            "population": 23271000,
+            "populationDate": "1991-01-01"
+        }
+    ],
+    "ZA": [
+        {
+            "qid": "Q258",
+            "osmRelation": "87565",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20South%20Africa%20%28heraldic%29.svg",
+            "population": 62027503,
+            "populationDate": "2022-02-02"
+        }
+    ],
+    "ZM": [
+        {
+            "qid": "Q953",
+            "osmRelation": "195271",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Zambia.svg",
+            "population": 19610769,
+            "populationDate": "2022-01-01"
+        }
+    ],
+    "ZW": [
+        {
+            "qid": "Q954",
+            "osmRelation": "195272",
+            "coatOfArms": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Zimbabwe.svg",
+            "population": 15178979,
+            "populationDate": "2022-01-01"
+        }
+    ]
+}

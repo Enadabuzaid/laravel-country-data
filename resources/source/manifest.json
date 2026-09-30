@@ -1,0 +1,45 @@
+{
+    "fetchedAt": "2026-09-30T11:39:02Z",
+    "sources": {
+        "mledoze-countries.json": {
+            "url": "https://github.com/mledoze/countries",
+            "ref": "c2ac0049c14edcf2436c7aa1b2493222a020b462",
+            "license": "ODbL-1.0"
+        },
+        "cldr-ar-territories.json": {
+            "url": "https://github.com/unicode-org/cldr-json",
+            "ref": "13e9fe520d5efe4298b1f988adea284a3396d8f5",
+            "license": "Unicode-3.0"
+        },
+        "cldr-ar-currencies.json": {
+            "url": "https://github.com/unicode-org/cldr-json",
+            "ref": "13e9fe520d5efe4298b1f988adea284a3396d8f5",
+            "license": "Unicode-3.0"
+        },
+        "tzdb-zone.tab": {
+            "url": "https://github.com/eggert/tz",
+            "ref": "2026e",
+            "license": "public-domain"
+        },
+        "iso-639-3.tab": {
+            "url": "https://iso639-3.sil.org/code_tables/download_tables",
+            "ref": "latest",
+            "license": "SIL ISO 639-3 terms of use"
+        },
+        "un-m49.json": {
+            "url": "https://unstats.un.org/unsd/methodology/m49/overview/",
+            "ref": "latest",
+            "license": "UN Statistics Division, free use"
+        },
+        "wikidata-countries.json": {
+            "url": "https://query.wikidata.org/",
+            "ref": "query at fetchedAt",
+            "license": "CC0-1.0"
+        },
+        "wikidata-capitals.json": {
+            "url": "https://query.wikidata.org/",
+            "ref": "query at fetchedAt",
+            "license": "CC0-1.0"
+        }
+    }
+}

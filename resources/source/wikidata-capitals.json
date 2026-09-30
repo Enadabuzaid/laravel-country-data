@@ -1,0 +1,2877 @@
+{
+    "AC": [
+        {
+            "countryQid": "Q31890709",
+            "qid": "Q695774",
+            "en": "Georgetown",
+            "ar": "جورج تاون، جزيرة أسينشين",
+            "latitude": -7.928611,
+            "longitude": -14.411667,
+            "population": 479
+        }
+    ],
+    "AD": [
+        {
+            "countryQid": "Q228",
+            "qid": "Q1863",
+            "en": "Andorra la Vella",
+            "ar": "أندورا لا فيلا",
+            "latitude": 42.507222,
+            "longitude": 1.522222,
+            "population": 24042
+        }
+    ],
+    "AE": [
+        {
+            "countryQid": "Q878",
+            "qid": "Q1519",
+            "en": "Abu Dhabi",
+            "ar": "أبو ظبي",
+            "latitude": 24.451111,
+            "longitude": 54.396944,
+            "population": 1570000
+        }
+    ],
+    "AF": [
+        {
+            "countryQid": "Q889",
+            "qid": "Q5838",
+            "en": "Kabul",
+            "ar": "كابل",
+            "latitude": 34.532778,
+            "longitude": 69.165833,
+            "population": 5333284
+        }
+    ],
+    "AG": [
+        {
+            "countryQid": "Q781",
+            "qid": "Q36262",
+            "en": null,
+            "ar": "سانت جونز",
+            "latitude": 17.121111,
+            "longitude": -61.844722,
+            "population": 21394
+        }
+    ],
+    "AI": [
+        {
+            "countryQid": "Q25228",
+            "qid": "Q30994",
+            "en": "The Valley",
+            "ar": "ذا فالي",
+            "latitude": 18.220833,
+            "longitude": -63.051667,
+            "population": 1067
+        }
+    ],
+    "AL": [
+        {
+            "countryQid": "Q222",
+            "qid": "Q19689",
+            "en": "Tirana",
+            "ar": "تيرانا",
+            "latitude": 41.328333,
+            "longitude": 19.818056,
+            "population": 389323
+        }
+    ],
+    "AM": [
+        {
+            "countryQid": "Q399",
+            "qid": "Q1953",
+            "en": "Yerevan",
+            "ar": "يريفان",
+            "latitude": 40.181389,
+            "longitude": 44.514444,
+            "population": 1106300
+        }
+    ],
+    "AN": [
+        {
+            "countryQid": "Q25227",
+            "qid": "Q132679",
+            "en": "Willemstad",
+            "ar": "ويلمستاد",
+            "latitude": 12.108,
+            "longitude": -68.935,
+            "population": 136660
+        }
+    ],
+    "AO": [
+        {
+            "countryQid": "Q916",
+            "qid": "Q3897",
+            "en": "Luanda",
+            "ar": "لواندا",
+            "latitude": -8.838333,
+            "longitude": 13.234444,
+            "population": 2487444
+        }
+    ],
+    "AR": [
+        {
+            "countryQid": "Q414",
+            "qid": "Q1486",
+            "en": "Buenos Aires",
+            "ar": "بوينس آيرس",
+            "latitude": -34.599722,
+            "longitude": -58.381944,
+            "population": 3121707
+        }
+    ],
+    "AS": [
+        {
+            "countryQid": "Q16641",
+            "qid": "Q51678",
+            "en": "Pago Pago",
+            "ar": "باغو باغو",
+            "latitude": -14.279444,
+            "longitude": -170.700556,
+            "population": 3656
+        }
+    ],
+    "AT": [
+        {
+            "countryQid": "Q40",
+            "qid": "Q1741",
+            "en": "Vienna",
+            "ar": "فيينا",
+            "latitude": 48.208333,
+            "longitude": 16.3725,
+            "population": 2028289
+        }
+    ],
+    "AU": [
+        {
+            "countryQid": "Q408",
+            "qid": "Q3114",
+            "en": "Canberra",
+            "ar": "كانبرا",
+            "latitude": -35.293056,
+            "longitude": 149.126944,
+            "population": 381488
+        }
+    ],
+    "AW": [
+        {
+            "countryQid": "Q21203",
+            "qid": "Q131243",
+            "en": "Oranjestad",
+            "ar": "أورنجستاد",
+            "latitude": 12.518611,
+            "longitude": -70.035833,
+            "population": 28658
+        }
+    ],
+    "AX": [
+        {
+            "countryQid": "Q5689",
+            "qid": "Q48329",
+            "en": "Mariehamn",
+            "ar": "ماريهامن",
+            "latitude": 60.098611,
+            "longitude": 19.944444,
+            "population": 11957
+        }
+    ],
+    "AZ": [
+        {
+            "countryQid": "Q227",
+            "qid": "Q9248",
+            "en": "Baku",
+            "ar": "باكو",
+            "latitude": 40.366656,
+            "longitude": 49.835183,
+            "population": 2300500
+        }
+    ],
+    "BA": [
+        {
+            "countryQid": "Q225",
+            "qid": "Q11194",
+            "en": "Sarajevo",
+            "ar": "سراييفو",
+            "latitude": 43.856389,
+            "longitude": 18.413056,
+            "population": 275524
+        }
+    ],
+    "BB": [
+        {
+            "countryQid": "Q244",
+            "qid": "Q36168",
+            "en": "Bridgetown",
+            "ar": "بريدج تاون",
+            "latitude": 13.0975,
+            "longitude": -59.616667,
+            "population": 98511
+        }
+    ],
+    "BD": [
+        {
+            "countryQid": "Q902",
+            "qid": "Q1354",
+            "en": "Dhaka",
+            "ar": "دكا",
+            "latitude": 23.728889,
+            "longitude": 90.394444,
+            "population": 16800000
+        }
+    ],
+    "BE": [
+        {
+            "countryQid": "Q31",
+            "qid": "Q239",
+            "en": "Brussels",
+            "ar": "مدينة بروكسل",
+            "latitude": 50.846667,
+            "longitude": 4.351667,
+            "population": 195546
+        }
+    ],
+    "BF": [
+        {
+            "countryQid": "Q965",
+            "qid": "Q3777",
+            "en": "Ouagadougou",
+            "ar": "واغادوغو",
+            "latitude": 12.368611,
+            "longitude": -1.5275,
+            "population": 2453496
+        }
+    ],
+    "BG": [
+        {
+            "countryQid": "Q219",
+            "qid": "Q472",
+            "en": "Sofia",
+            "ar": "صوفيا",
+            "latitude": 42.697886,
+            "longitude": 23.321726,
+            "population": 1213134
+        }
+    ],
+    "BH": [
+        {
+            "countryQid": "Q398",
+            "qid": "Q3882",
+            "en": "Manama",
+            "ar": "المنامة",
+            "latitude": 26.216667,
+            "longitude": 50.583333,
+            "population": 297502
+        }
+    ],
+    "BI": [
+        {
+            "countryQid": "Q967",
+            "qid": "Q167551",
+            "en": "Gitega",
+            "ar": "غيتيغا",
+            "latitude": -3.428333,
+            "longitude": 29.925,
+            "population": 135467
+        }
+    ],
+    "BJ": [
+        {
+            "countryQid": "Q962",
+            "qid": "Q3799",
+            "en": "Porto-Novo",
+            "ar": "بورتو نوفو",
+            "latitude": 6.483333,
+            "longitude": 2.616667,
+            "population": 234168
+        }
+    ],
+    "BL": [
+        {
+            "countryQid": "Q25362",
+            "qid": "Q34112",
+            "en": "Gustavia",
+            "ar": "غوستافيا، سانت بارتيليمي",
+            "latitude": 17.898611,
+            "longitude": -62.849167,
+            "population": 9131
+        }
+    ],
+    "BM": [
+        {
+            "countryQid": "Q23635",
+            "qid": "Q30985",
+            "en": "Hamilton",
+            "ar": "هاميلتون، جزر برمودا",
+            "latitude": 32.295,
+            "longitude": -64.783056,
+            "population": 3686
+        }
+    ],
+    "BN": [
+        {
+            "countryQid": "Q921",
+            "qid": "Q9279",
+            "en": "Bandar Seri Begawan",
+            "ar": "بندر سري بكاوان",
+            "latitude": 4.916667,
+            "longitude": 114.916667,
+            "population": 50000
+        }
+    ],
+    "BO": [
+        {
+            "countryQid": "Q750",
+            "qid": "Q1491",
+            "en": "La Paz",
+            "ar": "لاباز",
+            "latitude": -16.495833,
+            "longitude": -68.133333,
+            "population": 755732
+        },
+        {
+            "countryQid": "Q750",
+            "qid": "Q2907",
+            "en": "Sucre",
+            "ar": "سوكري",
+            "latitude": -19.0475,
+            "longitude": -65.26,
+            "population": 360544
+        }
+    ],
+    "BQ": [
+        {
+            "countryQid": null,
+            "qid": "Q331584",
+            "en": "Kralendijk",
+            "ar": "كراليندايك",
+            "latitude": 12.150833,
+            "longitude": -68.276667,
+            "population": 12531,
+            "matchedBy": "label"
+        }
+    ],
+    "BR": [
+        {
+            "countryQid": "Q155",
+            "qid": "Q2844",
+            "en": "Brasília",
+            "ar": "برازيليا",
+            "latitude": -15.793889,
+            "longitude": -47.882778,
+            "population": 2996899
+        }
+    ],
+    "BS": [
+        {
+            "countryQid": "Q778",
+            "qid": "Q2467",
+            "en": "Nassau",
+            "ar": "ناساو",
+            "latitude": 25.078056,
+            "longitude": -77.338611,
+            "population": 227940
+        }
+    ],
+    "BT": [
+        {
+            "countryQid": "Q917",
+            "qid": "Q9270",
+            "en": "Thimphu",
+            "ar": "تيمفو",
+            "latitude": 27.47135,
+            "longitude": 89.63367,
+            "population": 114551
+        }
+    ],
+    "BW": [
+        {
+            "countryQid": "Q963",
+            "qid": "Q3919",
+            "en": "Gaborone",
+            "ar": "غابورون",
+            "latitude": -24.656944,
+            "longitude": 25.908611,
+            "population": 235884
+        }
+    ],
+    "BY": [
+        {
+            "countryQid": "Q184",
+            "qid": "Q2280",
+            "en": "Minsk",
+            "ar": "مينسك",
+            "latitude": 53.902246,
+            "longitude": 27.561837,
+            "population": 1995091
+        }
+    ],
+    "BZ": [
+        {
+            "countryQid": "Q242",
+            "qid": "Q3043",
+            "en": "Belmopan",
+            "ar": "بلموبان",
+            "latitude": 17.25,
+            "longitude": -88.7675,
+            "population": 20754
+        }
+    ],
+    "CA": [
+        {
+            "countryQid": "Q16",
+            "qid": "Q1930",
+            "en": "Ottawa",
+            "ar": "أوتاوا",
+            "latitude": 45.424722,
+            "longitude": -75.695,
+            "population": 1017449
+        }
+    ],
+    "CC": [
+        {
+            "countryQid": "Q36004",
+            "qid": "Q48675",
+            "en": "West Island",
+            "ar": "ويست آيلند",
+            "latitude": -12.186944,
+            "longitude": 96.828333,
+            "population": 147
+        }
+    ],
+    "CD": [
+        {
+            "countryQid": "Q974",
+            "qid": "Q3838",
+            "en": "Kinshasa",
+            "ar": "كينشاسا",
+            "latitude": -4.321944,
+            "longitude": 15.311944,
+            "population": 14565700
+        }
+    ],
+    "CF": [
+        {
+            "countryQid": "Q929",
+            "qid": "Q3832",
+            "en": "Bangui",
+            "ar": "بنغي",
+            "latitude": 4.37325,
+            "longitude": 18.562833,
+            "population": 889231
+        }
+    ],
+    "CG": [
+        {
+            "countryQid": "Q971",
+            "qid": "Q3844",
+            "en": "Brazzaville",
+            "ar": "برازافيل",
+            "latitude": -4.269444,
+            "longitude": 15.271111,
+            "population": 2145783
+        }
+    ],
+    "CH": [
+        {
+            "countryQid": "Q39",
+            "qid": "Q70",
+            "en": "Bern",
+            "ar": "برن",
+            "latitude": 46.94798,
+            "longitude": 7.44743,
+            "population": 136988
+        }
+    ],
+    "CI": [
+        {
+            "countryQid": "Q1008",
+            "qid": "Q3768",
+            "en": "Yamoussoukro",
+            "ar": "ياموسوكرو",
+            "latitude": 6.816111,
+            "longitude": -5.274167,
+            "population": 340234
+        }
+    ],
+    "CK": [
+        {
+            "countryQid": "Q26988",
+            "qid": "Q170482",
+            "en": "Avarua",
+            "ar": "آواروآ",
+            "latitude": -21.207,
+            "longitude": -159.771,
+            "population": 4798
+        }
+    ],
+    "CL": [
+        {
+            "countryQid": "Q298",
+            "qid": "Q2887",
+            "en": "Santiago",
+            "ar": "سانتياغو",
+            "latitude": -33.4375,
+            "longitude": -70.65,
+            "population": 6257516
+        }
+    ],
+    "CM": [
+        {
+            "countryQid": "Q1009",
+            "qid": "Q3808",
+            "en": "Yaoundé",
+            "ar": "ياوندي",
+            "latitude": 3.857778,
+            "longitude": 11.518056,
+            "population": 2440462
+        }
+    ],
+    "CN": [
+        {
+            "countryQid": "Q148",
+            "qid": "Q956",
+            "en": "Beijing",
+            "ar": "بكين",
+            "latitude": 39.90403,
+            "longitude": 116.407526,
+            "population": 21893095
+        }
+    ],
+    "CO": [
+        {
+            "countryQid": "Q739",
+            "qid": "Q2841",
+            "en": "Bogotá",
+            "ar": "بوغوتا",
+            "latitude": 4.60971,
+            "longitude": -74.08175,
+            "population": 8034649
+        }
+    ],
+    "CR": [
+        {
+            "countryQid": "Q800",
+            "qid": "Q3070",
+            "en": "San José",
+            "ar": "سان خوسيه",
+            "latitude": 9.932739,
+            "longitude": -84.079614,
+            "population": 335007
+        }
+    ],
+    "CU": [
+        {
+            "countryQid": "Q241",
+            "qid": "Q1563",
+            "en": "Havana",
+            "ar": "هافانا",
+            "latitude": 23.136667,
+            "longitude": -82.358889,
+            "population": 2492618
+        }
+    ],
+    "CV": [
+        {
+            "countryQid": "Q1011",
+            "qid": "Q3751",
+            "en": "Praia",
+            "ar": "برايا",
+            "latitude": 14.917719,
+            "longitude": -23.509156,
+            "population": 159050
+        }
+    ],
+    "CW": [
+        {
+            "countryQid": "Q25279",
+            "qid": "Q132679",
+            "en": "Willemstad",
+            "ar": "ويلمستاد",
+            "latitude": 12.108,
+            "longitude": -68.935,
+            "population": 136660
+        }
+    ],
+    "CX": [
+        {
+            "countryQid": "Q31063",
+            "qid": "Q30980",
+            "en": "Flying Fish Cove",
+            "ar": "فلاينغ فيش كوف",
+            "latitude": -10.421667,
+            "longitude": 105.678056,
+            "population": 1599
+        }
+    ],
+    "CY": [
+        {
+            "countryQid": "Q229",
+            "qid": "Q3856",
+            "en": "Nicosia",
+            "ar": "نيقوسيا",
+            "latitude": 35.1725,
+            "longitude": 33.365,
+            "population": 56848
+        },
+        {
+            "countryQid": "Q644636",
+            "qid": "Q3856",
+            "en": "Nicosia",
+            "ar": "نيقوسيا",
+            "latitude": 35.1725,
+            "longitude": 33.365,
+            "population": 56848
+        }
+    ],
+    "CZ": [
+        {
+            "countryQid": "Q213",
+            "qid": "Q1085",
+            "en": "Prague",
+            "ar": "براغ",
+            "latitude": 50.0875,
+            "longitude": 14.421389,
+            "population": 1397880
+        }
+    ],
+    "DD": [
+        {
+            "countryQid": "Q16957",
+            "qid": "Q56037",
+            "en": "East Berlin",
+            "ar": "برلين الشرقية",
+            "latitude": 52.518611,
+            "longitude": 13.404444,
+            "population": 1279212
+        }
+    ],
+    "DE": [
+        {
+            "countryQid": "Q183",
+            "qid": "Q64",
+            "en": "Berlin",
+            "ar": "برلين",
+            "latitude": 52.516667,
+            "longitude": 13.383333,
+            "population": 3700577
+        }
+    ],
+    "DJ": [
+        {
+            "countryQid": "Q977",
+            "qid": "Q3604",
+            "en": "Djibouti",
+            "ar": "جيبوتي",
+            "latitude": 11.595,
+            "longitude": 43.148056,
+            "population": 603900
+        }
+    ],
+    "DK": [
+        {
+            "countryQid": "Q35",
+            "qid": "Q1748",
+            "en": "Copenhagen",
+            "ar": "كوبنهاغن",
+            "latitude": 55.676111,
+            "longitude": 12.568889,
+            "population": 667099
+        }
+    ],
+    "DM": [
+        {
+            "countryQid": "Q784",
+            "qid": "Q36281",
+            "en": "Roseau",
+            "ar": "روسو",
+            "latitude": 15.3,
+            "longitude": -61.383333,
+            "population": 16571
+        }
+    ],
+    "DO": [
+        {
+            "countryQid": "Q786",
+            "qid": "Q34820",
+            "en": "Santo Domingo",
+            "ar": "سانتو دومينغو",
+            "latitude": 18.4625,
+            "longitude": -69.936111,
+            "population": 2201941
+        }
+    ],
+    "DZ": [
+        {
+            "countryQid": "Q262",
+            "qid": "Q3561",
+            "en": "Algiers",
+            "ar": "الجزائر العاصمة",
+            "latitude": 36.776389,
+            "longitude": 3.058611,
+            "population": 2364230
+        }
+    ],
+    "EC": [
+        {
+            "countryQid": "Q736",
+            "qid": "Q2900",
+            "en": "Quito",
+            "ar": "كيتو",
+            "latitude": -0.22,
+            "longitude": -78.5125,
+            "population": 1763275
+        }
+    ],
+    "EE": [
+        {
+            "countryQid": "Q191",
+            "qid": "Q1770",
+            "en": "Tallinn",
+            "ar": "تالين",
+            "latitude": 59.437222,
+            "longitude": 24.745,
+            "population": 457572
+        }
+    ],
+    "EG": [
+        {
+            "countryQid": "Q79",
+            "qid": "Q85",
+            "en": "Cairo",
+            "ar": "القاهرة",
+            "latitude": 30.044444,
+            "longitude": 31.235833,
+            "population": 9801536
+        }
+    ],
+    "EH": [
+        {
+            "countryQid": null,
+            "qid": "Q47837",
+            "en": "El Aaiún",
+            "ar": "العيون",
+            "latitude": 27.15,
+            "longitude": -13.2,
+            "population": 262791,
+            "matchedBy": "label"
+        }
+    ],
+    "ER": [
+        {
+            "countryQid": "Q986",
+            "qid": "Q3642",
+            "en": "Asmara",
+            "ar": "أسمرة",
+            "latitude": 15.333333,
+            "longitude": 38.916667,
+            "population": 963000
+        }
+    ],
+    "ES": [
+        {
+            "countryQid": "Q29",
+            "qid": "Q2807",
+            "en": "Madrid",
+            "ar": "مدريد",
+            "latitude": 40.416944,
+            "longitude": -3.703333,
+            "population": 3506730
+        }
+    ],
+    "ET": [
+        {
+            "countryQid": "Q115",
+            "qid": "Q3624",
+            "en": "Addis Ababa",
+            "ar": "أديس أبابا",
+            "latitude": 9.035833,
+            "longitude": 38.7525,
+            "population": 5704000
+        }
+    ],
+    "FI": [
+        {
+            "countryQid": "Q33",
+            "qid": "Q1757",
+            "en": "Helsinki",
+            "ar": "هلسنكي",
+            "latitude": 60.170833,
+            "longitude": 24.9375,
+            "population": 694392
+        }
+    ],
+    "FJ": [
+        {
+            "countryQid": "Q712",
+            "qid": "Q38807",
+            "en": "Suva",
+            "ar": "سوفا",
+            "latitude": -18.133333,
+            "longitude": 178.433333,
+            "population": 88271
+        }
+    ],
+    "FK": [
+        {
+            "countryQid": "Q9648",
+            "qid": "Q12245",
+            "en": "Stanley",
+            "ar": "ستانلي",
+            "latitude": -51.693861,
+            "longitude": -57.849556,
+            "population": 2121
+        }
+    ],
+    "FM": [
+        {
+            "countryQid": "Q702",
+            "qid": "Q42751",
+            "en": "Palikir",
+            "ar": "باليكير",
+            "latitude": 6.917778,
+            "longitude": 158.185,
+            "population": 6227
+        }
+    ],
+    "FO": [
+        {
+            "countryQid": "Q4628",
+            "qid": "Q10704",
+            "en": "Tórshavn",
+            "ar": "توشهافن",
+            "latitude": 62.00981,
+            "longitude": -6.77135,
+            "population": 14038
+        }
+    ],
+    "FR": [
+        {
+            "countryQid": "Q142",
+            "qid": "Q90",
+            "en": "Paris",
+            "ar": "باريس",
+            "latitude": 48.856667,
+            "longitude": 2.352222,
+            "population": 2103778
+        }
+    ],
+    "GA": [
+        {
+            "countryQid": "Q1000",
+            "qid": "Q3825",
+            "en": "Libreville",
+            "ar": "ليبرفيل",
+            "latitude": 0.407778,
+            "longitude": 9.440278,
+            "population": 899000
+        }
+    ],
+    "GB": [
+        {
+            "countryQid": "Q145",
+            "qid": "Q84",
+            "en": "London",
+            "ar": "لندن",
+            "latitude": 51.507222,
+            "longitude": -0.1275,
+            "population": 8799728
+        }
+    ],
+    "GD": [
+        {
+            "countryQid": "Q769",
+            "qid": "Q41547",
+            "en": "St. George's",
+            "ar": "سانت جورجز",
+            "latitude": 12.0525,
+            "longitude": -61.753056,
+            "population": 33734
+        }
+    ],
+    "GE": [
+        {
+            "countryQid": "Q230",
+            "qid": "Q994",
+            "en": "Tbilisi",
+            "ar": "تبليسي",
+            "latitude": 41.7225,
+            "longitude": 44.7925,
+            "population": 1331485
+        }
+    ],
+    "GF": [
+        {
+            "countryQid": "Q3769",
+            "qid": "Q44401",
+            "en": "Cayenne",
+            "ar": "كايين",
+            "latitude": 4.938611,
+            "longitude": -52.335,
+            "population": 62675
+        }
+    ],
+    "GG": [
+        {
+            "countryQid": "Q25230",
+            "qid": "Q174262",
+            "en": "Saint Peter Port",
+            "ar": "سان بيتر بورت",
+            "latitude": 49.46,
+            "longitude": -2.55194,
+            "population": null
+        }
+    ],
+    "GH": [
+        {
+            "countryQid": "Q117",
+            "qid": "Q3761",
+            "en": "Accra",
+            "ar": "أكرا",
+            "latitude": 5.55602,
+            "longitude": -0.1969,
+            "population": 1782150
+        }
+    ],
+    "GI": [
+        {
+            "countryQid": "Q1410",
+            "qid": "Q1410",
+            "en": "Gibraltar",
+            "ar": "جبل طارق",
+            "latitude": 36.14,
+            "longitude": -5.35,
+            "population": 34003
+        }
+    ],
+    "GL": [
+        {
+            "countryQid": "Q223",
+            "qid": "Q226",
+            "en": "Nuuk",
+            "ar": "نوك",
+            "latitude": 64.175,
+            "longitude": -51.733333,
+            "population": 18326
+        }
+    ],
+    "GM": [
+        {
+            "countryQid": "Q1005",
+            "qid": "Q3726",
+            "en": "Banjul",
+            "ar": "بانجول",
+            "latitude": 13.453056,
+            "longitude": -16.5775,
+            "population": 31356
+        }
+    ],
+    "GN": [
+        {
+            "countryQid": "Q1006",
+            "qid": "Q3733",
+            "en": "Conakry",
+            "ar": "كوناكري",
+            "latitude": 9.509167,
+            "longitude": -13.712222,
+            "population": 1667864
+        }
+    ],
+    "GP": [
+        {
+            "countryQid": "Q17012",
+            "qid": "Q167024",
+            "en": "Basse-Terre",
+            "ar": "باس-تير",
+            "latitude": 15.996944,
+            "longitude": -61.732778,
+            "population": 9417
+        }
+    ],
+    "GQ": [
+        {
+            "countryQid": "Q983",
+            "qid": "Q1140136",
+            "en": "Ciudad de la Paz",
+            "ar": "سيوداد دي لا باز",
+            "latitude": 1.591667,
+            "longitude": 10.822222,
+            "population": 2000
+        },
+        {
+            "countryQid": null,
+            "qid": "Q3818",
+            "en": "Malabo",
+            "ar": "مالابو",
+            "latitude": 3.752064,
+            "longitude": 8.7737,
+            "population": 297000,
+            "matchedBy": "label"
+        }
+    ],
+    "GR": [
+        {
+            "countryQid": "Q41",
+            "qid": "Q1524",
+            "en": "Athens",
+            "ar": "أثينا",
+            "latitude": 37.984167,
+            "longitude": 23.728056,
+            "population": 643452
+        }
+    ],
+    "GS": [
+        {
+            "countryQid": "Q35086",
+            "qid": "Q393878",
+            "en": "King Edward Point",
+            "ar": "نقطة الملك إدوارد",
+            "latitude": -54.283291,
+            "longitude": -36.494182,
+            "population": 22
+        }
+    ],
+    "GT": [
+        {
+            "countryQid": "Q774",
+            "qid": "Q1555",
+            "en": "Guatemala City",
+            "ar": "غواتيمالا العاصمة",
+            "latitude": 14.641667,
+            "longitude": -90.513333,
+            "population": 994938
+        }
+    ],
+    "GU": [
+        {
+            "countryQid": "Q16635",
+            "qid": "Q30988",
+            "en": "Hagåtña",
+            "ar": "هاغاتنيا",
+            "latitude": 13.483333,
+            "longitude": 144.75,
+            "population": 943
+        }
+    ],
+    "GW": [
+        {
+            "countryQid": "Q1007",
+            "qid": "Q3739",
+            "en": "Bissau",
+            "ar": "بيساو",
+            "latitude": 11.86,
+            "longitude": -15.583333,
+            "population": 492004
+        }
+    ],
+    "GY": [
+        {
+            "countryQid": "Q734",
+            "qid": "Q10717",
+            "en": "Georgetown",
+            "ar": "جورج تاون",
+            "latitude": 6.805833,
+            "longitude": -58.150833,
+            "population": 235017
+        }
+    ],
+    "HK": [
+        {
+            "countryQid": null,
+            "qid": "Q963152",
+            "en": "City of Victoria",
+            "ar": "مدينة فكتوريا",
+            "latitude": 22.278333,
+            "longitude": 114.174444,
+            "population": null,
+            "matchedBy": "label"
+        }
+    ],
+    "HN": [
+        {
+            "countryQid": "Q783",
+            "qid": "Q3238",
+            "en": "Tegucigalpa",
+            "ar": "تيغوسيغالبا",
+            "latitude": 14.105783,
+            "longitude": -87.204706,
+            "population": 1055729
+        }
+    ],
+    "HR": [
+        {
+            "countryQid": "Q224",
+            "qid": "Q1435",
+            "en": "Zagreb",
+            "ar": "زغرب",
+            "latitude": 45.813056,
+            "longitude": 15.977222,
+            "population": 767131
+        }
+    ],
+    "HT": [
+        {
+            "countryQid": "Q790",
+            "qid": "Q34261",
+            "en": "Port-au-Prince",
+            "ar": "بورت أو برانس",
+            "latitude": 18.546944,
+            "longitude": -72.340278,
+            "population": 987310
+        }
+    ],
+    "HU": [
+        {
+            "countryQid": "Q28",
+            "qid": "Q1781",
+            "en": "Budapest",
+            "ar": "بودابست",
+            "latitude": 47.498333,
+            "longitude": 19.040833,
+            "population": 1685209
+        }
+    ],
+    "ID": [
+        {
+            "countryQid": "Q252",
+            "qid": "Q3630",
+            "en": "Jakarta",
+            "ar": "جاكرتا",
+            "latitude": -6.175278,
+            "longitude": 106.826944,
+            "population": 11135191
+        }
+    ],
+    "IE": [
+        {
+            "countryQid": "Q27",
+            "qid": "Q1761",
+            "en": "Dublin",
+            "ar": "دبلن",
+            "latitude": 53.349722,
+            "longitude": -6.260278,
+            "population": 592713
+        }
+    ],
+    "IL": [
+        {
+            "countryQid": "Q801",
+            "qid": "Q1218",
+            "en": "Jerusalem",
+            "ar": "القدس",
+            "latitude": 31.776679,
+            "longitude": 35.234156,
+            "population": 1050151
+        }
+    ],
+    "IM": [
+        {
+            "countryQid": "Q9676",
+            "qid": "Q18569",
+            "en": "Douglas",
+            "ar": "دوغلاس، جزيرة مان",
+            "latitude": 54.15,
+            "longitude": -4.4775,
+            "population": 26677
+        }
+    ],
+    "IN": [
+        {
+            "countryQid": "Q668",
+            "qid": "Q987",
+            "en": "New Delhi",
+            "ar": "نيو دلهي",
+            "latitude": 28.613889,
+            "longitude": 77.208889,
+            "population": 249998
+        }
+    ],
+    "IO": [
+        {
+            "countryQid": "Q43448",
+            "qid": "Q184851",
+            "en": "Diego Garcia",
+            "ar": "دييغو غارسيا",
+            "latitude": -7.313333,
+            "longitude": 72.411111,
+            "population": 4202
+        }
+    ],
+    "IQ": [
+        {
+            "countryQid": "Q796",
+            "qid": "Q1530",
+            "en": "Baghdad",
+            "ar": "بغداد",
+            "latitude": 33.315278,
+            "longitude": 44.366111,
+            "population": 8126755
+        }
+    ],
+    "IR": [
+        {
+            "countryQid": "Q794",
+            "qid": "Q3616",
+            "en": "Tehran",
+            "ar": "طهران",
+            "latitude": 35.688889,
+            "longitude": 51.389722,
+            "population": 8693706
+        }
+    ],
+    "IS": [
+        {
+            "countryQid": "Q189",
+            "qid": "Q1764",
+            "en": "Reykjavík",
+            "ar": "ريكيافيك",
+            "latitude": 64.1475,
+            "longitude": -21.935,
+            "population": 138772
+        }
+    ],
+    "IT": [
+        {
+            "countryQid": "Q38",
+            "qid": "Q220",
+            "en": "Rome",
+            "ar": "روما",
+            "latitude": 41.893056,
+            "longitude": 12.482778,
+            "population": 2748109
+        }
+    ],
+    "JE": [
+        {
+            "countryQid": "Q785",
+            "qid": "Q147738",
+            "en": "Saint Helier",
+            "ar": "ساينت هيلير",
+            "latitude": 49.185833,
+            "longitude": -2.11,
+            "population": 35822
+        }
+    ],
+    "JM": [
+        {
+            "countryQid": "Q766",
+            "qid": "Q34692",
+            "en": "Kingston",
+            "ar": "كينغستون",
+            "latitude": 17.971389,
+            "longitude": -76.793056,
+            "population": 937700
+        }
+    ],
+    "JO": [
+        {
+            "countryQid": "Q810",
+            "qid": "Q3805",
+            "en": "Amman",
+            "ar": "عَمَّان",
+            "latitude": 31.930983,
+            "longitude": 35.926084,
+            "population": 4007526
+        }
+    ],
+    "JP": [
+        {
+            "countryQid": "Q17",
+            "qid": "Q1490",
+            "en": "Tokyo",
+            "ar": "طوكيو",
+            "latitude": 35.689444,
+            "longitude": 139.691667,
+            "population": 14264798
+        }
+    ],
+    "KE": [
+        {
+            "countryQid": "Q114",
+            "qid": "Q3870",
+            "en": "Nairobi",
+            "ar": "نيروبي",
+            "latitude": -1.286389,
+            "longitude": 36.817222,
+            "population": 5545000
+        }
+    ],
+    "KG": [
+        {
+            "countryQid": "Q813",
+            "qid": "Q9361",
+            "en": "Bishkek",
+            "ar": "بيشكك",
+            "latitude": 42.866667,
+            "longitude": 74.566667,
+            "population": 1191000
+        }
+    ],
+    "KH": [
+        {
+            "countryQid": "Q424",
+            "qid": "Q1850",
+            "en": "Phnom Penh",
+            "ar": "بنوم بنه",
+            "latitude": 11.569583,
+            "longitude": 104.921028,
+            "population": 2129371
+        }
+    ],
+    "KI": [
+        {
+            "countryQid": "Q710",
+            "qid": "Q131233",
+            "en": "South Tarawa",
+            "ar": "جنوب تاراوا",
+            "latitude": 1.333333,
+            "longitude": 172.966667,
+            "population": 63439
+        }
+    ],
+    "KM": [
+        {
+            "countryQid": "Q970",
+            "qid": "Q3901",
+            "en": "Moroni",
+            "ar": "موروني",
+            "latitude": -11.703611,
+            "longitude": 43.253611,
+            "population": 85400
+        }
+    ],
+    "KN": [
+        {
+            "countryQid": "Q763",
+            "qid": "Q41295",
+            "en": "Basseterre",
+            "ar": "باستير",
+            "latitude": 17.298333,
+            "longitude": -62.734167,
+            "population": 12920
+        }
+    ],
+    "KP": [
+        {
+            "countryQid": "Q423",
+            "qid": "Q18808",
+            "en": "Pyongyang",
+            "ar": "بيونغيانغ",
+            "latitude": 39.016667,
+            "longitude": 125.7475,
+            "population": 2863000
+        }
+    ],
+    "KR": [
+        {
+            "countryQid": "Q884",
+            "qid": "Q8684",
+            "en": "Seoul",
+            "ar": "سول",
+            "latitude": 37.56,
+            "longitude": 126.99,
+            "population": 9668465
+        }
+    ],
+    "KW": [
+        {
+            "countryQid": "Q817",
+            "qid": "Q35178",
+            "en": "Kuwait City",
+            "ar": "مدينة الكويت",
+            "latitude": 29.375,
+            "longitude": 47.98,
+            "population": 2989000
+        }
+    ],
+    "KY": [
+        {
+            "countryQid": "Q5785",
+            "qid": "Q172996",
+            "en": "George Town",
+            "ar": "جورج تاون، جزر كايمان",
+            "latitude": 19.296389,
+            "longitude": -81.381667,
+            "population": 27704
+        }
+    ],
+    "KZ": [
+        {
+            "countryQid": "Q232",
+            "qid": "Q1520",
+            "en": "Astana",
+            "ar": "أستانة",
+            "latitude": 51.133333,
+            "longitude": 71.433333,
+            "population": 1078362
+        }
+    ],
+    "LA": [
+        {
+            "countryQid": "Q819",
+            "qid": "Q9326",
+            "en": "Vientiane",
+            "ar": "فيينتيان",
+            "latitude": 17.98,
+            "longitude": 102.63,
+            "population": 948487
+        }
+    ],
+    "LB": [
+        {
+            "countryQid": "Q822",
+            "qid": "Q3820",
+            "en": "Beirut",
+            "ar": "بيروت",
+            "latitude": 33.886944,
+            "longitude": 35.513056,
+            "population": 2421354
+        }
+    ],
+    "LC": [
+        {
+            "countryQid": "Q760",
+            "qid": "Q41699",
+            "en": "Castries",
+            "ar": "كاستريس",
+            "latitude": 14.010833,
+            "longitude": -60.989444,
+            "population": 20000
+        }
+    ],
+    "LI": [
+        {
+            "countryQid": "Q347",
+            "qid": "Q1844",
+            "en": "Vaduz",
+            "ar": "فادوتس",
+            "latitude": 47.140556,
+            "longitude": 9.522222,
+            "population": 5668
+        }
+    ],
+    "LK": [
+        {
+            "countryQid": "Q854",
+            "qid": "Q35381",
+            "en": "Colombo",
+            "ar": "كولمبو",
+            "latitude": 6.926667,
+            "longitude": 79.860556,
+            "population": 647557
+        },
+        {
+            "countryQid": "Q854",
+            "qid": "Q41963",
+            "en": "Sri Jayawardenepura Kotte",
+            "ar": "سري جاياواردنابورا كوتي",
+            "latitude": 6.9,
+            "longitude": 79.916389,
+            "population": 115826
+        }
+    ],
+    "LR": [
+        {
+            "countryQid": "Q1014",
+            "qid": "Q3748",
+            "en": "Monrovia",
+            "ar": "مونروفيا",
+            "latitude": 6.310556,
+            "longitude": -10.804722,
+            "population": 1761032
+        }
+    ],
+    "LS": [
+        {
+            "countryQid": "Q1013",
+            "qid": "Q3909",
+            "en": "Maseru",
+            "ar": "ماسيرو",
+            "latitude": -29.31,
+            "longitude": 27.48,
+            "population": 343541
+        }
+    ],
+    "LT": [
+        {
+            "countryQid": "Q37",
+            "qid": "Q216",
+            "en": "Vilnius",
+            "ar": "فيلنيوس",
+            "latitude": 54.687222,
+            "longitude": 25.28,
+            "population": 581475
+        }
+    ],
+    "LU": [
+        {
+            "countryQid": "Q32",
+            "qid": "Q1842",
+            "en": "Luxembourg",
+            "ar": "مدينة لوكسمبورغ",
+            "latitude": 49.611389,
+            "longitude": 6.13,
+            "population": 137678
+        }
+    ],
+    "LV": [
+        {
+            "countryQid": "Q211",
+            "qid": "Q1773",
+            "en": "Riga",
+            "ar": "ريغا",
+            "latitude": 56.9475,
+            "longitude": 24.106944,
+            "population": 588911
+        }
+    ],
+    "LY": [
+        {
+            "countryQid": "Q1016",
+            "qid": "Q3579",
+            "en": "Tripoli",
+            "ar": "طرابلس",
+            "latitude": 32.8875,
+            "longitude": 13.1875,
+            "population": 1293016
+        }
+    ],
+    "MA": [
+        {
+            "countryQid": "Q1028",
+            "qid": "Q3551",
+            "en": "Rabat",
+            "ar": "الرباط",
+            "latitude": 34.021111,
+            "longitude": -6.841389,
+            "population": 515619
+        }
+    ],
+    "MC": [
+        {
+            "countryQid": "Q235",
+            "qid": "Q235",
+            "en": "Monaco",
+            "ar": "موناكو",
+            "latitude": 43.731111,
+            "longitude": 7.42,
+            "population": 38857
+        }
+    ],
+    "MD": [
+        {
+            "countryQid": "Q217",
+            "qid": "Q21197",
+            "en": "Chișinău",
+            "ar": "كيشيناو",
+            "latitude": 47.022778,
+            "longitude": 28.835278,
+            "population": 567038
+        }
+    ],
+    "ME": [
+        {
+            "countryQid": "Q236",
+            "qid": "Q23564",
+            "en": "Podgorica",
+            "ar": "بودغوريتسا",
+            "latitude": 42.441389,
+            "longitude": 19.262778,
+            "population": 150977
+        }
+    ],
+    "MF": [
+        {
+            "countryQid": "Q126125",
+            "qid": "Q200605",
+            "en": "Marigot",
+            "ar": "ماريغو",
+            "latitude": 18.066667,
+            "longitude": -63.084722,
+            "population": 5700
+        }
+    ],
+    "MG": [
+        {
+            "countryQid": "Q1019",
+            "qid": "Q3915",
+            "en": "Antananarivo",
+            "ar": "أنتانانريفو",
+            "latitude": -18.91,
+            "longitude": 47.525,
+            "population": 1275207
+        }
+    ],
+    "MH": [
+        {
+            "countryQid": "Q709",
+            "qid": "Q12919",
+            "en": "Majuro",
+            "ar": "ماجورو",
+            "latitude": 7.0918,
+            "longitude": 171.3802,
+            "population": 30000
+        }
+    ],
+    "MK": [
+        {
+            "countryQid": "Q221",
+            "qid": "Q384",
+            "en": "Skopje",
+            "ar": "إسكوبية",
+            "latitude": 41.996111,
+            "longitude": 21.431667,
+            "population": 422540
+        }
+    ],
+    "ML": [
+        {
+            "countryQid": "Q912",
+            "qid": "Q3703",
+            "en": "Bamako",
+            "ar": "باماكو",
+            "latitude": 12.645833,
+            "longitude": -7.992222,
+            "population": 4227569
+        }
+    ],
+    "MM": [
+        {
+            "countryQid": "Q836",
+            "qid": "Q37400",
+            "en": "Naypyidaw",
+            "ar": "نايبيداو",
+            "latitude": 19.7475,
+            "longitude": 96.115,
+            "population": 1160242
+        }
+    ],
+    "MN": [
+        {
+            "countryQid": "Q711",
+            "qid": "Q23430",
+            "en": "Ulaanbaatar",
+            "ar": "أولان باتور",
+            "latitude": 47.921357,
+            "longitude": 106.905515,
+            "population": 1396288
+        }
+    ],
+    "MP": [
+        {
+            "countryQid": "Q16644",
+            "qid": "Q49755159",
+            "en": "Saipan",
+            "ar": null,
+            "latitude": 15.21233,
+            "longitude": 145.7545,
+            "population": 43385
+        }
+    ],
+    "MQ": [
+        {
+            "countryQid": "Q17054",
+            "qid": "Q81621",
+            "en": "Fort-de-France",
+            "ar": "فور دو فرانس",
+            "latitude": 14.6,
+            "longitude": -61.066667,
+            "population": 75506
+        }
+    ],
+    "MR": [
+        {
+            "countryQid": "Q1025",
+            "qid": "Q3688",
+            "en": "Nouakchott",
+            "ar": "نواكشوط",
+            "latitude": 18.08581,
+            "longitude": -15.9785,
+            "population": 1446761
+        }
+    ],
+    "MS": [
+        {
+            "countryQid": "Q13353",
+            "qid": "Q30990",
+            "en": "Plymouth",
+            "ar": "بليموث، مونتسيرات",
+            "latitude": 16.706417,
+            "longitude": -62.215839,
+            "population": 0
+        },
+        {
+            "countryQid": "Q13353",
+            "qid": "Q31006",
+            "en": "Brades",
+            "ar": "بريدز",
+            "latitude": 16.792778,
+            "longitude": -62.210556,
+            "population": 391
+        }
+    ],
+    "MT": [
+        {
+            "countryQid": "Q233",
+            "qid": "Q23800",
+            "en": "Valletta",
+            "ar": "البلد",
+            "latitude": 35.897778,
+            "longitude": 14.5125,
+            "population": 6444
+        }
+    ],
+    "MU": [
+        {
+            "countryQid": "Q1027",
+            "qid": "Q3929",
+            "en": "Port Louis",
+            "ar": "بورت لويس",
+            "latitude": -20.161944,
+            "longitude": 57.498889,
+            "population": 149194
+        }
+    ],
+    "MV": [
+        {
+            "countryQid": "Q826",
+            "qid": "Q9347",
+            "en": "Malé",
+            "ar": "ماليه",
+            "latitude": 4.175,
+            "longitude": 73.508333,
+            "population": 133019
+        }
+    ],
+    "MW": [
+        {
+            "countryQid": "Q1020",
+            "qid": "Q3876",
+            "en": "Lilongwe",
+            "ar": "ليلونغوي",
+            "latitude": -13.986389,
+            "longitude": 33.768056,
+            "population": 989318
+        }
+    ],
+    "MX": [
+        {
+            "countryQid": "Q96",
+            "qid": "Q1489",
+            "en": "Mexico City",
+            "ar": "مدينة مكسيكو",
+            "latitude": 19.353773,
+            "longitude": -99.13589,
+            "population": 9209944
+        }
+    ],
+    "MY": [
+        {
+            "countryQid": "Q833",
+            "qid": "Q1865",
+            "en": "Kuala Lumpur",
+            "ar": "كوالالمبور",
+            "latitude": 3.147778,
+            "longitude": 101.695278,
+            "population": 9000280
+        }
+    ],
+    "MZ": [
+        {
+            "countryQid": "Q1029",
+            "qid": "Q3889",
+            "en": "Maputo",
+            "ar": "مابوتو",
+            "latitude": -25.968889,
+            "longitude": 32.573333,
+            "population": 1133200
+        }
+    ],
+    "NA": [
+        {
+            "countryQid": "Q1030",
+            "qid": "Q3935",
+            "en": "Windhoek",
+            "ar": "ويندهوك",
+            "latitude": -22.57,
+            "longitude": 17.083611,
+            "population": 486169
+        }
+    ],
+    "NC": [
+        {
+            "countryQid": "Q33788",
+            "qid": "Q9733",
+            "en": "Nouméa",
+            "ar": "نوميا",
+            "latitude": -22.266667,
+            "longitude": 166.45,
+            "population": 96082
+        }
+    ],
+    "NE": [
+        {
+            "countryQid": "Q1032",
+            "qid": "Q3674",
+            "en": "Niamey",
+            "ar": "نيامي",
+            "latitude": 13.515,
+            "longitude": 2.1175,
+            "population": 1496260
+        }
+    ],
+    "NF": [
+        {
+            "countryQid": "Q31057",
+            "qid": "Q30963",
+            "en": "Kingston",
+            "ar": "كينغستون",
+            "latitude": -29.05,
+            "longitude": 167.966667,
+            "population": null
+        }
+    ],
+    "NG": [
+        {
+            "countryQid": "Q1033",
+            "qid": "Q3787",
+            "en": "Abuja",
+            "ar": "أبوجا",
+            "latitude": 9.055556,
+            "longitude": 7.491389,
+            "population": 1693400
+        }
+    ],
+    "NI": [
+        {
+            "countryQid": "Q811",
+            "qid": "Q3274",
+            "en": "Managua",
+            "ar": "ماناغوا",
+            "latitude": 12.154681,
+            "longitude": -86.273725,
+            "population": 937489
+        }
+    ],
+    "NL": [
+        {
+            "countryQid": "Q29999",
+            "qid": "Q727",
+            "en": "Amsterdam",
+            "ar": "أمستردام",
+            "latitude": 52.366667,
+            "longitude": 4.883333,
+            "population": 921468
+        }
+    ],
+    "NO": [
+        {
+            "countryQid": "Q20",
+            "qid": "Q585",
+            "en": "Oslo",
+            "ar": "أوسلو",
+            "latitude": 59.913333,
+            "longitude": 10.738889,
+            "population": 717710
+        }
+    ],
+    "NP": [
+        {
+            "countryQid": "Q837",
+            "qid": "Q3037",
+            "en": "Kathmandu",
+            "ar": "كتمندو",
+            "latitude": 27.71,
+            "longitude": 85.32,
+            "population": 845767
+        }
+    ],
+    "NR": [
+        {
+            "countryQid": "Q697",
+            "qid": "Q31026",
+            "en": "Yaren District",
+            "ar": "ضاحية يارين",
+            "latitude": -0.5477,
+            "longitude": 166.920867,
+            "population": 747
+        }
+    ],
+    "NU": [
+        {
+            "countryQid": "Q34020",
+            "qid": "Q30966",
+            "en": "Alofi",
+            "ar": "الوفي",
+            "latitude": -19.056,
+            "longitude": -169.921,
+            "population": 575
+        }
+    ],
+    "NZ": [
+        {
+            "countryQid": "Q664",
+            "qid": "Q23661",
+            "en": "Wellington",
+            "ar": "ويلينغتون",
+            "latitude": -41.288889,
+            "longitude": 174.777222,
+            "population": 216200
+        }
+    ],
+    "OM": [
+        {
+            "countryQid": "Q842",
+            "qid": "Q3826",
+            "en": "Muscat",
+            "ar": "مسقط",
+            "latitude": 23.613889,
+            "longitude": 58.592222,
+            "population": 1421409
+        }
+    ],
+    "PA": [
+        {
+            "countryQid": "Q804",
+            "qid": "Q3306",
+            "en": "Panama City",
+            "ar": "مدينة بنما",
+            "latitude": 8.971111,
+            "longitude": -79.534722,
+            "population": 1540000
+        }
+    ],
+    "PC": [
+        {
+            "countryQid": "Q129237",
+            "qid": "Q51679",
+            "en": "Saipan",
+            "ar": "سايبان",
+            "latitude": 15.183333,
+            "longitude": 145.75,
+            "population": 48220
+        }
+    ],
+    "PE": [
+        {
+            "countryQid": "Q419",
+            "qid": "Q2868",
+            "en": "Lima",
+            "ar": "ليما",
+            "latitude": -12.06,
+            "longitude": -77.0375,
+            "population": 9943800
+        }
+    ],
+    "PF": [
+        {
+            "countryQid": "Q30971",
+            "qid": "Q130800",
+            "en": "Papeete",
+            "ar": "بابيتي",
+            "latitude": -17.539722,
+            "longitude": -149.568889,
+            "population": 26654
+        }
+    ],
+    "PG": [
+        {
+            "countryQid": "Q691",
+            "qid": "Q36526",
+            "en": "Port Moresby",
+            "ar": "بورت مورسبي",
+            "latitude": -9.478889,
+            "longitude": 147.149444,
+            "population": 317374
+        }
+    ],
+    "PH": [
+        {
+            "countryQid": "Q928",
+            "qid": "Q1461",
+            "en": "Manila",
+            "ar": "مانيلا",
+            "latitude": 14.595833,
+            "longitude": 120.977222,
+            "population": 1902590
+        }
+    ],
+    "PK": [
+        {
+            "countryQid": "Q843",
+            "qid": "Q1362",
+            "en": "Islamabad",
+            "ar": "إسلام آباد",
+            "latitude": 33.698889,
+            "longitude": 73.036944,
+            "population": 1014825
+        },
+        {
+            "countryQid": "Q843",
+            "qid": "Q93230",
+            "en": "Rawalpindi",
+            "ar": "راولبندي",
+            "latitude": 33.6007,
+            "longitude": 73.0679,
+            "population": 2098231
+        }
+    ],
+    "PL": [
+        {
+            "countryQid": "Q36",
+            "qid": "Q270",
+            "en": "Warsaw",
+            "ar": "وارسو",
+            "latitude": 52.23,
+            "longitude": 21.011111,
+            "population": 1862402
+        }
+    ],
+    "PM": [
+        {
+            "countryQid": "Q34617",
+            "qid": "Q185678",
+            "en": "Saint-Pierre",
+            "ar": "سان بيير (سان بيير وميكلون)",
+            "latitude": 46.777778,
+            "longitude": -56.177778,
+            "population": 5282
+        }
+    ],
+    "PN": [
+        {
+            "countryQid": "Q35672",
+            "qid": "Q48273",
+            "en": "Adamstown",
+            "ar": "آدمزتاون",
+            "latitude": -25.066667,
+            "longitude": -130.1,
+            "population": 50
+        }
+    ],
+    "PR": [
+        {
+            "countryQid": "Q1183",
+            "qid": "Q41211",
+            "en": "San Juan",
+            "ar": "سان خوان",
+            "latitude": 18.465278,
+            "longitude": -66.116667,
+            "population": 342259
+        }
+    ],
+    "PS": [
+        {
+            "countryQid": "Q219060",
+            "qid": "Q158119",
+            "en": "Ramallah",
+            "ar": "رام الله",
+            "latitude": 31.896944,
+            "longitude": 35.201667,
+            "population": 43880
+        },
+        {
+            "countryQid": "Q219060",
+            "qid": "Q212938",
+            "en": "East Jerusalem",
+            "ar": "القدس الشرقية",
+            "latitude": 31.78336,
+            "longitude": 35.23388,
+            "population": 236000
+        }
+    ],
+    "PT": [
+        {
+            "countryQid": "Q45",
+            "qid": "Q597",
+            "en": "Lisbon",
+            "ar": "لشبونة",
+            "latitude": 38.708042,
+            "longitude": -9.139016,
+            "population": 545796
+        }
+    ],
+    "PW": [
+        {
+            "countryQid": "Q695",
+            "qid": "Q515229",
+            "en": "Ngerulmud",
+            "ar": "نغيرولمود",
+            "latitude": 7.500556,
+            "longitude": 134.624167,
+            "population": 0
+        }
+    ],
+    "PY": [
+        {
+            "countryQid": "Q733",
+            "qid": "Q2933",
+            "en": "Asunción",
+            "ar": "أسونسيون",
+            "latitude": -25.28,
+            "longitude": -57.634444,
+            "population": 462241
+        }
+    ],
+    "QA": [
+        {
+            "countryQid": "Q846",
+            "qid": "Q3861",
+            "en": "Doha",
+            "ar": "الدوحة",
+            "latitude": 25.286111,
+            "longitude": 51.529444,
+            "population": 1186023
+        }
+    ],
+    "RE": [
+        {
+            "countryQid": "Q17070",
+            "qid": "Q47045",
+            "en": "Saint-Denis",
+            "ar": "سان ديني",
+            "latitude": -20.878889,
+            "longitude": 55.448056,
+            "population": 155634
+        }
+    ],
+    "RO": [
+        {
+            "countryQid": "Q218",
+            "qid": "Q19660",
+            "en": "Bucharest",
+            "ar": "بوخارست",
+            "latitude": 44.413361,
+            "longitude": 26.097778,
+            "population": 1716961
+        }
+    ],
+    "RS": [
+        {
+            "countryQid": "Q403",
+            "qid": "Q3711",
+            "en": "Belgrade",
+            "ar": "بلغراد",
+            "latitude": 44.817778,
+            "longitude": 20.456944,
+            "population": 1197714
+        }
+    ],
+    "RU": [
+        {
+            "countryQid": "Q159",
+            "qid": "Q649",
+            "en": "Moscow",
+            "ar": "موسكو",
+            "latitude": 55.750556,
+            "longitude": 37.6175,
+            "population": 13274285
+        }
+    ],
+    "RW": [
+        {
+            "countryQid": "Q1037",
+            "qid": "Q3859",
+            "en": "Kigali",
+            "ar": "كيغالي",
+            "latitude": -1.9525,
+            "longitude": 30.115,
+            "population": 1745555
+        }
+    ],
+    "SA": [
+        {
+            "countryQid": "Q851",
+            "qid": "Q3692",
+            "en": "Riyadh",
+            "ar": "الرياض",
+            "latitude": 24.65,
+            "longitude": 46.71,
+            "population": 7009100
+        }
+    ],
+    "SB": [
+        {
+            "countryQid": "Q685",
+            "qid": "Q40921",
+            "en": "Honiara",
+            "ar": "هونيارا",
+            "latitude": -9.433333,
+            "longitude": 159.95,
+            "population": 84520
+        }
+    ],
+    "SC": [
+        {
+            "countryQid": "Q1042",
+            "qid": "Q3940",
+            "en": "Victoria",
+            "ar": "فكتوريا",
+            "latitude": -4.623611,
+            "longitude": 55.454444,
+            "population": 24701
+        }
+    ],
+    "SD": [
+        {
+            "countryQid": "Q1049",
+            "qid": "Q1963",
+            "en": "Khartoum",
+            "ar": "الخرطوم",
+            "latitude": 15.60308,
+            "longitude": 32.52654,
+            "population": 5345000
+        }
+    ],
+    "SE": [
+        {
+            "countryQid": "Q34",
+            "qid": "Q1754",
+            "en": "Stockholm",
+            "ar": "ستوكهولم",
+            "latitude": 59.329444,
+            "longitude": 18.068611,
+            "population": 984748
+        }
+    ],
+    "SG": [
+        {
+            "countryQid": "Q334",
+            "qid": "Q334",
+            "en": "Singapore",
+            "ar": "سنغافورة",
+            "latitude": 1.3,
+            "longitude": 103.8,
+            "population": 5866139
+        }
+    ],
+    "SH": [
+        {
+            "countryQid": "Q192184",
+            "qid": "Q30970",
+            "en": "Jamestown",
+            "ar": "جيمس تاون",
+            "latitude": -15.925139,
+            "longitude": -5.717917,
+            "population": 714
+        }
+    ],
+    "SI": [
+        {
+            "countryQid": "Q215",
+            "qid": "Q437",
+            "en": "Ljubljana",
+            "ar": "لبلانة",
+            "latitude": 46.051389,
+            "longitude": 14.506111,
+            "population": 284293
+        }
+    ],
+    "SJ": [
+        {
+            "countryQid": null,
+            "qid": "Q25923",
+            "en": "Longyearbyen",
+            "ar": "لونغييربين",
+            "latitude": 78.216667,
+            "longitude": 15.633333,
+            "population": 2417,
+            "matchedBy": "label"
+        }
+    ],
+    "SK": [
+        {
+            "countryQid": "Q214",
+            "qid": "Q1780",
+            "en": "Bratislava",
+            "ar": "براتيسلافا",
+            "latitude": 48.151699,
+            "longitude": 17.109306,
+            "population": 480902
+        }
+    ],
+    "SL": [
+        {
+            "countryQid": "Q1044",
+            "qid": "Q3780",
+            "en": "Freetown",
+            "ar": "فريتاون",
+            "latitude": 8.487222,
+            "longitude": -13.235556,
+            "population": 951000
+        }
+    ],
+    "SM": [
+        {
+            "countryQid": "Q238",
+            "qid": "Q1848",
+            "en": "San Marino",
+            "ar": "مدينة سان مارينو",
+            "latitude": 43.932011,
+            "longitude": 12.44845,
+            "population": 4040
+        }
+    ],
+    "SN": [
+        {
+            "countryQid": "Q1041",
+            "qid": "Q3718",
+            "en": "Dakar",
+            "ar": "دكار",
+            "latitude": 14.672556,
+            "longitude": -17.432,
+            "population": 1438725
+        }
+    ],
+    "SO": [
+        {
+            "countryQid": "Q1045",
+            "qid": "Q2449",
+            "en": "Mogadishu",
+            "ar": "مقديشو",
+            "latitude": 2.039167,
+            "longitude": 45.341944,
+            "population": 2120000
+        }
+    ],
+    "SR": [
+        {
+            "countryQid": "Q730",
+            "qid": "Q3001",
+            "en": "Paramaribo",
+            "ar": "باراماريبو",
+            "latitude": 5.866667,
+            "longitude": -55.166667,
+            "population": 223757
+        }
+    ],
+    "SS": [
+        {
+            "countryQid": "Q958",
+            "qid": "Q1947",
+            "en": "Juba",
+            "ar": "جوبا",
+            "latitude": 4.853889,
+            "longitude": 31.5825,
+            "population": 500088
+        }
+    ],
+    "ST": [
+        {
+            "countryQid": "Q1039",
+            "qid": "Q3932",
+            "en": "São Tomé",
+            "ar": "ساو تومي",
+            "latitude": 0.3375,
+            "longitude": 6.728333,
+            "population": 65468
+        }
+    ],
+    "SV": [
+        {
+            "countryQid": "Q792",
+            "qid": "Q3110",
+            "en": "San Salvador",
+            "ar": "سان سلفادور",
+            "latitude": 13.697597,
+            "longitude": -89.191156,
+            "population": 330543
+        }
+    ],
+    "SX": [
+        {
+            "countryQid": "Q26273",
+            "qid": "Q30958",
+            "en": "Philipsburg",
+            "ar": "فيليبسبورغ",
+            "latitude": 18.024167,
+            "longitude": -63.043333,
+            "population": 1338
+        }
+    ],
+    "SY": [
+        {
+            "countryQid": "Q858",
+            "qid": "Q3766",
+            "en": "Damascus",
+            "ar": "دمشق",
+            "latitude": 33.513,
+            "longitude": 36.292,
+            "population": 2685360
+        }
+    ],
+    "SZ": [
+        {
+            "countryQid": "Q1050",
+            "qid": "Q101418",
+            "en": "Lobamba",
+            "ar": "لوبامبا",
+            "latitude": -26.44648,
+            "longitude": 31.206411,
+            "population": 114585
+        },
+        {
+            "countryQid": "Q1050",
+            "qid": "Q3904",
+            "en": "Mbabane",
+            "ar": "مبابان",
+            "latitude": -26.316667,
+            "longitude": 31.133333,
+            "population": 76218
+        }
+    ],
+    "TA": [
+        {
+            "countryQid": "Q34625512",
+            "qid": "Q498153",
+            "en": "Edinburgh of the Seven Seas",
+            "ar": "إدنبرة ذات البحار السبعة",
+            "latitude": -37.067278,
+            "longitude": -12.31,
+            "population": null
+        }
+    ],
+    "TC": [
+        {
+            "countryQid": "Q18221",
+            "qid": "Q34205",
+            "en": "Cockburn Town",
+            "ar": "كوكبرن تاون",
+            "latitude": 21.460278,
+            "longitude": -71.141389,
+            "population": 4100
+        }
+    ],
+    "TD": [
+        {
+            "countryQid": "Q657",
+            "qid": "Q3659",
+            "en": "N'Djamena",
+            "ar": "انجمينا",
+            "latitude": 12.11,
+            "longitude": 15.05,
+            "population": 1092066
+        }
+    ],
+    "TF": [
+        {
+            "countryQid": "Q129003",
+            "qid": "Q839559",
+            "en": "Port-aux-Français",
+            "ar": "بورت أو فرانسيه",
+            "latitude": -49.35,
+            "longitude": 70.216667,
+            "population": null
+        }
+    ],
+    "TG": [
+        {
+            "countryQid": "Q945",
+            "qid": "Q3792",
+            "en": "Lomé",
+            "ar": "لومي",
+            "latitude": 6.13,
+            "longitude": 1.215833,
+            "population": 2188376
+        }
+    ],
+    "TH": [
+        {
+            "countryQid": "Q869",
+            "qid": "Q1861",
+            "en": "Bangkok",
+            "ar": "بانكوك",
+            "latitude": 13.75,
+            "longitude": 100.516667,
+            "population": 5676648
+        }
+    ],
+    "TJ": [
+        {
+            "countryQid": "Q863",
+            "qid": "Q9365",
+            "en": "Dushanbe",
+            "ar": "دوشنبة",
+            "latitude": 38.573056,
+            "longitude": 68.786389,
+            "population": 948251
+        }
+    ],
+    "TK": [
+        {
+            "countryQid": null,
+            "qid": "Q650847",
+            "en": "Fakaofo",
+            "ar": "فاكاوفو",
+            "latitude": -9.38,
+            "longitude": -171.219,
+            "population": 483,
+            "matchedBy": "label"
+        }
+    ],
+    "TL": [
+        {
+            "countryQid": "Q574",
+            "qid": "Q9310",
+            "en": "Dili",
+            "ar": "ديلي",
+            "latitude": -8.553611,
+            "longitude": 125.578333,
+            "population": 222323
+        }
+    ],
+    "TM": [
+        {
+            "countryQid": "Q874",
+            "qid": "Q23438",
+            "en": "Ashgabat",
+            "ar": "عشق آباد",
+            "latitude": 37.95,
+            "longitude": 58.383333,
+            "population": 1030063
+        }
+    ],
+    "TN": [
+        {
+            "countryQid": "Q948",
+            "qid": "Q3572",
+            "en": "Tunis",
+            "ar": "تونس",
+            "latitude": 36.800833,
+            "longitude": 10.18,
+            "population": 602560
+        }
+    ],
+    "TO": [
+        {
+            "countryQid": "Q678",
+            "qid": "Q38834",
+            "en": "Nukuʻalofa",
+            "ar": "نوكو ألوفا",
+            "latitude": -21.13434,
+            "longitude": -175.201808,
+            "population": 23221
+        }
+    ],
+    "TR": [
+        {
+            "countryQid": "Q43",
+            "qid": "Q3640",
+            "en": "Ankara",
+            "ar": "أنقرة",
+            "latitude": 39.93576,
+            "longitude": 32.83869,
+            "population": 5803482
+        }
+    ],
+    "TT": [
+        {
+            "countryQid": "Q754",
+            "qid": "Q39178",
+            "en": "Port of Spain",
+            "ar": "بورت أوف سبين",
+            "latitude": 10.666667,
+            "longitude": -61.516667,
+            "population": 49031
+        }
+    ],
+    "TV": [
+        {
+            "countryQid": "Q672",
+            "qid": "Q34126",
+            "en": "Funafuti",
+            "ar": "فونافوتي",
+            "latitude": -8.504778,
+            "longitude": 179.117361,
+            "population": 6025
+        }
+    ],
+    "TW": [
+        {
+            "countryQid": "Q865",
+            "qid": "Q1867",
+            "en": "Taipei",
+            "ar": "تايبيه",
+            "latitude": 25.0375,
+            "longitude": 121.5625,
+            "population": 2442991
+        }
+    ],
+    "TZ": [
+        {
+            "countryQid": "Q924",
+            "qid": "Q3866",
+            "en": "Dodoma",
+            "ar": "دودوما",
+            "latitude": -6.1835,
+            "longitude": 35.746,
+            "population": 213636
+        }
+    ],
+    "UA": [
+        {
+            "countryQid": "Q212",
+            "qid": "Q1899",
+            "en": "Kyiv",
+            "ar": "كييف",
+            "latitude": 50.45,
+            "longitude": 30.523611,
+            "population": 2952301
+        }
+    ],
+    "UG": [
+        {
+            "countryQid": "Q1036",
+            "qid": "Q3894",
+            "en": "Kampala",
+            "ar": "كامبالا",
+            "latitude": 0.313611,
+            "longitude": 32.581111,
+            "population": 1680600
+        }
+    ],
+    "US": [
+        {
+            "countryQid": "Q30",
+            "qid": "Q61",
+            "en": "Washington, D.C.",
+            "ar": "واشنطن العاصمة",
+            "latitude": 38.895,
+            "longitude": -77.036667,
+            "population": 689545
+        }
+    ],
+    "UY": [
+        {
+            "countryQid": "Q77",
+            "qid": "Q1335",
+            "en": "Montevideo",
+            "ar": "مونتفيدو",
+            "latitude": -34.905917,
+            "longitude": -56.191311,
+            "population": 1302954
+        }
+    ],
+    "UZ": [
+        {
+            "countryQid": "Q265",
+            "qid": "Q269",
+            "en": "Tashkent",
+            "ar": "طشقند",
+            "latitude": 41.311111,
+            "longitude": 69.279722,
+            "population": 2956384
+        }
+    ],
+    "VA": [
+        {
+            "countryQid": "Q237",
+            "qid": "Q237",
+            "en": "Vatican City",
+            "ar": "الفاتيكان",
+            "latitude": 41.904,
+            "longitude": 12.453,
+            "population": 882
+        }
+    ],
+    "VC": [
+        {
+            "countryQid": "Q757",
+            "qid": "Q41474",
+            "en": "Kingstown",
+            "ar": "كينغستاون",
+            "latitude": 13.15527,
+            "longitude": -61.22742,
+            "population": 24518
+        }
+    ],
+    "VE": [
+        {
+            "countryQid": "Q717",
+            "qid": "Q1533",
+            "en": "Caracas",
+            "ar": "كراكاس",
+            "latitude": 10.506111,
+            "longitude": -66.914444,
+            "population": 2245744
+        }
+    ],
+    "VG": [
+        {
+            "countryQid": "Q25305",
+            "qid": "Q179431",
+            "en": "Road Town",
+            "ar": "رود تاون",
+            "latitude": 18.433333,
+            "longitude": -64.616667,
+            "population": 12603
+        }
+    ],
+    "VI": [
+        {
+            "countryQid": "Q11703",
+            "qid": "Q51681",
+            "en": "Charlotte Amalie",
+            "ar": "شارلوت أمالي",
+            "latitude": 18.35,
+            "longitude": -64.95,
+            "population": 14477
+        }
+    ],
+    "VN": [
+        {
+            "countryQid": "Q881",
+            "qid": "Q1858",
+            "en": "Hanoi",
+            "ar": "هانوي",
+            "latitude": 21.0245,
+            "longitude": 105.84117,
+            "population": 8717600
+        }
+    ],
+    "VU": [
+        {
+            "countryQid": "Q686",
+            "qid": "Q37806",
+            "en": "Port Vila",
+            "ar": "بورت فيلا",
+            "latitude": -17.73333,
+            "longitude": 168.316667,
+            "population": 49034
+        }
+    ],
+    "WF": [
+        {
+            "countryQid": "Q35555",
+            "qid": "Q31002",
+            "en": "Mata-Utu",
+            "ar": "ماتا-أوتو",
+            "latitude": -13.2827,
+            "longitude": -176.1737,
+            "population": 1075
+        }
+    ],
+    "WS": [
+        {
+            "countryQid": "Q683",
+            "qid": "Q36260",
+            "en": "Apia",
+            "ar": "أبيا",
+            "latitude": -13.833333,
+            "longitude": -171.833333,
+            "population": 37708
+        }
+    ],
+    "XK": [
+        {
+            "countryQid": "Q1246",
+            "qid": "Q25270",
+            "en": "Pristina",
+            "ar": "برشتينة",
+            "latitude": 42.666667,
+            "longitude": 21.166667,
+            "population": 227466
+        }
+    ],
+    "YE": [
+        {
+            "countryQid": "Q805",
+            "qid": "Q131694",
+            "en": "Aden",
+            "ar": "عدن",
+            "latitude": 12.8,
+            "longitude": 45.033333,
+            "population": 1154410
+        },
+        {
+            "countryQid": "Q805",
+            "qid": "Q2471",
+            "en": "Sanaa",
+            "ar": "صنعاء",
+            "latitude": 15.35,
+            "longitude": 44.2,
+            "population": 2957000
+        }
+    ],
+    "YT": [
+        {
+            "countryQid": "Q17063",
+            "qid": "Q132676",
+            "en": "Mamoudzou",
+            "ar": "مامودزو",
+            "latitude": -12.781389,
+            "longitude": 45.231667,
+            "population": 71437
+        },
+        {
+            "countryQid": "Q17063",
+            "qid": "Q846048",
+            "en": "Dzaoudzi",
+            "ar": "دزاودزي",
+            "latitude": -12.788333,
+            "longitude": 45.2725,
+            "population": 17831
+        }
+    ],
+    "YU": [
+        {
+            "countryQid": "Q36704",
+            "qid": "Q3711",
+            "en": "Belgrade",
+            "ar": "بلغراد",
+            "latitude": 44.817778,
+            "longitude": 20.456944,
+            "population": 1197714
+        }
+    ],
+    "ZA": [
+        {
+            "countryQid": "Q258",
+            "qid": "Q37701",
+            "en": "Bloemfontein",
+            "ar": "بلومفونتين",
+            "latitude": -29.1,
+            "longitude": 26.216667,
+            "population": 256185
+        },
+        {
+            "countryQid": "Q258",
+            "qid": "Q3926",
+            "en": "Pretoria",
+            "ar": "بريتوريا",
+            "latitude": -25.746389,
+            "longitude": 28.188056,
+            "population": 741651
+        },
+        {
+            "countryQid": "Q258",
+            "qid": "Q5465",
+            "en": "Cape Town",
+            "ar": "كيب تاون",
+            "latitude": -33.925278,
+            "longitude": 18.423889,
+            "population": 3776313
+        }
+    ],
+    "ZM": [
+        {
+            "countryQid": "Q953",
+            "qid": "Q3881",
+            "en": "Lusaka",
+            "ar": "لوساكا",
+            "latitude": -15.416667,
+            "longitude": 28.283333,
+            "population": 2467563
+        }
+    ],
+    "ZW": [
+        {
+            "countryQid": "Q954",
+            "qid": "Q3921",
+            "en": "Harare",
+            "ar": "هراري",
+            "latitude": -17.829167,
+            "longitude": 31.052222,
+            "population": 2150000
+        }
+    ]
+}

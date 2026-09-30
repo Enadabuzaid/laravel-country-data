@@ -13,11 +13,11 @@ class SeederTest extends TestCase
 {
     // ── CountrySeeder ─────────────────────────────────────────────────────────
 
-    public function test_country_seeder_inserts_all_22_arab_countries(): void
+    public function test_country_seeder_inserts_all_250_countries(): void
     {
         $this->seed(CountrySeeder::class);
 
-        $this->assertDatabaseCount('countries', 22);
+        $this->assertDatabaseCount('countries', 250);
     }
 
     public function test_country_seeder_jordan_data_is_correct(): void
@@ -44,7 +44,7 @@ class SeederTest extends TestCase
         $this->seed(CountrySeeder::class);
         $this->seed(CountrySeeder::class); // run again
 
-        $this->assertDatabaseCount('countries', 22); // no duplicates
+        $this->assertDatabaseCount('countries', 250); // no duplicates
     }
 
     // ── CitySeeder ────────────────────────────────────────────────────────────
@@ -54,7 +54,7 @@ class SeederTest extends TestCase
         $this->seed(CountrySeeder::class);
         $this->seed(CitySeeder::class);
 
-        $this->assertDatabaseCount('cities', 136);
+        $this->assertDatabaseCount('cities', 359);
     }
 
     public function test_city_seeder_jordan_has_12_cities(): void
@@ -115,7 +115,7 @@ class SeederTest extends TestCase
         $this->seed(CitySeeder::class);
         $this->seed(CitySeeder::class); // run again
 
-        $this->assertDatabaseCount('cities', 136);
+        $this->assertDatabaseCount('cities', 359);
     }
 
     // ── AreaSeeder ────────────────────────────────────────────────────────────

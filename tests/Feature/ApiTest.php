@@ -34,12 +34,12 @@ class ApiTest extends TestCase
             ->assertJsonStructure(['data', 'meta' => ['total']]);
     }
 
-    public function test_countries_endpoint_returns_22_countries(): void
+    public function test_countries_endpoint_returns_every_country(): void
     {
         $response = $this->getJson('/api/geography/countries');
 
         $response->assertOk()
-            ->assertJsonPath('meta.total', 22);
+            ->assertJsonPath('meta.total', 250);
     }
 
     public function test_countries_endpoint_supports_filter(): void

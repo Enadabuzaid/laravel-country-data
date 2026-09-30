@@ -6,9 +6,15 @@ use Closure;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Enadstack\CountryData\Data\CurrencyData;
+use Enadstack\CountryData\Enums\CountryCode;
+use Enadstack\CountryData\Enums\Region;
 use Enadstack\CountryData\Models\Country;
 use Enadstack\CountryData\Models\City;
 use Enadstack\CountryData\Models\Area;
+use Enadstack\CountryData\Support\AreaCollection;
+use Enadstack\CountryData\Support\Lookup;
+use Illuminate\Support\Facades\Schema;
+use Throwable;
 
 /**
  * DB-based geography service.
@@ -161,6 +167,122 @@ class GeographyService
                 ->orderBy('name_en')
                 ->get()
         );
+    }
+
+    // ── Resolution (shortcuts, enums, scopes) ────────────────────────────────
+
+    /**
+     * Find an active country by anything a person might type: an ISO-2 or ISO-3
+     * code, a CountryCode case, or its English / official / Arabic name in any
+     * spelling ('Saudi Arabia', 'saudi-arabia', 'saudiArabia', 'السعودية').
+     */
+    public function resolveCountry(CountryCode|Country|string $needle): ?Country
+    {
+        if ($needle instanceof Country) {
+            return $needle;
+        }
+
+        if ($needle instanceof CountryCode) {
+            return $this->country($needle->value);
+        }
+
+        $code = $this->countryIndex()['keys'][Lookup::key($needle)] ?? null;
+
+        return $code !== null ? $this->country($code) : null;
+    }
+
+    /**
+     * Lookup tables for resolveCountry(), built from the countries table:
+     *   keys    – normalised name / code => ISO-2
+     *   methods – ISO-2 => static-method spelling (jordan, saudiArabia, …)
+     *
+     * @return array{keys: array<string, string>, methods: array<string, string>}
+     */
+    public function countryIndex(): array
+    {
+        return $this->remember('countries.index', function () {
+            $keys = $methods = [];
+            $rows = Country::active()->orderBy('id')
+                ->get(['code', 'iso3', 'name_en', 'name_ar', 'official_name_en', 'official_name_ar']);
+
+            // Weakest first so a common name always beats another row's official name.
+            foreach (['official_name_ar', 'official_name_en', 'name_ar', 'name_en', 'iso3', 'code'] as $column) {
+                foreach ($rows as $row) {
+                    if (filled($row->{$column})) {
+                        $keys[Lookup::key((string) $row->{$column})] = $row->code;
+                    }
+                }
+            }
+
+            foreach ($rows as $row) {
+                $methods[$row->code] = Lookup::method($row->name_en);
+            }
+
+            return ['keys' => $keys, 'methods' => $methods];
+        });
+    }
+
+    /** Active countries in a region (cached; same data as countries($filter)). */
+    public function countriesIn(Region|string $region): Collection
+    {
+        return $this->countries(($region instanceof Region ? $region : Region::fromName($region))->value);
+    }
+
+    /** Active cities of every active country in a region */
+    public function citiesIn(Region|string $region): Collection
+    {
+        $region = $region instanceof Region ? $region : Region::fromName($region);
+
+        return $this->remember("cities.region.{$region->value}", fn () =>
+            City::active()
+                ->whereIn('country_code', $this->countries($region->value)->pluck('code'))
+                ->orderBy('country_code')
+                ->orderBy('name_en')
+                ->get()
+        );
+    }
+
+    /** Active areas of every city in a country */
+    public function areasInCountry(string $countryCode): AreaCollection
+    {
+        $code = strtoupper($countryCode);
+
+        return $this->remember("areas.country.{$code}", fn () =>
+            Area::active()->inCountry($code)->orderBy('name_en')->get()
+        );
+    }
+
+    /** Active areas of every city in every country of a region */
+    public function areasInRegion(Region|string $region): AreaCollection
+    {
+        $region = $region instanceof Region ? $region : Region::fromName($region);
+
+        return $this->remember("areas.region.{$region->value}", fn () =>
+            Area::active()
+                ->whereIn('city_id', City::query()->select('id')
+                    ->whereIn('country_code', $this->countries($region->value)->pluck('code')))
+                ->orderBy('name_en')
+                ->get()
+        );
+    }
+
+    /**
+     * Whether the countries table exists and holds rows. Remembered for the
+     * process only: the answer changes the moment someone seeds.
+     */
+    public function isSeeded(): bool
+    {
+        if (array_key_exists('__seeded', $this->memo)) {
+            return $this->memo['__seeded'];
+        }
+
+        try {
+            $seeded = Schema::hasTable('countries') && Country::query()->exists();
+        } catch (Throwable) {
+            $seeded = false;
+        }
+
+        return $this->memo['__seeded'] = $seeded;
     }
 
     // ── Search (not cached — dynamic input) ──────────────────────────────────
