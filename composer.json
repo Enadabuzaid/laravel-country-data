@@ -1,6 +1,6 @@
 {
     "name": "enadstack/laravel-country-data",
-    "description": "Laravel package for country information (config-based, reusable, and localized)",
+    "description": "Every country, capital and city area for Laravel: Eloquent models, cached shortcuts, enums, validation rules and UI components, in English and Arabic",
     "type": "library",
     "license": "MIT",
     "authors": [

@@ -31,6 +31,11 @@ project uses [Semantic Versioning](https://semver.org/).
 - `GeographyService`: `resolveCountry()`, `countryIndex()`, `countriesIn()`,
   `citiesIn()`, `areasInCountry()`, `areasInRegion()`, `isSeeded()`.
 
+### Documentation
+- README rewritten: data coverage per region, shortcuts cheat sheet, enums, models and
+  scopes, facade, validation, frontend components, API, caching, data sources.
+- New UPGRADE.md for 2.x → 3.0.
+
 ### Deprecated
 - `CountryData` and its facade. When the countries table is seeded, every method now
   reads through `GeographyService`; without it, they fall back to the bundled config,
