@@ -4,7 +4,37 @@ All notable changes to `enadstack/laravel-country-data` are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the
 project uses [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [Unreleased] — 3.0.0
+
+### Added — shortcuts and enums
+- Static, cached shortcut classes in `Enadstack\CountryData\Shortcuts`:
+  - `Countries::jordan()`, `Countries::of('JO' | 'JOR' | CountryCode::JO | 'Jordan' | 'الأردن')`,
+    `Countries::europe()` (any region), `Countries::in(Region::Levant)`, `Countries::all()`.
+  - `Cities::jordan()`, `Cities::of($country)`, `Cities::capitalOf($country)`,
+    `Cities::named($country, 'Irbid')`, `Cities::gulf()`.
+  - `Areas::jordan()`, `Areas::in('JO', 'Amman')`, `Areas::levant()`.
+  - Unknown names throw `CountryNotFoundException`, `RegionNotFoundException` or
+    `CityNotFoundException` (all extend `GeographyNotFoundException`) with a
+    "did you mean …?" suggestion.
+  - Generated `@method` docblocks for every country and region, for IDE autocompletion.
+- Enums in `Enadstack\CountryData\Enums`: `Region` (every filter), `CountryCode`
+  (all 250 ISO-2 codes, with `model()`, `name($locale)`, `flag()`, `iso3()`,
+  `fromAny('jor')`) and `AreaType`.
+- `AreaCollection`, returned by every Area query: `->districts()`, `->neighborhoods()`,
+  `->streets()`, `->zones()`, `->ofType()`, `->roots()` and `->tree()`, all in memory.
+- Model scopes:
+  - `Country`: `inRegion(Region|string)`, one named scope per region
+    (`Country::europe()`, `::gulf()`, `::levant()`, …), `code()` (ISO-2 / ISO-3,
+    any case) and `search()` (English and Arabic, common and official names).
+  - `Area`: `ofType()` accepts `AreaType`, plus `neighborhoods()`, `inCity()` and
+    `inCountry()`.
+- `GeographyService`: `resolveCountry()`, `countryIndex()`, `countriesIn()`,
+  `citiesIn()`, `areasInCountry()`, `areasInRegion()`, `isSeeded()`.
+
+### Deprecated
+- `CountryData` and its facade. When the countries table is seeded, every method now
+  reads through `GeographyService`; without it, they fall back to the bundled config,
+  as before. The methods keep working throughout 3.x. See UPGRADE.md.
 
 ### Added — full world data
 - All 250 ISO 3166-1 countries and territories (was 22). The 22 curated Arab League

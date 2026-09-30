@@ -31,7 +31,9 @@
 $root  = dirname(__DIR__);
 $check = in_array('--check', $argv, true);
 
+require $root . '/vendor/autoload.php';
 require __DIR__ . '/lib/DataFormatter.php';
+require __DIR__ . '/lib/CodeGenerator.php';
 require __DIR__ . '/lib/functions.php';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -191,6 +193,24 @@ foreach ($regions as $tag => $def) {
 
 $outputs['resources/build-report.md'] = renderReport($countries, $newCities, $curatedCities);
 
+// ── Generated PHP ────────────────────────────────────────────────────────────
+assertMethodNamesAreUnique($countries, $regions);
+
+$outputs['src/Enums/Region.php']                     = CodeGenerator::regionEnum($regions);
+$outputs['src/Enums/CountryCode.php']                = CodeGenerator::countryCodeEnum($countries);
+$outputs['src/Models/Concerns/HasRegionScopes.php']  = CodeGenerator::regionScopes($regions);
+
+$shortcutReturns = [
+    'Countries' => ['\\Illuminate\\Support\\Collection<int, \\Enadstack\\CountryData\\Models\\Country>', '\\Enadstack\\CountryData\\Models\\Country'],
+    'Cities'    => ['\\Illuminate\\Support\\Collection<int, \\Enadstack\\CountryData\\Models\\City>', '\\Illuminate\\Support\\Collection<int, \\Enadstack\\CountryData\\Models\\City>'],
+    'Areas'     => ['\\Enadstack\\CountryData\\Support\\AreaCollection', '\\Enadstack\\CountryData\\Support\\AreaCollection'],
+];
+
+foreach ($shortcutReturns as $class => [$regionReturn, $countryReturn]) {
+    $path = "src/Shortcuts/{$class}.php";
+    $outputs[$path] = CodeGenerator::injectMethods(file_get_contents("{$root}/{$path}"), $regionReturn, $countryReturn, $regions, $countries);
+}
+
 $changed = [];
 
 foreach ($outputs as $path => $contents) {
@@ -346,6 +366,33 @@ function buildCountry(array $m): array
         'area'       => $m['area'] ?? null,
         'filters'    => filtersFor($iso2),
     ];
+}
+
+/**
+ * Every country and region must map to a distinct static-method name that
+ * doesn't shadow a real method of the shortcut classes.
+ */
+function assertMethodNamesAreUnique(array $countries, array $regions): void
+{
+    $reserved = ['all', 'of', 'in', 'inRegion', 'capitalOf', 'named', 'geo', 'country', 'resolve', 'suggest'];
+    $seen     = [];
+
+    $names = array_merge(
+        array_map(fn ($tag) => [\Enadstack\CountryData\Support\Lookup::method($tag), "region {$tag}"], array_keys($regions)),
+        array_map(fn ($c) => [\Enadstack\CountryData\Support\Lookup::method($c['names']['common']['en']), "country {$c['code']}"], $countries),
+    );
+
+    foreach ($names as [$method, $owner]) {
+        $key = strtolower($method);
+
+        // PHP method names are case-insensitive.
+        if (in_array($key, array_map('strtolower', $reserved), true) || isset($seen[$key])) {
+            fwrite(STDERR, "Method name collision: {$method}() for {$owner}" . (isset($seen[$key]) ? " and {$seen[$key]}" : '') . "\n");
+            exit(1);
+        }
+
+        $seen[$key] = $owner;
+    }
 }
 
 /**
