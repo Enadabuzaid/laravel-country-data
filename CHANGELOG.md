@@ -70,8 +70,10 @@ project uses [Semantic Versioning](https://semver.org/).
   - Iraq is tagged `gulf` in config too, so `CountryData::getGulfCountries()` returns
     7 countries (it returned 6). The DB always had 7. Use the new `gcc` filter for
     the six GCC member states.
-  - Some currency symbols, borders, coordinates and populations were aligned with
-    the JSON values in the same way.
+  - Other values now follow the JSON as well: capitals YE `Sanaa` (was `Sana'a`) and
+    DJ `Djibouti City` (was `Djibouti`); the English currency symbols for EG, SD, IQ,
+    LB, SY, YE, MA, DJ and KM; some borders (SA/OM list `UAE`, as the curated JSON always
+    has); coordinates and populations.
 - Curated countries gain the new region tags only (appended after their existing
   filters). For example, JO gains `levant`, and SA gains `gcc` and `g20`.
 

@@ -62,7 +62,8 @@ source of truth):
 | PS currency (ar) | شيكل جديد | شيكل إسرائيلي جديد |
 | `getGulfCountries()` | 6 (no Iraq) | 7 (Iraq included, same as the DB always had) |
 
-A few currency symbols, borders and coordinates were aligned in the same way. The
+Capitals (YE `Sanaa`, DJ `Djibouti City`), several English currency symbols, some
+borders and coordinates were aligned in the same way; see CHANGELOG.md. The
 database values did not change.
 
 To keep a 22-country config, publish the Arab dataset:

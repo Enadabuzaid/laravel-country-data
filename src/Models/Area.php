@@ -22,6 +22,8 @@ class Area extends Model
     ];
 
     protected $casts = [
+        'city_id'   => 'integer',
+        'parent_id' => 'integer',   // AreaCollection::roots()/tree() compare ids strictly
         'is_active' => 'boolean',
         'latitude'  => 'float',
         'longitude' => 'float',

@@ -97,11 +97,12 @@ PHP;
         $methods = '';
 
         foreach ($regions as $tag => $def) {
-            $name     = ucfirst(Lookup::method($tag));
+            $method   = Lookup::method($tag);
+            $name     = ucfirst($method);
             $case     = self::regionCase($tag);
             $methods .= <<<PHP
 
-    /** Country::{$name}() — {$def['label']}. */
+    /** Country::{$method}() — {$def['label']}. */
     public function scope{$name}(\$query)
     {
         return \$query->inRegion(Region::{$case});

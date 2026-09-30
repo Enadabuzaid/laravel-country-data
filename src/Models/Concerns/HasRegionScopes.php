@@ -11,97 +11,97 @@ use Enadstack\CountryData\Enums\Region;
  */
 trait HasRegionScopes
 {
-    /** Country::Arab() — Arab League. */
+    /** Country::arab() — Arab League. */
     public function scopeArab($query)
     {
         return $query->inRegion(Region::Arab);
     }
 
-    /** Country::Gulf() — Arabian Gulf. */
+    /** Country::gulf() — Arabian Gulf. */
     public function scopeGulf($query)
     {
         return $query->inRegion(Region::Gulf);
     }
 
-    /** Country::Gcc() — Gulf Cooperation Council. */
+    /** Country::gcc() — Gulf Cooperation Council. */
     public function scopeGcc($query)
     {
         return $query->inRegion(Region::GCC);
     }
 
-    /** Country::Levant() — Levant. */
+    /** Country::levant() — Levant. */
     public function scopeLevant($query)
     {
         return $query->inRegion(Region::Levant);
     }
 
-    /** Country::Maghreb() — Maghreb. */
+    /** Country::maghreb() — Maghreb. */
     public function scopeMaghreb($query)
     {
         return $query->inRegion(Region::Maghreb);
     }
 
-    /** Country::MiddleEast() — Middle East. */
+    /** Country::middleEast() — Middle East. */
     public function scopeMiddleEast($query)
     {
         return $query->inRegion(Region::MiddleEast);
     }
 
-    /** Country::MuslimMajority() — Muslim-majority. */
+    /** Country::muslimMajority() — Muslim-majority. */
     public function scopeMuslimMajority($query)
     {
         return $query->inRegion(Region::MuslimMajority);
     }
 
-    /** Country::Africa() — Africa. */
+    /** Country::africa() — Africa. */
     public function scopeAfrica($query)
     {
         return $query->inRegion(Region::Africa);
     }
 
-    /** Country::Asia() — Asia. */
+    /** Country::asia() — Asia. */
     public function scopeAsia($query)
     {
         return $query->inRegion(Region::Asia);
     }
 
-    /** Country::Europe() — Europe. */
+    /** Country::europe() — Europe. */
     public function scopeEurope($query)
     {
         return $query->inRegion(Region::Europe);
     }
 
-    /** Country::NorthAmerica() — North America. */
+    /** Country::northAmerica() — North America. */
     public function scopeNorthAmerica($query)
     {
         return $query->inRegion(Region::NorthAmerica);
     }
 
-    /** Country::SouthAmerica() — South America. */
+    /** Country::southAmerica() — South America. */
     public function scopeSouthAmerica($query)
     {
         return $query->inRegion(Region::SouthAmerica);
     }
 
-    /** Country::Oceania() — Oceania. */
+    /** Country::oceania() — Oceania. */
     public function scopeOceania($query)
     {
         return $query->inRegion(Region::Oceania);
     }
 
-    /** Country::Eu() — European Union. */
+    /** Country::eu() — European Union. */
     public function scopeEu($query)
     {
         return $query->inRegion(Region::EU);
     }
 
-    /** Country::Schengen() — Schengen Area. */
+    /** Country::schengen() — Schengen Area. */
     public function scopeSchengen($query)
     {
         return $query->inRegion(Region::Schengen);
     }
 
-    /** Country::G20() — G20. */
+    /** Country::g20() — G20. */
     public function scopeG20($query)
     {
         return $query->inRegion(Region::G20);
