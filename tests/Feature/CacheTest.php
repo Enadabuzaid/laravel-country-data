@@ -178,4 +178,42 @@ class CacheTest extends TestCase
 
         $this->assertSame(0, $queryCount);
     }
+
+    // ── Object serialization hardening (cache.serializable_classes) ──────────
+
+    public function test_lookups_survive_a_cache_that_forbids_unserializing_objects(): void
+    {
+        config([
+            'cache.default' => 'file',
+            'cache.serializable_classes' => false,
+        ]);
+        Cache::clearResolvedInstances();
+        app()->forgetInstance('cache');
+        app()->forgetInstance('cache.store');
+
+        Geography::countries();
+        Geography::countriesForSelect();
+
+        // A new request/process gets a fresh service instance.
+        app()->forgetInstance(GeographyService::class);
+        Geography::clearResolvedInstance(GeographyService::class);
+
+        $this->assertInstanceOf(\Illuminate\Support\Collection::class, Geography::countries());
+        $this->assertSame('+962', Geography::countriesForSelect()->firstWhere('value', 'JO')['dial']);
+        $this->assertSame('JO', Geography::country('jo')?->code);
+    }
+
+    public function test_repeated_calls_are_memoized_when_objects_cannot_be_cached(): void
+    {
+        config(['cache.serializable_classes' => false]);
+
+        Geography::countries();
+
+        $queryCount = 0;
+        DB::listen(function () use (&$queryCount) { $queryCount++; });
+
+        Geography::countries();
+
+        $this->assertSame(0, $queryCount);
+    }
 }

@@ -19,6 +19,9 @@ use Enadstack\CountryData\Models\Area;
  */
 class GeographyService
 {
+    /** @var array<string, mixed> Per-process memo of resolved lookups. */
+    private array $memo = [];
+
     // ── Countries ────────────────────────────────────────────────────────────
 
     /** All active countries, optionally filtered by tag (arab, gulf, etc.) */
@@ -514,6 +517,8 @@ class GeographyService
         }
 
         Cache::forget($metaKey);
+
+        $this->memo = [];
     }
 
     // ── Private helpers ───────────────────────────────────────────────────────
@@ -525,11 +530,42 @@ class GeographyService
         }
 
         $fullKey = $this->prefix() . '.' . $key;
-        $ttl     = (int) config('country-data.cache.ttl', 86400);
+
+        if (array_key_exists($fullKey, $this->memo)) {
+            return $this->memo[$fullKey];
+        }
+
+        // Cached values are models/collections. When the app forbids unserializing
+        // objects (Laravel's `cache.serializable_classes`), a persistent cache would
+        // hand back __PHP_Incomplete_Class, so fall back to per-process memoization.
+        if (! $this->canCacheObjects()) {
+            return $this->memo[$fullKey] = $callback();
+        }
+
+        $cached = Cache::get($fullKey);
+
+        if ($cached !== null && ! $cached instanceof \__PHP_Incomplete_Class) {
+            return $this->memo[$fullKey] = $cached;
+        }
+
+        $ttl   = (int) config('country-data.cache.ttl', 86400);
+        $value = $callback();
 
         $this->trackKey($fullKey, $ttl);
+        Cache::put($fullKey, $value, $ttl);
 
-        return Cache::remember($fullKey, $ttl, $callback);
+        return $this->memo[$fullKey] = $value;
+    }
+
+    /**
+     * Whether the persistent cache may store and restore objects.
+     * `cache.serializable_classes` = null/true allows it; false or an allow-list does not.
+     */
+    private function canCacheObjects(): bool
+    {
+        $allowed = config('cache.serializable_classes');
+
+        return $allowed === null || $allowed === true;
     }
 
     private function trackKey(string $key, int $ttl): void
