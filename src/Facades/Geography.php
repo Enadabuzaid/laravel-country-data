@@ -17,6 +17,7 @@ use Enadstack\CountryData\Services\GeographyService;
  * @method static \Illuminate\Support\Collection searchCities(string $query, ?string $countryCode = null)
  * @method static \Illuminate\Support\Collection searchAreas(string $query, \Enadstack\CountryData\Models\City|int $city)
  * @method static \Illuminate\Support\Collection countriesForSelect(string $locale = 'en', ?string $filter = null)
+ * @method static \Illuminate\Support\Collection phoneCountriesForSelect(string $locale = 'en', ?string $filter = null)
  * @method static \Illuminate\Support\Collection citiesForSelect(string $countryCode, string $locale = 'en')
  * @method static \Illuminate\Support\Collection areasForSelect(\Enadstack\CountryData\Models\City|int $city, string $locale = 'en', ?string $type = null)
  * @method static \Enadstack\CountryData\Data\CurrencyData|null currencyOf(string $countryCode, string $locale = 'en')

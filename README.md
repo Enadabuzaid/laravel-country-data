@@ -359,6 +359,93 @@ $request->validate([
 
 ---
 
+## Phone Input (React)
+
+A searchable dial-code picker (flag + `+962`) joined to a national-number
+input. The selected country's ISO-2 code is kept in a hidden field; users only
+see the flag and dial code. Pasting an international number (`+962 772 432 330`)
+selects the country automatically.
+
+```
+🇯🇴 +962 ▾ │ 772432330
+```
+
+**1. Pass the countries from the server**
+
+```php
+use Enadstack\CountryData\Facades\Geography;
+
+return Inertia::render('users/create', [
+    // [{ value: 'JO', label: 'Jordan', flag: '🇯🇴', flag_svg: '…', dial: '+962' }, …]
+    'phoneCountries' => Geography::phoneCountriesForSelect(app()->getLocale()),
+]);
+```
+
+**2. Use the component** — import it straight from the package (updates arrive
+with `composer update`) or publish a copy to customise it:
+
+```ts
+// vite.config.ts → resolve.alias
+'@country-data': path.resolve(__dirname, 'vendor/enadstack/laravel-country-data/src/resources/js'),
+// tsconfig.json → compilerOptions.paths
+"@country-data/*": ["./vendor/enadstack/laravel-country-data/src/resources/js/*"]
+```
+
+```css
+/* app.css (Tailwind v4) — let Tailwind see the component's classes */
+@source '../../vendor/enadstack/laravel-country-data/src/resources/js/react';
+```
+
+```tsx
+import { PhoneInput } from '@country-data/react/PhoneInput';
+
+<PhoneInput
+    countries={phoneCountries}
+    countryCode={data.phone_country_code}
+    phone={data.phone}
+    defaultCountry="JO"
+    invalid={!!errors.phone}
+    onChange={({ countryCode, phone }) =>
+        setData((d) => ({ ...d, phone_country_code: countryCode, phone }))
+    }
+/>
+```
+
+Or publish a copy: `php artisan country-data:publish-component --component=phone-input --type=react`
+(→ `resources/js/components/custom/PhoneInput.tsx`).
+
+The component only depends on React and Tailwind utility classes using
+shadcn/ui theme tokens (`border-input`, `bg-popover`, `ring-ring`, …).
+
+| Prop | Type | Description |
+|---|---|---|
+| `countries` | `PhoneCountryOption[]` | Output of `Geography::phoneCountriesForSelect()` |
+| `countryCode` / `phone` | `string \| null` | Controlled values (ISO-2 / national digits) |
+| `onChange` | `({ countryCode, dial, phone, e164 }) => void` | Fired on country or number change |
+| `defaultCountry` | `string` | Used while `countryCode` is empty |
+| `countryCodeName` / `phoneName` | `string` | Input names for native/`<Form>` posts (`phone_country_code` / `phone`) |
+| `invalid`, `disabled`, `required`, `placeholder`, `searchPlaceholder`, `emptyText`, `id`, `className` | | Presentation |
+
+**3. Validate and normalise on the server**
+
+```php
+use Enadstack\CountryData\Rules\ValidCountryCode;
+use Enadstack\CountryData\Rules\ValidPhoneNumber;
+
+// "0772 432 330" → "772432330"
+$request->merge(['phone' => ValidPhoneNumber::normalize($request->input('phone'))]);
+
+$request->validate([
+    'phone_country_code' => ['nullable', 'required_with:phone', new ValidCountryCode],
+    'phone'              => ['nullable', new ValidPhoneNumber('phone_country_code')],
+]);
+```
+
+`ValidPhoneNumber` checks digits only, at least 6 digits, and that dial code +
+number fit E.164 (15 digits).
+
+---
+
 ## Livewire Cascading Dropdown
 
 Requires **Livewire 3**. The component is auto-registered when Livewire is installed.
@@ -496,7 +583,7 @@ Or in `config/country-data.php`:
 | `php artisan country-data:cache-clear` | Flush all geography cache entries |
 | `php artisan country-data:stats` | Display seeded counts, cache status |
 | `php artisan country-data:configure` | Choose config-based country dataset |
-| `php artisan country-data:publish-component` | Publish Blade/Vue/React frontend component |
+| `php artisan country-data:publish-component --component=phone-input --type=react` | Publish a Blade/Vue/React component (`country-select`, `phone-input`) |
 
 ### `country-data:stats` output
 

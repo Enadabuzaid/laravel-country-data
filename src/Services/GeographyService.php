@@ -208,6 +208,28 @@ class GeographyService
         );
     }
 
+    /**
+     * Countries formatted for a phone dial-code selector (e.g. the React PhoneInput).
+     * Only countries with a dial code are included.
+     *
+     * @return Collection<int, array{value: string, label: string, flag: string|null, flag_svg: string|null, dial: string}>
+     */
+    public function phoneCountriesForSelect(string $locale = 'en', ?string $filter = null): Collection
+    {
+        return $this->remember("select.phone-countries.{$locale}.{$filter}", fn () =>
+            $this->countries($filter)
+                ->filter(fn (Country $c) => filled($c->dial))
+                ->map(fn (Country $c) => [
+                    'value'    => $c->code,
+                    'label'    => $locale === 'ar' ? ($c->name_ar ?? $c->name_en) : $c->name_en,
+                    'flag'     => $c->flag,
+                    'flag_svg' => $c->flag_svg,
+                    'dial'     => str_starts_with((string) $c->dial, '+') ? $c->dial : "+{$c->dial}",
+                ])
+                ->values()
+        );
+    }
+
     /** Cities formatted for a select dropdown */
     public function citiesForSelect(string $countryCode, string $locale = 'en'): Collection
     {

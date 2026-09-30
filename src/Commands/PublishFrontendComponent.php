@@ -7,37 +7,66 @@ use Illuminate\Support\Facades\File;
 
 class PublishFrontendComponent extends Command
 {
-    protected $signature = 'country-data:publish-component';
-    protected $description = 'Publish frontend component for country select (Blade, Vue, React)';
+    protected $signature = 'country-data:publish-component
+                            {--type= : Frontend type (blade, vue, react)}
+                            {--component= : Component to publish (country-select, phone-input)}
+                            {--force : Overwrite an existing file}';
 
-    public function handle(): void
+    protected $description = 'Publish a frontend component (country select or phone input) for Blade, Vue, or React';
+
+    /**
+     * Source file (relative to src/resources) and target path (relative to resources/) per component and type.
+     *
+     * @var array<string, array<string, array{0: string, 1: string}>>
+     */
+    private const COMPONENTS = [
+        'country-select' => [
+            'blade' => ['views/components/country-select.blade.php', 'views/components/country-select.blade.php'],
+            'vue'   => ['js/vue/CountrySelect.vue', 'js/components/custom/CountrySelect.vue'],
+            'react' => ['js/react/CountrySelect.jsx', 'js/components/custom/CountrySelect.jsx'],
+        ],
+        'phone-input' => [
+            'blade' => ['views/components/phone-code-select.blade.php', 'views/components/phone-code-select.blade.php'],
+            'vue'   => ['js/vue/PhoneCodeSelect.vue', 'js/components/custom/PhoneCodeSelect.vue'],
+            'react' => ['js/react/PhoneInput.tsx', 'js/components/custom/PhoneInput.tsx'],
+        ],
+    ];
+
+    public function handle(): int
     {
-        $type = $this->choice('Which frontend type to publish?', ['blade', 'vue', 'react'], 0);
+        $component = $this->option('component')
+            ?: $this->choice('Which component to publish?', array_keys(self::COMPONENTS), 0);
+        $type = $this->option('type')
+            ?: $this->choice('Which frontend type to publish?', ['blade', 'vue', 'react'], 0);
 
-        $base = __DIR__ . '/../resources';
+        if (! isset(self::COMPONENTS[$component][$type])) {
+            $this->error("Unknown component/type combination: {$component} ({$type}).");
 
-        $sourcePath = match ($type) {
-            'blade' => realpath($base . '/views/components/country-select.blade.php'),
-            'vue'   => realpath($base . '/js/vue/CountrySelect.vue'),
-            'react' => realpath($base . '/js/react/CountrySelect.jsx'),
-        };
+            return self::FAILURE;
+        }
 
-        $targetPath = match ($type) {
-            'blade' => base_path('resources/views/components/country-select.blade.php'),
-            'vue'   => base_path('resources/js/components/custom/CountrySelect.vue'),
-            'react' => base_path('resources/js/components/custom/CountrySelect.jsx'),
-        };
+        [$source, $target] = self::COMPONENTS[$component][$type];
+        $sourcePath = __DIR__ . '/../resources/' . $source;
+        $targetPath = resource_path($target);
 
-        $this->info("Looking for: $sourcePath");
+        if (! File::exists($sourcePath)) {
+            $this->error("Component file not found for {$type} at: {$sourcePath}");
 
-        if (!File::exists($sourcePath)) {
-            $this->error("❌ Component file not found for $type at: $sourcePath");
-            return;
+            return self::FAILURE;
+        }
+
+        if (File::exists($targetPath) && ! $this->option('force')
+            && ! $this->confirm("{$targetPath} already exists. Overwrite?", false)) {
+            $this->warn('Skipped.');
+
+            return self::SUCCESS;
         }
 
         File::ensureDirectoryExists(dirname($targetPath));
         File::copy($sourcePath, $targetPath);
 
-        $this->info("✅ $type component published to: $targetPath");
+        $this->info("{$component} ({$type}) published to: {$targetPath}");
+
+        return self::SUCCESS;
     }
 }

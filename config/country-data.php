@@ -75,4 +75,15 @@ return [
         // Show the areas dropdown by default
         'show_areas' => true,
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Phone Input
+    |--------------------------------------------------------------------------
+    | Default country (ISO-2) preselected by the PhoneInput component when a
+    | record has no country code yet, e.g. 'JO'. Null = no preselection.
+    */
+    'phone' => [
+        'default_country' => env('COUNTRY_DATA_DEFAULT_PHONE_COUNTRY'),
+    ],
 ];
