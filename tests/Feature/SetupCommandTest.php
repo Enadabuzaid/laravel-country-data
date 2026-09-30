@@ -27,7 +27,7 @@ class SetupCommandTest extends TestCase
         $this->artisan('country-data:setup', ['--seed' => true, '--all' => true])
             ->assertExitCode(0);
 
-        $this->assertSame(22, Country::count());
+        $this->assertSame(250, Country::count());
         $this->assertGreaterThan(0, City::count());
     }
 

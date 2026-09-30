@@ -160,7 +160,7 @@ class CacheTest extends TestCase
         config(['country-data.cache.enabled' => false]);
 
         $countries = Geography::countries();
-        $this->assertCount(22, $countries);
+        $this->assertCount(250, $countries);
 
         config(['country-data.cache.enabled' => true]);
     }

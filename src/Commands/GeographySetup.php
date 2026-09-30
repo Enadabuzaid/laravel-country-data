@@ -17,7 +17,7 @@ class GeographySetup extends Command
                             {--migrate       : Run migrations only (skip seed prompt)}
                             {--seed          : Run seeders only (skip migrate)}
                             {--all           : Seed all countries without prompting}
-                            {--source=       : Seed countries from a configured source file (all, arab, gulf, europe)}
+                            {--source=       : Seed countries from a source file: all or any region (arab, gulf, gcc, europe, eu, levant, …)}
                             {--countries=    : Comma-separated ISO-2 codes to seed (e.g. JO,SA,AE)}
                             {--fresh         : Drop and re-create geography tables before migrating}';
 

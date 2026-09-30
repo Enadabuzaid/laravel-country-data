@@ -19,9 +19,9 @@ class GeographyFacadeTest extends TestCase
 
     // ── countries() ───────────────────────────────────────────────────────────
 
-    public function test_countries_returns_all_22(): void
+    public function test_countries_returns_all_250(): void
     {
-        $this->assertCount(22, Geography::countries());
+        $this->assertCount(250, Geography::countries());
     }
 
     public function test_countries_with_filter_returns_subset(): void

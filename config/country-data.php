@@ -5,7 +5,10 @@ return [
     |--------------------------------------------------------------------------
     | Country Data Source
     |--------------------------------------------------------------------------
-    | Options: 'all' | 'arab' | 'gulf' | 'europe'
+    | 'all', or any region filter: 'arab' | 'gulf' | 'gcc' | 'levant' |
+    | 'maghreb' | 'middle-east' | 'muslim-majority' | 'africa' | 'asia' |
+    | 'europe' | 'north-america' | 'south-america' | 'oceania' | 'eu' |
+    | 'schengen' | 'g20'. Each maps to config/source/countries-{source}.php.
     */
     'source' => 'all',
 

@@ -22,7 +22,7 @@ class StatsCommandTest extends TestCase
     public function test_stats_command_outputs_country_count(): void
     {
         $this->artisan('country-data:stats')
-            ->expectsOutputToContain('22')
+            ->expectsOutputToContain('250')
             ->assertExitCode(0);
     }
 

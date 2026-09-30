@@ -6,6 +6,40 @@ project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added — full world data
+- All 250 ISO 3166-1 countries and territories (was 22). The 22 curated Arab League
+  countries are unchanged; the other 228 are generated.
+- A capital city for every generated country that has one: `cities.json` goes from
+  136 to 359 rows. The 136 curated cities and all 276 areas (207 in Amman) are unchanged.
+- New region filters: `gcc`, `levant`, `maghreb`, `europe`, `north-america`,
+  `south-america`, `oceania`, `eu`, `schengen`, `g20`. Each is defined and documented
+  in `resources/regions.php`. `asia` / `africa` now cover every country in the
+  UN M49 region.
+- `config/source/countries-{filter}.php` for every filter, so
+  `country-data:setup --source=levant` (or any filter) works. `europe` was empty before.
+- `scripts/fetch-sources.php` pins upstream data (mledoze/countries, CLDR `ar`,
+  UN M49, IANA tzdb, Wikidata, ISO 639-3) under `resources/source/`.
+  `scripts/build-data.php` regenerates `data/*.json`, `config/countries.php` and
+  `config/source/*` from it offline (`composer data:build`; `--check` fails when
+  generated files are stale).
+- `data/ATTRIBUTION.md`: sources and licences. The generated data files are
+  derived from mledoze/countries and fall under the ODbL 1.0.
+
+### Changed
+- `data/countries.json` is now the single source of truth. `config/countries.php`
+  and `config/source/*` are generated from it, which changes a few values seen
+  through the config-based `CountryData` class. They now match the database:
+  - Arabic names: SA `المملكة العربية السعودية` (was `السعودية`), AE
+    `الإمارات العربية المتحدة` (was `الإمارات`), OM `عُمان` / `سلطنة عُمان`
+    (was `عمان` / `سلطنة عمان`); PS currency `شيكل إسرائيلي جديد`.
+  - Iraq is tagged `gulf` in config too, so `CountryData::getGulfCountries()` returns
+    7 countries (it returned 6). The DB always had 7. Use the new `gcc` filter for
+    the six GCC member states.
+  - Some currency symbols, borders, coordinates and populations were aligned with
+    the JSON values in the same way.
+- Curated countries gain the new region tags only (appended after their existing
+  filters). For example, JO gains `levant`, and SA gains `gcc` and `g20`.
+
 ## [2.3.0]
 
 ### Fixed
