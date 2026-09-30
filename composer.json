@@ -1,13 +1,12 @@
 {
     "name": "enadstack/laravel-country-data",
     "description": "Laravel package for country information (config-based, reusable, and localized)",
-    "version": "2.2.0",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Enad Abu Zaid",
-            "email": "enad@enadstack.com",
+            "email": "enad.abuzaid15@gmail.com",
             "homepage": "https://enadstack.com",
             "role": "Developer"
         }
@@ -17,7 +16,7 @@
         "illuminate/support": "^11.0 || ^12.0 || ^13.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^9.0 || ^10.0",
+        "orchestra/testbench": "^9.0 || ^10.0 || ^11.0",
         "phpunit/phpunit": "^11.0",
         "livewire/livewire": "^3.0"
     },
@@ -47,7 +46,5 @@
                 "Geography": "Enadstack\\CountryData\\Facades\\Geography"
             }
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

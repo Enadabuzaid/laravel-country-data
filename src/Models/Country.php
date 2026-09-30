@@ -4,6 +4,7 @@ namespace Enadstack\CountryData\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class Country extends Model
@@ -33,7 +34,6 @@ class Country extends Model
         'population'=> 'integer',
         'area'      => 'float',
         'is_active' => 'boolean',
-        'is_capital'=> 'boolean',
     ];
 
     // ── Relationships ──────────────────────────────────────────────
@@ -41,6 +41,15 @@ class Country extends Model
     public function cities(): HasMany
     {
         return $this->hasMany(City::class);
+    }
+
+    /**
+     * The capital city. Eager-load it to avoid one query per country:
+     *   Country::with('capitalCity')->get()
+     */
+    public function capitalCity(): HasOne
+    {
+        return $this->hasOne(City::class)->where('is_capital', true);
     }
 
     /**
@@ -76,8 +85,12 @@ class Country extends Model
         return $locale === 'ar' ? ($this->name_ar ?? $this->name_en) : $this->name_en;
     }
 
+    /**
+     * Backward-compatible `$country->capital_city`. Reads through the
+     * capitalCity relation, so it queries at most once and uses eager loads.
+     */
     public function getCapitalCityAttribute(): ?City
     {
-        return $this->cities()->where('is_capital', true)->first();
+        return $this->getRelationValue('capitalCity');
     }
 }
